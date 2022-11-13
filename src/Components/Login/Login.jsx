@@ -1,5 +1,6 @@
 import React from "react";
 import "./Login.scss";
+import { Link } from "react-router-dom";
 
 
 const Login =()=>{
@@ -9,7 +10,6 @@ const Login =()=>{
                 <img src="https://picsum.photos/500/600" alt="login-front" />
             </div>
             <div className="login-form">
-                
                 <div id="login-headers">
                     <h1>Login</h1>
                 </div>
@@ -20,7 +20,7 @@ const Login =()=>{
                             <input type="password"  placeholder="Contraseña"/>
                         </div>
                         <p>Dont have an account yet? <a href="">Sing up</a></p>
-                        <button>Login</button>
+                        <button><Link to="/dashboard">Login</Link></button>
                     </form>
                 </div>
                
