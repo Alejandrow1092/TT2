@@ -25,22 +25,6 @@ const Login =()=>{
                     <a href="">Registrate</a>
                 </div>
             </div>
-            {/*<div className="login-form">
-                <div id="login-headers">
-                    <h1>Login</h1>
-                </div>
-                <div id="form-sec">
-                    <form action="#">
-                        <div>
-                            <input type="email" placeholder="Correo"/>
-                            <input type="password"  placeholder="Contraseña"/>
-                        </div>
-                        <p>Dont have an account yet? <a href="">Sing up</a></p>
-                        <button>Login</button>
-                    </form>
-                </div>
-               
-    </div>*/}
             <div className="elipseText">
                     <span name="span-white">Crea empleados</span>
                     <span name="span-yellow">felices</span>
