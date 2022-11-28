@@ -104,6 +104,21 @@
         a{
             color: #6495ED;
         }
+        button{
+            cursor: pointer;
+            a{
+                color: white;
+                text-decoration: none;
+                font-size: 1rem;
+                
+            }
+            a:hover{
+                
+            }
+            &:hover{
+                background-color:#eb224d ;
+            }
+        }
     }
 
     input{
@@ -172,4 +187,8 @@
         top: 20%;
         padding-left: 3em;
     }
+}
+
+.error{
+    color: red;
 }

@@ -4,6 +4,8 @@ const router = express.Router();
 const indexController = require('../controllers/index');
 
 //rutas
-router.use("/", indexController.index)
+router.get("/", indexController.index);
+
+router.post("/login", indexController.login);
 
 module.exports = router;

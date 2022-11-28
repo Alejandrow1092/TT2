@@ -2,7 +2,8 @@
 This sql stands for MariaDB
 
 Comando para usar la base de datos
->>mysql -u root -p
+>>cd c:\xampp\mysql\bin
+>>.\mysql.exe -u root --password
 
 Las foreign key tiene un esquema diferente en MariaDB
 

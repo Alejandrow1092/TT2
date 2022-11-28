@@ -1,0 +1,38 @@
+.top-header{
+    background-color: #F2FAFA;
+    width: 100%;
+    margin: auto;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    .description-header{
+       /*  background-color: red; */
+        width: 50%;
+        #titulo{
+            width: 80%;
+            font-size: 3rem;
+            font-weight:550;
+        }
+        #subtitulo{
+            width: 80%;
+            font-size: 1.4rem;
+            margin-top: -30px;
+            color: #252525;
+        }
+        button{
+            margin-top: 30px;
+            background-color: #1E88E5;
+            border: none;
+            width: 10rem;
+            color: white;
+            height: 3.5rem;
+            border-radius: 10px;
+            font-size: 1rem;
+        }
+    }
+    .img-header{
+        width: 50%;
+       /*  background-color: blue; */
+    }
+}
