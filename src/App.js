@@ -2,7 +2,7 @@ import {createBrowserRouter, RouterProvider, Route, Router, Routes} from "react-
 import React from "react";
 import ReactDOM from "react-dom/client";
 import Login from "./Components/Login/Login"
-import Dashboard from "./Components/Dashboard/Dashboard"
+import ListaNegocios from "./Components/ListaNegocios/ListaNegocios"
 
 /* const router = createBrowserRouter([
   {
@@ -18,9 +18,8 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/login" element={<Login/>}/>
-        <Route path="/Dashboard" element={<Dashboard/>}/>
+        <Route path="/ListaNegocios" element={<ListaNegocios/>}/>
       </Routes>
-      
     </div>
   );
 }

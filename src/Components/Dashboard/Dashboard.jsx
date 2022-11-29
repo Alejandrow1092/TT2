@@ -9,8 +9,6 @@ const Dashboard =()=>{
     return(
         <>
             <NavBar3/>
-            <AdminItem/>
-            <BubbleAdmin/>
             <div className="top-header">
                 <div className="description-header">
                     <p id="titulo">¿Tu empresa cumple la NOM-035?</p>

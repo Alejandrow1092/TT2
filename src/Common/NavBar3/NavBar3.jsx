@@ -25,11 +25,6 @@ const NavBar3=()=>{
                     </button>
                 </div>
             </div>
-            
-
-                
-          
-            
         </nav>
     );
 }

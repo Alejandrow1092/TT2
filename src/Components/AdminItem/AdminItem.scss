@@ -5,6 +5,7 @@
     border-radius: 1em;
     background: #4299E1;
     cursor: pointer;
+    width: 100%;
 
     font-style: normal;
     font-weight: bolder;
@@ -24,6 +25,7 @@
 .hidden-box{
     margin: 0.2em;
     max-height: 0px;
+    width: 100%;
     background: #E6E6E6;
     transition: max-height 0.2s;
     border-radius: 1em;
@@ -35,7 +37,6 @@
 
 .item:hover + .hidden-box{
     max-height: 100%;
-
     span{
         display: block;
         padding-left: 15%;
