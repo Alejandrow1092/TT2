@@ -1,0 +1,23 @@
+.contenedorInfo{
+    width: 100%;
+    font-family: "San Seriff";
+
+    .nombreNegocio{
+        font-weight: 500;
+        padding-right: 50%;
+    }
+}
+
+.camposInfo{
+    width: 100%;
+
+    span{
+        display: inline-block;
+        margin-bottom: 1%;
+    }
+
+    .input{
+        display: inline-block;
+        margin-bottom: 1%;
+    }
+}

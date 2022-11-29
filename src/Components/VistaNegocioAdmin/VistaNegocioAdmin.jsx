@@ -1,26 +1,20 @@
 import React from "react";
-import './ListaNegocios.scss';
+import './VistaNegocioAdmin.scss';
 import NavBar3 from "../../Common/NavBar3/NavBar3";
-import BubbleAdmin from "../BubbleAdmin/BubbleAdmin";
+import NegocioInfo from "../NegocioInfo/NegocioInfo";
 import ListScroll from "../ListScroll/ListScroll";
 
-const ListaNegocios =()=>{
+const VistaNegocioAdmin =()=>{
     return(
         <>
             <NavBar3/>
             <div className="container">
-                <div className="header">
-                    <span>¡Bienvenido!</span>
-                </div>
                 <div className="body">
                     <div className="left-grid">
-                        <ListScroll/>
-                        <div>
-                            <button>Agregar Negocio</button>
-                        </div>
+                        <ListScroll></ListScroll>
                     </div>
                     <div className="right-grid">
-                        <BubbleAdmin/>
+                        <NegocioInfo></NegocioInfo>
                     </div>
                 </div>
             </div>
@@ -28,4 +22,4 @@ const ListaNegocios =()=>{
     );
 }
 
-export default ListaNegocios;
+export default VistaNegocioAdmin;
