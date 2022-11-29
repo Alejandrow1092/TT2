@@ -13,8 +13,8 @@ const NegocioInfo =()=>{
                     <input className="input" disabled="disabled"/>
                     <span>Domicilio</span>
                     <input className="input" disabled="disabled"/>
-                    <span>Actividad principal</span>
-                    <select className="input">
+                    <span className="input">Actividad principal</span>
+                    <select className="input" disabled="disabled">
                         <option>Actividad 1</option>
                         <option>Actividad 2</option>
                         <option>Actividad 3</option>

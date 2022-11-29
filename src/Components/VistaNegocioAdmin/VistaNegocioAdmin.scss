@@ -1,21 +1,26 @@
 .container{
     display: grid;
-    height: 90vh;
 }
 
 .body{
-    height: 80%;
     display: grid;
     grid-template-columns: 1fr 1fr;
 
     .left-grid{
         padding-left: 10%;
         padding-right: 10%;
-        height: 50%;
+        height: 100%;
+
+        .gestores{
+            font-size: 2em;
+            margin-top: 5%;
+            margin-bottom: 5%;
+        }
     }
 
     .right-grid{
-        height: 70%;
+        margin-top: 5%;
+        height: auto;
         padding-left: 10%;
         padding-right: 10%;
     }

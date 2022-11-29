@@ -11,6 +11,9 @@ const VistaNegocioAdmin =()=>{
             <div className="container">
                 <div className="body">
                     <div className="left-grid">
+                        <div className="gestores">
+                            <h1>Gestores</h1>
+                        </div>
                         <ListScroll></ListScroll>
                     </div>
                     <div className="right-grid">
