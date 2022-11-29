@@ -1,14 +1,19 @@
 import React from "react";
-import './AdministradorItem.scss';
+import './AdminItem.scss';
 
-const AdministradorItem =()=>{
+const AdminItem =()=>{
     return(
         <>
             <div className="item">
-                <span className="text-item"></span>
+                <span className="text-item">Texto Dummie</span>
+            </div>
+            <div className="hidden-box">
+                <span>Correo electrónico</span>
+                <span>Número de celular</span>
+                <span>Número de casa</span>
             </div>
         </>
     );
 }
 
-export default Dashboard;
+export default AdminItem;

@@ -1,14 +1,45 @@
 .item{
+    padding-left: 15%;
+    padding-top: 1%;
+    padding-bottom: 1%;
     border-radius: 1em;
     background: #4299E1;
+    cursor: pointer;
 
     font-style: normal;
     font-weight: bolder;
+
+    :hover{
+        opacity: 0.8;
+    }
     
-    .text-tem{
+    .text-item{
         display: flex;
         align-items: center;
         text-align: center;
         color: #F5F5F5;
+    }
+}
+
+.hidden-box{
+    margin: 0.2em;
+    max-height: 0px;
+    background: #E6E6E6;
+    transition: max-height 0.2s;
+    border-radius: 1em;
+
+    span{
+        display: none;
+    }
+}
+
+.item:hover + .hidden-box{
+    max-height: 100%;
+
+    span{
+        display: block;
+        padding-left: 15%;
+        padding-top: 1%;
+        padding-bottom: 1%;
     }
 }

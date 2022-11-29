@@ -1,0 +1,33 @@
+.elipseText{
+    position: relative;
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    border-radius: 100%;
+    width: 27vw;
+    height: 48vh;
+    left: 10vw;
+    top: 20vh;
+    align-items: center;
+    background: linear-gradient(151.68deg, rgba(161, 245, 220, 0.2) 35.5%, rgba(0, 0, 0, 0) 82.49%), linear-gradient(203.88deg, #67A2B5 14.14%, rgba(96, 44, 129, 0.629604) 65.2%, rgba(147, 101, 176, 0.54) 77.55%);
+
+    span{
+        text-align: center;
+        display: block;
+        white-space: nowrap;
+        padding: 0%;
+        font-family: 'Century Gothic';
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.5em;
+    }
+    
+    span[name="span-white"]{
+        font-size: 1.5em;
+        color: #FFFBFB;
+    }
+
+    span[name="span-yellow"]{
+        font-size: 5em;
+        color: #F8FFCB;
+    }
+}
