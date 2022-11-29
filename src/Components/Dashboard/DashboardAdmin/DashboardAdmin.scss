@@ -1,0 +1,37 @@
+.container{
+    display: grid;
+    grid-template-rows: 15vh 75vh;
+    height: 90vh;
+}
+
+.header{
+    grid-row: 1;
+    font-size: 3em;
+    text-align: center;
+}
+
+.body{
+    height: 85%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row: 2;
+
+    .right-grid{
+        grid-row: 1;
+        padding-left: 10%;
+        padding-right: 10%;
+        height: auto;
+    }
+
+    .left-grid{
+        height: 100%;
+        grid-row: 1;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .version{
+        margin-top: 10%;
+        font-size: 1em;
+    }
+}
