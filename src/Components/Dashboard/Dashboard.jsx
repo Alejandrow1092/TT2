@@ -4,7 +4,8 @@ import './Dashboard.scss';
 import NavBar3 from "../../Common/NavBar3/NavBar3";
 import AdminItem from "../AdminItem/AdminItem";
 import BubbleAdmin from "../BubbleAdmin/BubbleAdmin";
-import DashboardAdmin from "../DashboardGestor/DashboardGestor";
+import DashboardAdmin from "./DashboardAdmin/DashboardAdmin";
+
 
 const Dashboard =()=>{
     return(

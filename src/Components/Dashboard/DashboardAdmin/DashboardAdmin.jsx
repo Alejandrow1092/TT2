@@ -1,5 +1,5 @@
 import React from "react";
-import headerImg from "../../asets/header.png"
+import headerImg from "../../../asets/header.png"
 import './DashboardAdmin.scss';
 import NavBar3 from "../../../Common/NavBar3/NavBar3";
 import AdminItem from "../../AdminItem/AdminItem";

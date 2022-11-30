@@ -7,7 +7,8 @@ import Configuracion from "./Components/Configuracion/Configuracion";
 import ProtectedRoutes from "./RootForm/ProtectedRoutes/ProtectedRoutes";
 import NavBar3 from "./Common/NavBar3/NavBar3";
 import Container from "./RootForm/Container/Container";
-import DashboardAdmin from "./Components/DashboardAdmin/DashboardAdmin";
+import Dashboard from "./Components/Dashboard/Dashboard";
+import ListaNegocios from "./Components/ListaNegocios/ListaNegocios";
 
 /* const router = createBrowserRouter([
   {
@@ -26,7 +27,7 @@ function App() {
         <Route element={<ProtectedRoutes/>}>
           <Route path="/Negocios" element={<ListaNegocios/>}/>
           <Route path="/Configuracion" element={<Configuracion/>}/>
-          <Route path="/dashboard" element={<DashboardAdmin/>}/>
+          <Route path="/dashboard" element={<Dashboard/>}/>
         </Route>
       </Routes>
     </div>
