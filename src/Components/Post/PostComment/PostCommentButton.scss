@@ -1,0 +1,24 @@
+.postCommentButton{
+    display: inline-flex;
+    margin: 2%;
+    width: max-content;
+    padding: 1em 2em 1em 2em;
+    border: none;
+    border-radius: 1vw;
+    font-size: 0.5em;
+    font-weight: bold;
+    background-color: #6495ED;
+    color: white;
+
+    button{
+        margin-left: 10%;
+        display: inline-block;
+        height: max-content;
+    }
+
+    .postCommentImg{
+        display: inline-block;
+        width: 20px;
+        height: auto;
+    }
+}

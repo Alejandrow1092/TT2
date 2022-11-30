@@ -2,7 +2,7 @@ import {createBrowserRouter, RouterProvider, Route, Router, Routes} from "react-
 import React from "react";
 import ReactDOM from "react-dom/client";
 import Login from "./Components/Login/Login"
-import DashboardGestor from "./Components/DashboardGestor/DashboardGestor"
+import DashboardGestor from "./Components/Dashboard/DashboardGestor/DashboardGestor"
 
 /* const router = createBrowserRouter([
   {
@@ -18,7 +18,7 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/login" element={<Login/>}/>
-        <Route path="/DashboardGestor" element={<DashboardGestor/>}/>
+        <Route path="/Dashboard/DashboardGestor" element={<DashboardGestor/>}/>
       </Routes>
     </div>
   );

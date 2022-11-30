@@ -1,0 +1,27 @@
+.postHeader{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    color: #050203;
+    font-size: 1em;
+    font-weight: bold;
+
+    .postTitle{
+        text-align: left;
+        padding: 1em 0em 1em 2em;
+    }
+
+    .postType{
+        text-align: right;
+        padding: 1em 2em 1em;
+    }
+}
+
+.postSubject{
+    width: 100%;
+    color: #050203;
+    opacity: 0.8;
+    font: 0.8em;
+
+    padding: 1em 0em 1em 2em;
+}
