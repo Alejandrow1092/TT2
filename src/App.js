@@ -9,6 +9,7 @@ import NavBar3 from "./Common/NavBar3/NavBar3";
 import Container from "./RootForm/Container/Container";
 import Dashboard from "./Components/Dashboard/Dashboard";
 import ListaNegocios from "./Components/ListaNegocios/ListaNegocios";
+import VistaNegocioGestor from "./Components/VistaNegocioGestor/VistaNegocioGestor"
 
 /* const router = createBrowserRouter([
   {
@@ -29,6 +30,7 @@ function App() {
           <Route path="/Configuracion" element={<Configuracion/>}/>
           <Route path="/dashboard" element={<Dashboard/>}/>
         </Route>
+        <Route path="/VistaNegocioGestor/VistaNegocioGestor" element={<VistaNegocioGestor/>}/>
       </Routes>
     </div>
   );

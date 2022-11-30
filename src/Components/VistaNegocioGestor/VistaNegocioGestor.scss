@@ -1,0 +1,79 @@
+.container-empleado{
+    display: grid;
+
+    .infoNegocio-empleado{
+        grid-row: 1;
+        padding-left: 10%;
+        padding-right: 10%;
+        width: 100%;
+    }
+
+    .infoArea{
+        margin-top: 2%;
+        grid-row: 2;
+        padding-left: 10%;
+        padding-right: 10%;
+        width: 100%;
+
+        .areas{
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            gap: 5px;
+        }
+    }
+
+    .inputArea{
+        grid-row: 3;
+        margin-top: 2%;
+        padding-left: 10%;
+        padding-right: 10%;
+
+        input{
+            width: 100%;
+            padding-left: 1em;
+            font-size: 1em;
+        }
+    }
+
+    .infoEmpleado{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-row: 4;
+
+        .left-grid-empleado{
+            grid-column: 1;
+        
+            padding-left: 10%;
+            padding-right: 10%;
+            height: 50%;
+    
+            .gestores{
+                font-size: 2em;
+                margin-top: 5%;
+                margin-bottom: 5%;
+            }
+        }
+    
+        .right-grid-empleado{
+            grid-column: 2;
+            margin-top: 5%;
+            height: auto;
+            padding-left: 10%;
+            padding-right: 10%;
+        }
+    }
+}
+
+button{
+    display: block;
+    margin-top: 5%;
+    border: none;
+    border-radius: 1vw;
+    font-size: 1em;
+    font-weight: bold;
+
+    width: 15rem;
+    height: 2.5rem;
+    background-color: #6495ED;
+    color: white;
+}
