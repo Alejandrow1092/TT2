@@ -3,6 +3,7 @@ import './VistaNegocioGestor.scss';
 import NegocioInfo from "../NegocioInfo/NegocioInfo";
 import ListScroll from "../ListScroll/ListScroll";
 import EmpleadoInfo from "../EmpleadoInfo/EmpleadoInfo"
+import ItemArea from "../NegocioInfo/ItemArea";
 
 const VistaNegocioGestor =()=>{
     return(
@@ -10,6 +11,21 @@ const VistaNegocioGestor =()=>{
             <div className="container-empleado">
                 <div className="infoNegocio-empleado">
                     <NegocioInfo/>
+                </div>
+                <div className="infoArea">
+                    <ItemArea/>
+                    <ItemArea/>
+                    <ItemArea/>
+                    <ItemArea/>
+                    <ItemArea/>
+                    <ItemArea/>
+                    <ItemArea/>
+                    <ItemArea/>
+                    <ItemArea/>
+                </div>
+                <div className="inputArea">
+                    <input></input>
+                    <button>Agregar</button>
                 </div>
                 <div className="infoEmpleado">
                     <div className="left-grid-empleado">

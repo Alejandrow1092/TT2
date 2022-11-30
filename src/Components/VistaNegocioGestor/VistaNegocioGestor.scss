@@ -8,10 +8,34 @@
         width: 100%;
     }
 
+    .infoArea{
+        margin-top: 2%;
+        grid-row: 2;
+        padding-left: 10%;
+        padding-right: 10%;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        gap: 5px;
+    }
+
+    .inputArea{
+        grid-row: 3;
+        margin-top: 2%;
+        padding-left: 10%;
+        padding-right: 10%;
+
+        input{
+            width: 100%;
+            padding-left: 1em;
+            font-size: 1em;
+        }
+    }
+
     .infoEmpleado{
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-row: 2;
+        grid-row: 4;
 
         .left-grid-empleado{
             grid-column: 1;
@@ -42,7 +66,7 @@ button{
     margin-top: 5%;
     border: none;
     border-radius: 1vw;
-    font-size: 0.8vw;
+    font-size: 1em;
     font-weight: bold;
 
     width: 15rem;
