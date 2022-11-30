@@ -2,7 +2,7 @@ import {createBrowserRouter, RouterProvider, Route, Router, Routes} from "react-
 import React from "react";
 import ReactDOM from "react-dom/client";
 import Login from "./Components/Login/Login"
-import ListaNegocios from "./Components/ListaNegocios/ListaNegocios"
+import DashboardGestor from "./Components/Dashboard/DashboardGestor/DashboardGestor"
 import Configuracion from "./Components/Configuracion/Configuracion";
 import ProtectedRoutes from "./RootForm/ProtectedRoutes/ProtectedRoutes";
 import NavBar3 from "./Common/NavBar3/NavBar3";

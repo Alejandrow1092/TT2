@@ -1,14 +1,13 @@
 import React from "react";
 import headerImg from "../../asets/header.png"
 import './DashboardAdmin.scss';
-import NavBar3 from "../../Common/NavBar3/NavBar3";
-import AdminItem from "../AdminItem/AdminItem";
-import BubbleAdmin from "../BubbleAdmin/BubbleAdmin";
+import NavBar3 from "../../../Common/NavBar3/NavBar3";
+import AdminItem from "../../AdminItem/AdminItem";
+import BubbleAdmin from "../../BubbleAdmin/BubbleAdmin";
 
 const DashboardAdmin =()=>{
     return(
         <>
-            <NavBar3/>
             <div className="container">
                 <div className="header">
                     <span>¡Bienvenido!</span>

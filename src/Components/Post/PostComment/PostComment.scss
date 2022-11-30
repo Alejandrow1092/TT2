@@ -1,0 +1,29 @@
+.postComment{
+    display: grid;
+    grid-template-columns: 9fr 1fr;
+    padding: 1em;
+    column-gap: 1em;
+
+    textarea{
+        grid-row: 1;
+        padding: 0.2em;
+        border-bottom: 1px solid;
+        font-family: sans-serif;
+        height: 100%;
+        width: 100%;
+        resize: none;
+    }
+
+    button{
+        width: 50%;
+        height: 50%;
+        background-color: #4299E1;
+        border-radius: 50%;
+        align-items: center;
+        background-image: url('./../../../asets/sendVector.png');
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        box-shadow: 0px 2px 2px #050203;
+    }
+}

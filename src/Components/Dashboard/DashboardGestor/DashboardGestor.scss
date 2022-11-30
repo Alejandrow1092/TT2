@@ -1,0 +1,44 @@
+.container{
+    display: grid;
+    height: 90vh;
+}
+
+.body{
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .header{
+        font-size: 3em;
+        text-align: center;
+    }
+
+    .right-grid{
+        margin-top: 10%;
+        padding-left: 10%;
+        padding-right: 10%;
+        height: auto;
+    }
+
+    .left-grid{
+        height: 100%;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .version{
+        margin-top: 10%;
+        font-size: 1em;
+    }
+}
+
+.postSpace{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+
+    .centerSpace{
+        grid-column: 2;
+        background-color: #E6E6E6;
+        border-radius: 1em;
+    }
+}

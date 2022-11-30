@@ -1,7 +1,7 @@
 import React from "react";
-import './NegocioItem.scss';
+import './ItemListScroll.scss';
 
-const NegocioItem =()=>{
+const ItemListScroll =()=>{
     return(
         <>
             <div className="item" name="blueItem">
@@ -14,4 +14,4 @@ const NegocioItem =()=>{
     );
 }
 
-export default NegocioItem;
+export default ItemListScroll;

@@ -1,0 +1,41 @@
+.container{
+    display: grid;
+}
+
+.body{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .left-grid{
+        padding-left: 10%;
+        padding-right: 10%;
+        height: 100%;
+
+        .gestores{
+            font-size: 2em;
+            margin-top: 5%;
+            margin-bottom: 5%;
+        }
+    }
+
+    .right-grid{
+        margin-top: 5%;
+        height: auto;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}
+
+button{
+    display: block;
+    margin-top: 5%;
+    border: none;
+    border-radius: 1vw;
+    font-size: 0.8vw;
+    font-weight: bold;
+
+    width: 15rem;
+        height: 2.5rem;
+        background-color: #6495ED;
+        color: white;
+}
