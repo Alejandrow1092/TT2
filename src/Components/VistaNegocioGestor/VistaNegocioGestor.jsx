@@ -13,17 +13,21 @@ const VistaNegocioGestor =()=>{
                     <NegocioInfo/>
                 </div>
                 <div className="infoArea">
-                    <ItemArea/>
-                    <ItemArea/>
-                    <ItemArea/>
-                    <ItemArea/>
-                    <ItemArea/>
-                    <ItemArea/>
-                    <ItemArea/>
-                    <ItemArea/>
-                    <ItemArea/>
+                    <span>Areas registradas</span>
+                    <div className="areas">
+                        <ItemArea/>
+                        <ItemArea/>
+                        <ItemArea/>
+                        <ItemArea/>
+                        <ItemArea/>
+                        <ItemArea/>
+                        <ItemArea/>
+                        <ItemArea/>
+                        <ItemArea/>
+                    </div>
                 </div>
                 <div className="inputArea">
+                    <span>Nombre del area</span>
                     <input></input>
                     <button>Agregar</button>
                 </div>
