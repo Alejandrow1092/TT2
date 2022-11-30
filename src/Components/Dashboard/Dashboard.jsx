@@ -19,9 +19,7 @@ const Dashboard =()=>{
                     <button>Comenzar Test</button>
                 </div>
                 <div className="img-header">
-                 
-                        <img src={headerImg} alt="" />
-                   
+                    <img src={headerImg} alt="" />
                 </div>
             </div>
         </>

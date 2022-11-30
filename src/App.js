@@ -3,6 +3,11 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import Login from "./Components/Login/Login"
 import ListaNegocios from "./Components/ListaNegocios/ListaNegocios"
+import Configuracion from "./Components/Configuracion/Configuracion";
+import ProtectedRoutes from "./RootForm/ProtectedRoutes/ProtectedRoutes";
+import NavBar3 from "./Common/NavBar3/NavBar3";
+import Container from "./RootForm/Container/Container";
+import DashboardAdmin from "./Components/DashboardAdmin/DashboardAdmin";
 
 /* const router = createBrowserRouter([
   {
@@ -18,7 +23,11 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/login" element={<Login/>}/>
-        <Route path="/ListaNegocios" element={<ListaNegocios/>}/>
+        <Route element={<ProtectedRoutes/>}>
+          <Route path="/Negocios" element={<ListaNegocios/>}/>
+          <Route path="/Configuracion" element={<Configuracion/>}/>
+          <Route path="/dashboard" element={<DashboardAdmin/>}/>
+        </Route>
       </Routes>
     </div>
   );

@@ -3,11 +3,18 @@ import "./Login.scss";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import axios from 'axios';
+import { Navigate } from "react-router-dom";
 
 const Login =()=>{
+
+    //local storage para el login
+    //localStorage.setItem('auth', 'true');
+
+
     const [correo, setCorreo]=useState("");
     const [pass, setPass]=useState("");
     const [response, setResponse]=useState("no")
+    const [logged, setLogged]=useState(localStorage.getItem('auth')==='true');
 
     const body={correo: correo, pass: pass};    
     
@@ -28,12 +35,18 @@ const Login =()=>{
         axios.post('http://localhost:8080/login', body)
         .then(({data})=>{
             console.log(data);
+            localStorage.setItem('auth', 'true');
+            //setLogged(true);
         })
         .catch(({response})=>{
             console.log(response.data+" hola");
             setResponse(response.data);
+            localStorage.setItem('auth', 'false');
+            //setLogged(false);
         });
         event.preventDefault();
+        setLogged(localStorage.getItem('auth')==='true');
+        
     }
 
     return(
@@ -63,7 +76,8 @@ const Login =()=>{
                         <a href="#">¿Olvidaste tu contraseña?</a>
                         <button 
                             onClick={onSubmit}
-                        ><a><Link to="/dashboard">Iniciar Sesión</Link></a></button>
+                        ><a>{/* <Link to="/Configuracion"> */}Iniciar Sesión{/* </Link> */}</a></button>
+                        {logged && <Navigate to="/Configuracion"/> }
                     </form>
                 </div>
                 <div name="div-signup">
