@@ -14,13 +14,14 @@ const DashboardAdmin =()=>{
                 </div>
                 <div className="body">
                     <div className="left-grid">
-                        <BubbleAdmin/>
+                        <BubbleAdmin adminRegistrados="3" textoBubble="admin"/>
                     </div>
                     <div className="right-grid">
-                        <AdminItem/>
-                        <AdminItem/>
-                        <AdminItem/>
-                        <AdminItem/>
+                        <p id="admin">Administradores</p>
+                        <AdminItem nombre="Alejandro Martinez" correo="correodummie1@dum.com" celular="35523534523" casa="5545698745"/>
+                        <AdminItem nombre="Sergio Alejandro" correo="correodummie2@dum.com" celular="35523534523" casa="5545698745"/>
+                        <AdminItem nombre="Luis Ramirez" correo="correodummie3@dum.com" celular="35523534523" casa="5545698745"/>
+                        
                         <div className="version">
                             <span>Versión del Software: 1.0</span>
                         </div>

@@ -6,15 +6,14 @@ Comando para usar la base de datos
 >>.\mysql.exe -u root --password
 
 Las foreign key tiene un esquema diferente en MariaDB
-
-
 */
 
 create database if not exists nom035;
 
 use nom035;
 
-create table if not exists Usuario (idUsuario integer(10) unsigned auto_increment primary key,
+create table if not exists Usuario (
+	idUsuario integer(10) unsigned auto_increment primary key,
 	nombre varchar(50) not null default '',
 	domicilio varchar(200) not null default '',
 	numCelular varchar(10) unique not null default '',
@@ -23,21 +22,24 @@ create table if not exists Usuario (idUsuario integer(10) unsigned auto_incremen
 	contrasena varchar(255) not null default ''
 );
 
-create table if not exists Gestor (idGestor integer(10) unsigned auto_increment primary key,
+create table if not exists Gestor (
+	idGestor integer(10) unsigned auto_increment primary key,
 	idUsuario integer(10) unsigned,
 	foreign key (idUsuario) references Usuario(idUsuario) 
 	on delete cascade 
 	on update cascade
 );
 
-create table if not exists Administrador (idAdministrador integer(10) unsigned auto_increment primary key,
+create table if not exists Administrador (
+	idAdministrador integer(10) unsigned auto_increment primary key,
 	idUsuario integer(10) unsigned, 
 	foreign key (idUsuario) references Usuario(idUsuario) 
 	on delete cascade 
 	on update cascade
 );
 
-create table if not exists Empleado (idEmpleado integer(10) unsigned auto_increment primary key,
+create table if not exists Empleado (
+	idEmpleado integer(10) unsigned auto_increment primary key,
 	idUsuario integer(10) unsigned,
 	foreign key (idUsuario)references Usuario(idUsuario) 
 	on delete cascade 

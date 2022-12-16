@@ -64,25 +64,28 @@
     .user-options{
         display: block;
         position: absolute;
-        width: 10rem;
+        width: 12rem;
         height: 4rem;
         margin-top: 10px;
         border-radius: 10px;
         background-color: rgba(128, 128, 128, 0.219);
         ul{
             margin: 10px auto;
-            width: 90%;
+            width: 100%;
             //background-color: red;
             li{
                 &:hover{
-                    background-color: #FF4742;
+                    background-color: #4299E1;
+                    color: white;
                 }
                 cursor: pointer;
                 padding-left: 20px;
                 list-style-type: none;
                 display: flex;
-                padding-top: 10px;
+                padding-top: 7px;
+                padding-bottom: 7px;
                 img{
+                    
                     margin-right: 10px;
                     width: 20px;
                     height: auto;
@@ -102,5 +105,4 @@
     display: flex;
     //align-items: center;
 }
-
 

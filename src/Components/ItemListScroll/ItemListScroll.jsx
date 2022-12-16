@@ -1,15 +1,21 @@
 import React from "react";
 import './ItemListScroll.scss';
+import { Link } from "react-router-dom";
 
-const ItemListScroll =()=>{
+const ItemListScroll =(props)=>{
+    const{nombreNegocio, tipo}=props;
+    
     return(
-        <>
+        <>  
             <div className="item" name="blueItem">
-                <span className="text-item">Texto Dummie</span>
+               {/*  {tipo==="negocio"&&<Link to="/Negocio-vista"><span className="text-item" >{nombreNegocio}</span></Link>}
+                {tipo==="empleado"&&<Link to="/Empleado-vista"><span className="text-item" >{nombreNegocio}</span></Link>} */}
+                <Link to="/Negocio-vista"><span className="text-item" >{nombreNegocio}</span></Link>
+               {/*  <Link to="/Empleado-vista"><span className="text-item" >{nombreNegocio}</span></Link> */}
             </div>
-            <div className="item" name="whiteItem">
-                <span className="text-item">Texto Dummie</span>
-            </div>
+           {/*  <div className="item" name="whiteItem">
+                <span className="text-item-black">Corporativo computacion</span>
+            </div> */}
         </>
     );
 }

@@ -32,7 +32,7 @@ const Login =()=>{
 
     //lamada a la API
     const onSubmit=(event)=>{
-        axios.post('http://localhost:8080/login', body)
+         axios.post('http://localhost:8080/login', body)
         .then(({data})=>{
             console.log(data);
             localStorage.setItem('auth', 'true');
@@ -77,7 +77,7 @@ const Login =()=>{
                         <button 
                             onClick={onSubmit}
                         ><a>{/* <Link to="/Configuracion"> */}Iniciar Sesión{/* </Link> */}</a></button>
-                        {logged && <Navigate to="/Configuracion"/> }
+                        {logged && <Navigate to="/Dashboard"/> }
                     </form>
                 </div>
                 <div name="div-signup">

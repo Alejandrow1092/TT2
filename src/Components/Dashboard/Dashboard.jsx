@@ -5,26 +5,19 @@ import NavBar3 from "../../Common/NavBar3/NavBar3";
 import AdminItem from "../AdminItem/AdminItem";
 import BubbleAdmin from "../BubbleAdmin/BubbleAdmin";
 import DashboardAdmin from "./DashboardAdmin/DashboardAdmin";
-
+import DashboardGestor from "./DashboardGestor/DashboardGestor";
+import { useSelector, useDispatch } from "react-redux";
+import { setUser, setLogged } from "../../rootReducer";
 
 const Dashboard =()=>{
+    const user=useSelector((state)=>state.appTT.userType);
+    console.log(user)
+    
     return(
         <>
             <NavBar3/>
-            <DashboardAdmin/>
-            {/*<div className="top-header">
-                <div className="description-header">
-                    <p id="titulo">¿Tu empresa cumple la NOM-035?</p>
-                    <p id="subtitulo">
-                        Descubre si tu empresa cumple la norma mexicana
-                        y crea empleados felices.
-                    </p>
-                    <button>Comenzar Test</button>
-                </div>
-                <div className="img-header">
-                    <img src={headerImg} alt="" />
-                </div>
-            </div>*/}
+            {user==='Admin'&& <DashboardAdmin/>}
+            {user==='Gestor' && <DashboardGestor/>}
         </>
     );
 }

@@ -9,3 +9,4 @@ router.get("/", indexController.index);
 router.post("/login", indexController.login);
 
 module.exports = router;
+

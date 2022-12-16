@@ -36,7 +36,7 @@ const VistaNegocioGestor =()=>{
                         <div className="gestores">
                             <h1>Empleados</h1>
                         </div>
-                        <ListScroll></ListScroll>
+                        <ListScroll nombre="Luis Fernando"/>
                         <div>
                             <button>Agregar empleado</button>
                         </div>

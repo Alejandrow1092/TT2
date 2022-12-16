@@ -10,7 +10,8 @@ import Container from "./RootForm/Container/Container";
 import Dashboard from "./Components/Dashboard/Dashboard";
 import ListaNegocios from "./Components/ListaNegocios/ListaNegocios";
 import VistaNegocioGestor from "./Components/VistaNegocioGestor/VistaNegocioGestor"
-
+import VistaNegocioAdmin from "./Components/VistaNegocioAdmin/VistaNegocioAdmin"
+import EmpleadoInfo from "./Components/EmpleadoInfo/EmpleadoInfo";
 /* const router = createBrowserRouter([
   {
     path: "/",
@@ -27,10 +28,13 @@ function App() {
         <Route path="/login" element={<Login/>}/>
         <Route element={<ProtectedRoutes/>}>
           <Route path="/Negocios" element={<ListaNegocios/>}/>
+          <Route path="/Negocio-vista" element={<VistaNegocioAdmin/>}/>
+          <Route path="/Empleado-vista" element={<EmpleadoInfo/>}/>
           <Route path="/Configuracion" element={<Configuracion/>}/>
-          <Route path="/dashboard" element={<Dashboard/>}/>
+          <Route path="/Dashboard" element={<Dashboard/>}/>
+          <Route path="/VistaNegocioGest" element={<VistaNegocioGestor/>}/>
         </Route>
-        <Route path="/VistaNegocioGestor/VistaNegocioGestor" element={<VistaNegocioGestor/>}/>
+       
       </Routes>
     </div>
   );

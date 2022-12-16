@@ -1,16 +1,19 @@
 import React from "react";
 import './AdminItem.scss';
 
-const AdminItem =()=>{
+const AdminItem =(props)=>{
+
+    const{nombre, correo, celular, casa}=props;
+    
     return(
         <>
             <div className="item">
-                <span className="text-item">Texto Dummie</span>
+                <span className="text-item">{nombre}</span>
             </div>
             <div className="hidden-box">
-                <span>Correo electrónico</span>
-                <span>Número de celular</span>
-                <span>Número de casa</span>
+                <span>{correo}</span>
+                <span>{celular}</span>
+                <span>{casa}</span>
             </div>
         </>
     );

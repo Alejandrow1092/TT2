@@ -12,12 +12,13 @@ const VistaNegocioAdmin =()=>{
                 <div className="body">
                     <div className="left-grid">
                         <div className="gestores">
+                            <div className="title-line"></div>
                             <h1>Gestores</h1>
                         </div>
-                        <ListScroll></ListScroll>
+                        <ListScroll nombre="Alejandro Martinez"/>
                     </div>
                     <div className="right-grid">
-                        <NegocioInfo></NegocioInfo>
+                        <NegocioInfo/>
                     </div>
                 </div>
             </div>

@@ -1,14 +1,30 @@
 import React from "react";
 import './Configuracion.scss';
 import NavBar3 from "../../Common/NavBar3/NavBar3";
+import { useState } from "react";
+import { useSelector } from "react-redux";
 
 const Configuracion=()=>{
+    const [nombre, setNombre]=useState("Alejandro Martinez");
+    const [celular, setCelular]=useState("54532345");
+    const [celCasa, setCelCasa]=useState("12233455253");
+    const [correo, setCorreo]=useState("correodumie@dum.com");
+    const [pass, setPass]=useState("1234");
+    const [isAble, setIsAble]=useState(true);
+
+    const handleAble=()=>{
+        setIsAble(!isAble);
+    }
+
+    const user=useSelector((state)=>state.appTT.userType);
+    console.log(user);
     return(
         <>
         <NavBar3/>
         <div className="confi">
             <div className="perfil">
-                <p id="admin">Administrador</p>
+                {user==="Admin"&&<p id="admin">Administrador</p>}
+                {user==="Gestor"&&<p id="admin">Gestor</p>}
                 <figure>
                     <img src="https://picsum.photos/200" alt="perfil" />
                 </figure>
@@ -27,34 +43,35 @@ const Configuracion=()=>{
                     
                     <div className="form-fields">
                         <label for="nombre">Nombre: </label> <br />
-                        <input type="text" id="nombre"/> <br />
+                        <input type="text" id="nombre" onChange={(event)=>setNombre(event.target.value)} value={nombre} disabled={isAble}/> <br />
                         <div className="one-line-fields1">
                             <div>
                                 <label for="celular">Celular: </label> <br />
-                                <input type="text" id="celular"/> <br />
+                                <input type="text" id="celular" value={celular} onChange={(event)=>setCelular(event.target.value)} disabled={isAble}/> <br />
                             </div>
                             <div>
                                 <label for="tel-casa">Tel Casa: </label> <br />
-                                <input type="text" id="tel-casa"/> <br />
+                                <input type="text" id="tel-casa" onChange={(event)=>setCelCasa(event.target.value)} value={celCasa} disabled={isAble}/> <br />
                             </div>
                         </div>
 
                         <div className="one-line-fields2">
                             <div>
                                 <label for="correo">Correo electronico: </label> <br />
-                                <input type="text" id="correo"/> <br />
+                                <input type="text" id="correo" onChange={(event)=>setCorreo(event.target.value)} value={correo} disabled={isAble}/> <br />
                             </div>
                             <div>
                                 <label for="contra">Contraseña</label> <br />
-                                <input type="text" id="contra"/> <br />
+                                <input type="password" id="contra" onChange={(event)=>setPass(event.target.value)} value={pass} disabled={isAble}/> <br />
                             </div>
                         </div>
                        
                     </div>
                     
                     <div className="btn-formulario">
-                        <button>
-                            <p>Guardar</p>
+                        <button onClick={handleAble}>
+                        {isAble==true&&<p>Editar</p>}
+                        {isAble==false&&<p>Guardar</p>}
                         </button>
                     </div>
                    

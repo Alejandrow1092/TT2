@@ -6,7 +6,7 @@ import exit_img from '../../asets/exit.png';
 import { useState } from "react";
 
 const NavBar3=()=>{
-    const [active, setActive]=useState(false);
+    const [active, setActive]= useState(false);
     const [logged, setLogged] = useState(true);
 
     const handleUserMenu=()=>{
@@ -23,7 +23,7 @@ const NavBar3=()=>{
     return(
         <nav className="navigation">
             <div className="icon">
-                <a id="" href="">NavBar X</a>
+                <a><Link to="/Dashboard">NOM035</Link></a>
             </div>
             
             <div className="btns">
@@ -56,3 +56,6 @@ const NavBar3=()=>{
 }
 
 export default NavBar3;
+
+
+

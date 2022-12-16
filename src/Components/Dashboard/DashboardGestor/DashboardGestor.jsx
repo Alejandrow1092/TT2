@@ -21,12 +21,13 @@ const DashboardGestor =()=>{
                         <ButtonInicioGestor/>
                     </div>
                 </div>
-                <div className="postSpace">
+                
+            </div>
+            <div className="postSpace">
                     <div className="centerSpace">
                         <Post/>
                         <Post/>
                     </div>
-                </div>
             </div>
         </>
     );

@@ -1,12 +1,16 @@
 import React from "react";
 import './BubbleAdmin.scss';
 
-const BubbleAdmin =()=>{
+const BubbleAdmin =(props)=>{
+    const {adminRegistrados, textoBubble}=props;
+
     return(
         <>
             <div className="bubble">
-                <span name="span-yellow">#</span>
-                <span name="span-white">Administradores registrados</span>
+                <span name="span-yellow">{adminRegistrados}</span>
+                {textoBubble==="admin"&& <span name="span-white">Administradores <br/> registrados</span>}
+                {textoBubble==="negocios"&& <span name="span-white">Negocios estan <br/> utilizando el sisitema</span>}
+                
             </div>
         </>
     );

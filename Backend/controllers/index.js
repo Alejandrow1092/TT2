@@ -7,6 +7,63 @@ const index = (req, res)=>{
     })
 }
 
+const searchUsertype=({idUsuario})=>{
+    console.log(idUsuario);
+    let userType="a";
+
+    connection.query('Select * from administrador where idusuario=?',idUsuario, (error, results)=>{
+        if(error){ 
+            //res.status(500).send(error);
+        }
+        else{
+            if(results.length>0){
+                console.log("admin")
+                console.log(results[0]);
+                userType="Admin";
+                //return "Admin";
+                //searchUsertype(results[0]);
+                //res.status(200).send(results[0]);
+            }
+            else{
+                connection.query('Select * from gestor where idusuario=?',idUsuario, (error, results)=>{
+                    if(error){ 
+                        //res.status(500).send(error);
+                    }
+                    else{
+                        if(results.length>0){
+                            console.log("gestor")
+                            console.log(results[0]);
+                            userType="Gestor";
+                            /* return "Gestor"; */
+                            //searchUsertype(results[0]);
+                            //res.status(200).send(results[0]);
+                        }
+                        else{
+                            connection.query('Select * from empleado where idusuario=?',idUsuario, (error, results)=>{
+                                if(error){ 
+                                    //res.status(500).send(error);
+                                }
+                                else{
+                                    if(results.length>0){
+                                        console.log("Empleado")
+                                        console.log(results[0]);
+                                        userType="Empleado";
+                                        //return "Empleado";
+                                    }
+                                }
+                            });
+                        }
+                    }
+                });
+                
+                
+            }
+        }
+    });
+
+    return userType;
+}
+
 const login=(req, res)=>{
     const { correo, pass }=req.body;
     const values = [correo, pass];
@@ -18,7 +75,14 @@ const login=(req, res)=>{
         }
         else{
             if(results.length>0){
-                console.log(results);
+                console.log(results[0]);
+                //let userType= searchUsertype(results[0]);
+                console.log(searchUsertype(results[0]))
+                //console.log('usertype: '+userType)
+                const resultSet1=results[0];
+                //const resultSet={resultSet1, userType};
+
+                //console.log(resultSet)
                 res.status(200).send(results[0]);
             }
             else{
