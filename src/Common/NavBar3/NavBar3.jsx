@@ -31,7 +31,7 @@ const NavBar3=()=>{
                         <Link to="/Negocios"><li>Negocios</li></Link>
                         <li>Sistema</li>
                         <Link to='/Configuracion' className="link"><li>Configuracion</li></Link>
-                        <Link to='/Formulario' className="link"><li>Formulario</li></Link>
+                        <Link to='/ProgramarForm' className="link"><li>Formulario</li></Link>
                     </ul>
             </div>
            
