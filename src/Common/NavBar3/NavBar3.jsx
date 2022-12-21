@@ -37,6 +37,7 @@ const NavBar3=()=>{
                         {user=="Gestor"&&
                         <Link to='/Formulario' className="link"><li>Formulario</li></Link>
                         }
+                        <Link to='/ProgramarForm' className="link"><li>Formulario</li></Link>
                     </ul>
             </div>
            
