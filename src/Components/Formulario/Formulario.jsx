@@ -8,7 +8,7 @@ const Formulario=()=>{
         <>  
             <NavBar3/>
             <div className="container-seccion">
-
+                <span>Para responder las preguntas siguientes considere las condiciones ambientales de su centro de trabajo durante este semestre.</span>
             </div>
             <div className="container-formulario">
                 <Pregunta/>
