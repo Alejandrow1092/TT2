@@ -1,0 +1,35 @@
+.container-color-pregunta{
+    display: flex;
+    align-items: center;
+
+    .container-color{
+        background-color: #F16482;
+        width: 5px;
+        height: 100px;
+    }
+
+
+    .container-pregunta{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        border-radius: 20px;
+        max-width: 1200px;
+        margin-bottom: 25px;
+        background-color: #F6F6FA;
+    
+    
+        .pregunta{
+            margin: 10px;
+        }
+    
+        .opcion{
+            display: flex;
+            margin: 0px 0px 5px 10px;
+    
+            span{
+                margin-left: 2px;
+            }
+        }
+    }
+}
