@@ -7,7 +7,8 @@ const AdminItem =(props)=>{
     
     return(
         <>
-            <div className="item">
+            <div className="item-admin">
+                <p className="list-number">1</p>
                 <span className="text-item">{nombre}</span>
             </div>
             <div className="hidden-box">

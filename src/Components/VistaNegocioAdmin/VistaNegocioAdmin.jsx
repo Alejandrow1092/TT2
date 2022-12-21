@@ -3,25 +3,32 @@ import './VistaNegocioAdmin.scss';
 import NavBar3 from "../../Common/NavBar3/NavBar3";
 import NegocioInfo from "../NegocioInfo/NegocioInfo";
 import ListScroll from "../ListScroll/ListScroll";
+import Footer from "../../Common/Footer/Footer";
+import ButtonX from "../../DesingComp/ButtonX/Buttonx";
+import AddGestor from "./AddGestor/AddGestor";
+
 
 const VistaNegocioAdmin =()=>{
     return(
         <>
             <NavBar3/>
-            <div className="container">
-                <div className="body">
+            <div className="container-vista-admin">
+                <div className="body1">
                     <div className="left-grid">
                         <div className="gestores">
                             <div className="title-line"></div>
-                            <h1>Gestores</h1>
+                            <p>Gestores</p>
                         </div>
-                        <ListScroll nombre="Alejandro Martinez"/>
+                        <ListScroll className="lista-gestores" nombre="Alejandro Martinez"/>
+                        <ButtonX className="btn" title="Agregar gestores"/>
                     </div>
                     <div className="right-grid">
-                        <NegocioInfo/>
+                       {/*  <NegocioInfo/> */}
+                        <AddGestor/>
                     </div>
                 </div>
             </div>
+            <Footer/>
         </>
     );
 }

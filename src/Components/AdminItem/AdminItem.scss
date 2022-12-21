@@ -1,16 +1,19 @@
-.item{
-    padding-left: 15%;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    border-radius: 1em;
+.item-admin{
+    padding-left: 10%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-radius: 40px;
     background: #4299E1;
     cursor: pointer;
     width: 100%;
-
+    font-size: 1.4rem;
     font-style: normal;
-    font-weight: bolder;
+    //font-weight: bolder;
+    display: flex;
+    margin-top: 0.3rem;
+    
 
-    :hover{
+    &:hover{
         opacity: 0.8;
     }
     
@@ -19,6 +22,16 @@
         align-items: center;
         text-align: center;
         color: #F5F5F5;
+    }
+
+    .list-number{
+        margin-right: 10px;
+        padding: 4px 7px;
+        color: white;
+        background-color: #eb224d;
+        text-align: center;
+        border-radius: 50%;
+        font-size: 1.1rem;
     }
 }
 
@@ -35,7 +48,7 @@
     }
 }
 
-.item:hover + .hidden-box{
+.item-admin:hover + .hidden-box{
     max-height: 100%;
     span{
         display: block;

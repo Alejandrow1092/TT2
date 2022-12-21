@@ -8,6 +8,7 @@ import DashboardAdmin from "./DashboardAdmin/DashboardAdmin";
 import DashboardGestor from "./DashboardGestor/DashboardGestor";
 import { useSelector, useDispatch } from "react-redux";
 import { setUser, setLogged } from "../../rootReducer";
+import Footer from "../../Common/Footer/Footer";
 
 const Dashboard =()=>{
     const user=useSelector((state)=>state.appTT.userType);
@@ -15,9 +16,10 @@ const Dashboard =()=>{
     
     return(
         <>
-            <NavBar3/>
-            {user==='Admin'&& <DashboardAdmin/>}
+            <NavBar3 />
+            {user==='Admin'&& <DashboardAdmin user={"Alejandro"}/>}
             {user==='Gestor' && <DashboardGestor/>}
+            <Footer />
         </>
     );
 }

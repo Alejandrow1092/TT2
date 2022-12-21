@@ -1,10 +1,13 @@
 .confi{
     display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
 }
 
 .perfil{
-    //background-color: red;
-    width: 25%;
+    background-color: rgba(84, 153, 255, 0.479);
+    width: 22rem;
     height: 500px;
     display: flex;
     align-items: center;
@@ -23,6 +26,16 @@
     .edit-btn{
         margin-top: 40px;
         font-size: 1rem;
+        background-color: #4299E1;
+        border-style: none;
+        width: 10rem;
+        height: 3.1rem;
+        color: white;
+        border-radius: 30px;
+        &:hover{
+            background-color: #4299e1b9;
+            cursor: pointer;
+        }
     }
     figure, img{
         border-radius: 50%;
@@ -47,8 +60,9 @@
         font-size: 1.5rem;
     }
     .form-fields{
-        //background-color: red;
+        background-color: rgba(128, 128, 128, 0.247);
         width: 100%;
+        padding: 50px 30px;
         //height: 200px;
        /*  display: flex;
         flex-wrap: wrap; */
@@ -62,7 +76,7 @@
             height: 2rem;
             border-radius: 5px;
             border-style: none;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.377);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.37);
             font-size: 1.1rem;
             padding: 15px;
            
@@ -106,6 +120,11 @@
             border-style: none;
             border-radius: 10px;
             font-size: 1rem;
+            &:hover{
+                background-color: #eb224d;
+                cursor: pointer;
+            }
         }
+        
     }
 }

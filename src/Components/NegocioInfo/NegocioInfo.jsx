@@ -17,24 +17,25 @@ const NegocioInfo =()=>{
             <div className="contenedorInfo">
                 <div className="title-line"></div>
                 <div className="nombreNegocio">
-                    <h1>Negocio 1</h1>
+                    <p>Negocio 1</p>
                 </div>
                 <div className="camposInfo">
-                    <span className="input">Denominación o razón social</span>
+                    <span className="input-title">Denominación o razón social</span>
                     <input className="input" onChange={(event)=>setDenominacion(event.target.value)} value={denominacion} disabled={isAble}/>
-                    <span>Domicilio</span>
+                    <span className="input-title">Domicilio</span>
                     <input className="input" onChange={(event)=>setDomicilio(event.target.value)} value={domicilio} disabled={isAble}/>
-                    <span className="input">Actividad principal</span>
+                    <span className="input-title">Actividad principal</span>
                     <select className="input" value={actividadP}  disabled={isAble} onChange={(event)=>setActividadP(event.target.value)}>
                         <option value="Alimentos">Alimentos</option>
                         <option value="Comida">Comida</option>
                     </select>
-                </div>
-                <div className="editar">
+                    <div className="editar">
                     <button className="editarButton" onClick={handleAble}>
                         {isAble==true&&<p>Editar</p>}
                         {isAble==false&&<p>Guardar</p>}
                     </button>
+                </div>
+
                 </div>
             </div>
         </>

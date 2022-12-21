@@ -7,8 +7,8 @@ import Post from "../../Post/Post";
 const DashboardGestor =()=>{
     return(
         <>
-            <div className="container">
-                <div className="body">
+            <div className="container-gestor">
+                <div className="body-gestor">
                     <div className="left-grid">
                         <div className="header">
                             <span>¡Bienvenido!</span>
@@ -21,7 +21,6 @@ const DashboardGestor =()=>{
                         <ButtonInicioGestor/>
                     </div>
                 </div>
-                
             </div>
             <div className="postSpace">
                     <div className="centerSpace">

@@ -1,20 +1,26 @@
 .contenedorInfo{
-    width: 100%;
+    //width: 100%;
     font-family: "San Seriff";
+    //background-color: #C5C5C5;
+    //padding: 0px 50px;
 
-    .nombreNegocio{
-        font-weight: 500;
-        padding-right: 50%;
-        font-size: 2em;
-        margin-bottom: 5%;
+    .nombreNegocio p{
+        //font-weight: 500;
+        //padding-right: 50%;
+        //font-size: 2em;
+        //font-size: 2rem;
+        //margin-bottom: 5%;
     }
 }
 
 .camposInfo{
-    width: 100%;
-    font-size: 2em;
+    padding: 0px 50px;
+    padding-top: 30px;
+    width: 40rem;
+    background-color: #C5C5C5;
+    //margin-top: 90px;
     .input{
-        font-size: 1em;
+        font-size: 1.2rem;
         width: 100%;
         display: block;
         margin-bottom: 1%;
@@ -22,8 +28,24 @@
 }
 
 .editarButton{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-style: none;
+    text-align: center;
+    width: 150px;
+    height: 40px;
+    background-color: #1e86db;
+    &:hover{
+        cursor: pointer;
+    }
     p{
         color: white !important;
         font-size: 1rem;
+        border-style: none;
     }
+}
+
+.input-title{
+    font-size: 1.1rem;
+    margin-bottom: 10px;
 }

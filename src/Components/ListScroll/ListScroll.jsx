@@ -9,6 +9,7 @@ const ListScroll =(props)=>{
         <>
             <div className="list">
                 <ItemListScroll nombreNegocio={nombre} tipo={tipo}/>
+                <ItemListScroll nombreNegocio={nombre} tipo={tipo}/>
               {/*   <ItemListScroll/>
                 <ItemListScroll/>
                 <ItemListScroll/>

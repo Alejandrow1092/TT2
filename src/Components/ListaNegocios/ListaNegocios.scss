@@ -1,44 +1,71 @@
-.container{
-    display: grid;
-    grid-template-rows: 15vh 75vh;
-    height: 90vh;
+.container-negocio{
+    //display: grid;
+    //grid-template-rows: 15vh 75vh;
+    //height: 90vh;
+    //background-color: purple;
 }
 
 .header{
-    grid-row: 1;
+    //grid-row: 1;
     font-size: 3em;
-    text-align: center;
+    text-align: left;
+    margin-left: 60px;
+    margin-top: 20px;
 }
 
-.body{
-    height: 80%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-row: 2;
 
+
+
+
+
+.body-negocio{
+    display: flex;
+    //
+    //background-color: rgba(137, 43, 226, 0.493);
+    align-items: center;
+    justify-content: space-evenly;
+    //height: 80%;
+    //display: grid;
+    //grid-template-columns: 1fr 1fr;
+    //grid-row: 2;
+    //background-color: red;
     .left-grid{
-        padding-left: 10%;
-        padding-right: 10%;
-        height: 50%;
+        //padding-left: 10%;
+        //padding-right: 10%;
+        padding: 5px 50px;
+        //height: 50%;
+        width: 32rem;
+        background-color: rgba(128, 128, 128, 0.247);
         button{
             display: block;
-            margin-top: 5%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            //margin-top: 5%;
+            //margin-bottom: 50px;
             border: none;
-            border-radius: 1vw;
-            font-size: 0.8vw;
-            font-weight: bold;
-        
+            font-size: 1.2rem;
+            //border-radius: 1vw;
+            border-radius: 20px;
+            //font-size: 1rem;
+            //font-weight: bold;
             width: 15rem;
-                height: 2.5rem;
-                background-color: #6495ED;
-                color: white;
+            height: 2.5rem;
+            background-color: #6495ED;
+            color: white;
+            &:hover{
+                background-color: #eb224d;
+                cursor: pointer;
+            }
         }
     }
 
     .right-grid{
+        border: none;
         height: 70%;
-        padding-left: 10%;
-        padding-right: 10%;
+        width: 25rem;
+        //padding-left: 10%;
+        //padding-right: 10%;
+        //background-color: red;
     }
 
     .version{

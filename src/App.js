@@ -12,6 +12,9 @@ import ListaNegocios from "./Components/ListaNegocios/ListaNegocios";
 import VistaNegocioGestor from "./Components/VistaNegocioGestor/VistaNegocioGestor"
 import VistaNegocioAdmin from "./Components/VistaNegocioAdmin/VistaNegocioAdmin"
 import EmpleadoInfo from "./Components/EmpleadoInfo/EmpleadoInfo";
+import Formulario from "./Components/Formulario/Formulario";
+
+
 /* const router = createBrowserRouter([
   {
     path: "/",
@@ -33,6 +36,7 @@ function App() {
           <Route path="/Configuracion" element={<Configuracion/>}/>
           <Route path="/Dashboard" element={<Dashboard/>}/>
           <Route path="/VistaNegocioGest" element={<VistaNegocioGestor/>}/>
+          <Route path="/Formulario" element={<Formulario/>}/>
         </Route>
        
       </Routes>

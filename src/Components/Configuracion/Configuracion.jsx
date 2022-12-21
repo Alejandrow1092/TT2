@@ -3,6 +3,7 @@ import './Configuracion.scss';
 import NavBar3 from "../../Common/NavBar3/NavBar3";
 import { useState } from "react";
 import { useSelector } from "react-redux";
+import Footer from "../../Common/Footer/Footer"
 
 const Configuracion=()=>{
     const [nombre, setNombre]=useState("Alejandro Martinez");
@@ -65,19 +66,20 @@ const Configuracion=()=>{
                                 <input type="password" id="contra" onChange={(event)=>setPass(event.target.value)} value={pass} disabled={isAble}/> <br />
                             </div>
                         </div>
-                       
-                    </div>
-                    
-                    <div className="btn-formulario">
+                        <div className="btn-formulario">
                         <button onClick={handleAble}>
                         {isAble==true&&<p>Editar</p>}
                         {isAble==false&&<p>Guardar</p>}
                         </button>
                     </div>
+                    </div>
+                    
+                    
                    
                 </div>
             </div>
         </div>
+        <Footer/>
         </>
     );
 }

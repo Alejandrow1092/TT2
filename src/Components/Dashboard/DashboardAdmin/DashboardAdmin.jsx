@@ -5,14 +5,16 @@ import NavBar3 from "../../../Common/NavBar3/NavBar3";
 import AdminItem from "../../AdminItem/AdminItem";
 import BubbleAdmin from "../../BubbleAdmin/BubbleAdmin";
 
-const DashboardAdmin =()=>{
+const DashboardAdmin = (props)=>{
+    const {user}=props;
+
     return(
         <>
             <div className="container">
-                <div className="header">
-                    <span>¡Bienvenido!</span>
+                <div className="dash-header">
+                    <span>¡Bienvenido {user}!</span>
                 </div>
-                <div className="body">
+                <div className="body-admin">
                     <div className="left-grid">
                         <BubbleAdmin adminRegistrados="3" textoBubble="admin"/>
                     </div>

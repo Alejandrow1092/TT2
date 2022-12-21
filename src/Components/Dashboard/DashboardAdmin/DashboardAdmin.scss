@@ -1,40 +1,60 @@
 .container{
-    display: grid;
-    grid-template-rows: 15vh 75vh;
-    height: 90vh;
+    //display: grid;
+    //grid-template-rows: 15vh 75vh;
+    //height: 90vh;
+    //background-color: red;
+    width: 100%;
 }
 
-.header{
-    grid-row: 1;
-    font-size: 3em;
-    text-align: center;
+.dash-header{
+    //grid-row: 1;
+    font-size: 2.6rem;
+    text-align: left;
+    margin-left: 90px;
+    margin-top: 30px;
+    font-weight: bold
 }
 
-.body{
-    //background-color: blue;
-    height: 85%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-row: 2;
-
+.body-admin{
+    //background-color: rgba(100, 161, 196, 0.336);
+    //height: 85%;
+    //display: grid;
+    //grid-template-columns: 1fr 1fr;
+    //grid-row: 2;
+    //margin-top: -100px;
+    display: flex;
+    //background-color: red;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    
     .right-grid{
-        grid-row: 1;
-        padding-left: 10%;
-        padding-right: 10%;
-        height: auto;
+        //grid-row: 1;
+        //padding-left: 6rem;
+        //padding-right: 6rem;
+        //height: auto;
+        border-radius: 20px;
+        padding: 3rem 6rem;
+        width: 58rem;
+        background-color: #C5C5C5;
     }
+    
+    
 
     .left-grid{
-        //background-color: red;
-        height: 100%;
-        grid-row: 1;
-        padding-left: 10%;
-        padding-right: 10%;
+        width: 25rem;
+        //background-color: blue;
+        //height: 100%;
+        //grid-row: 1;
+        //padding-left: 10%;
+        //padding-right: 10%;
     }
 
     .version{
-        margin-top: 10%;
+        margin-top: 5rem;
+        //background-color: lime;
         font-size: 1em;
+        font-style: italic;
     }
 }
 

@@ -22,19 +22,22 @@ const NavBar3=()=>{
 
     return(
         <nav className="navigation">
-            <div className="icon">
-                <a><Link to="/Dashboard">NOM035</Link></a>
-            </div>
-            
-            <div className="btns">
-                <div className="nav-bar">
+            <div className="nav-bar">
+                    <div className="icon">
+                        <a><Link to="/Dashboard">NOMX</Link></a>
+                    </div>
                     <ul>
                         <Link to="/Dashboard"><li>Inicio</li></Link>
                         <Link to="/Negocios"><li>Negocios</li></Link>
                         <li>Sistema</li>
-                        <Link to='/Configuracion'><li>Configuracion</li></Link>
+                        <Link to='/Configuracion' className="link"><li>Configuracion</li></Link>
+                        <Link to='/Formulario' className="link"><li>Formulario</li></Link>
                     </ul>
-                </div>
+            </div>
+           
+            
+            <div className="btns">
+                
                 <div>
                     <button className="user-btn" onClick={handleUserMenu}>
                         <p>Alejandro M</p>
