@@ -1,0 +1,80 @@
+.form-gestor{
+    background-color: rgba(99, 99, 99, 0.233);
+    width: 40rem;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    h4{
+        margin-top: 30px;
+        margin-bottom: -10px;
+    }
+    .field-sec{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        //background-color: red;
+    }
+    //elementos que estan agrupados
+    .group{
+        display: flex;
+        justify-content: space-between;
+        //background-color: red;
+        width: 17.4rem;
+    }
+
+    .group-1{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .genera-con{
+            background-color: black;
+            color: white;
+            //width: 10rem;
+            padding: 10px 20px;
+            height: 40px;
+            margin: 30px;
+            font-size: 1rem;
+            border-style: none;
+            &:hover{
+                background-color: rgb(58, 58, 58);
+                cursor: pointer;
+                border-style: none;
+            }
+        }
+        //background-color: red;
+    }
+
+    .btn-bottom{
+        //padding: 0px 10px;
+        width: 100%;
+        //background-color: red;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+}
+
+//Afecta directamente al component de field
+.fieldx{
+    //background-color: red;
+    margin-top: 25px !important;
+    input{
+        width: 17.4rem !important;
+        //margin-top: 10px;
+        //background-color: blue;
+    }
+}
+
+//le quita espacio al botton
+.group2{
+    margin-top: -10px !important;
+}
+
+//afecta solo a los field con la clase de num-gestor
+.num-gestor{
+    input{
+        width: 8.2rem !important;
+    }
+}

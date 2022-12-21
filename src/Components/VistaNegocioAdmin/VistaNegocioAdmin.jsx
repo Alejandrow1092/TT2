@@ -5,7 +5,7 @@ import NegocioInfo from "../NegocioInfo/NegocioInfo";
 import ListScroll from "../ListScroll/ListScroll";
 import Footer from "../../Common/Footer/Footer";
 import ButtonX from "../../DesingComp/ButtonX/Buttonx";
-import AddGestor from "./AddGestor/AddGestor";
+import AddGestor from "../../Common/AddGestor/AddGestor";
 
 
 const VistaNegocioAdmin =()=>{
@@ -24,7 +24,7 @@ const VistaNegocioAdmin =()=>{
                     </div>
                     <div className="right-grid">
                        {/*  <NegocioInfo/> */}
-                        <AddGestor/>
+                        <AddGestor userForm="creaGestor"/>
                     </div>
                 </div>
             </div>

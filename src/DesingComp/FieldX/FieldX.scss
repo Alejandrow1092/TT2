@@ -3,11 +3,15 @@
 
     .clear-input{
         position: relative;
-        top: 23px;
+        top: 25px;
+        //right: -18.5rem;
+        right: -90%;
+        font-family:Arial, Helvetica, sans-serif;
     }
     
     label{
-        font-size: 1rem;
+        font-size: 0.9rem;
+        margin-left: -5px;
     }
     input{
         border-style: none;

@@ -83,6 +83,10 @@
             &:focus{
                 border-style: none;
             }
+            &:disabled{
+                background-color: white;
+                cursor: not-allowed;
+            }
         }
         .one-line-fields1{
             //background-color: blue;

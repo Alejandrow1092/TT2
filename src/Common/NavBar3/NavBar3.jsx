@@ -4,10 +4,13 @@ import profile_img from '../../asets/profile-user.png';
 import { Link, Navigate } from "react-router-dom";
 import exit_img from '../../asets/exit.png';
 import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
 const NavBar3=()=>{
     const [active, setActive]= useState(false);
     const [logged, setLogged] = useState(true);
+
+    const user=useSelector((state)=>state.appTT.userType);
 
     const handleUserMenu=()=>{
         setActive(!active);
@@ -29,9 +32,11 @@ const NavBar3=()=>{
                     <ul>
                         <Link to="/Dashboard"><li>Inicio</li></Link>
                         <Link to="/Negocios"><li>Negocios</li></Link>
-                        <li>Sistema</li>
+                       {/*  <li>Sistema</li> */}
                         <Link to='/Configuracion' className="link"><li>Configuracion</li></Link>
+                        {user=="Gestor"&&
                         <Link to='/Formulario' className="link"><li>Formulario</li></Link>
+                        }
                     </ul>
             </div>
            

@@ -6,6 +6,7 @@ import ListScroll from "../ListScroll/ListScroll";
 import { useDispatch, useSelector } from "react-redux";
 import VistaNegocioGestor from "../VistaNegocioGestor/VistaNegocioGestor";
 import Footer from "../../Common/Footer/Footer"
+import AddGestor from "../../Common/AddGestor/AddGestor";
 
 const ListaNegocios =()=>{
     const user=useSelector((state)=>state.appTT.userType);
@@ -28,7 +29,8 @@ const ListaNegocios =()=>{
                         </div>
                     </div>
                     <div className="right-grid">
-                        <BubbleAdmin adminRegistrados="2" textoBubble="negocios"/>
+                       {/*  <BubbleAdmin adminRegistrados="2" textoBubble="negocios"/> */}
+                        <AddGestor userForm="creaNegocio"/>
                     </div>
                 </div>
             </div>
