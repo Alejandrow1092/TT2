@@ -2,11 +2,11 @@ import React from "react";
 import "./ButtonX.scss"
 
 const ButtonX=(props)=>{
-    const {title}=props;
+    const {title, fun, state}=props;
 
     return(
         <>
-            <button className="btn-x">
+            <button className="btn-x" onClick={()=>fun(state)}>
                 <p>{title}</p>
             </button>
         </>

@@ -7,10 +7,24 @@ import { useDispatch, useSelector } from "react-redux";
 import VistaNegocioGestor from "../VistaNegocioGestor/VistaNegocioGestor";
 import Footer from "../../Common/Footer/Footer"
 import AddGestor from "../../Common/AddGestor/AddGestor";
+import { useState } from "react";
 
 const ListaNegocios =()=>{
     const user=useSelector((state)=>state.appTT.userType);
-    console.log(user)
+    const [show, setShow]=useState("burble");
+
+    const handleShow=()=>{
+        if(show==="burble"){
+            setShow("formulario");
+        }
+        if(show==="formulario"){
+            setShow("burble");
+        }
+    }
+
+    console.log(show)
+    
+    //console.log(user)
     return(
         <>
 
@@ -25,12 +39,16 @@ const ListaNegocios =()=>{
                         <ListScroll nombre="Juguitos y Refrescos Felices"/>
                        {/*  <ListScroll nombre="Alejandro Martinez"/> */}
                         <div>
-                            <button>Agregar Negocio</button>
+                            <button onClick={handleShow}>Agregar Negocio</button>
                         </div>
                     </div>
                     <div className="right-grid">
-                       {/*  <BubbleAdmin adminRegistrados="2" textoBubble="negocios"/> */}
-                        <AddGestor userForm="creaNegocio"/>
+                        {show==="burble"&&
+                            <BubbleAdmin adminRegistrados="2" textoBubble="negocios"/>
+                        }
+                        {show==="formulario"&&
+                            <AddGestor userForm="creaNegocio"/>
+                        }
                     </div>
                 </div>
             </div>

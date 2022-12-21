@@ -1,9 +1,11 @@
 footer{
     background-color: rgb(180, 177, 177);
+    width: 100%;
     display: flex;
     color: black;
     position: absolute;
-    bottom: 0;
+    min-height: 30px;
+    overflow: hidden;
     .footer-sec1{
         color:rgb(0, 0, 0);
         height: 14rem;

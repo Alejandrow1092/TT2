@@ -3,6 +3,7 @@ import headerImg from "../../../asets/employVector.png"
 import './DashboardGestor.scss';
 import ButtonInicioGestor from "../../ButtonInicioGestor/ButtonInicioGestor";
 import Post from "../../Post/Post";
+import PostHeader1 from "../../Dashboard/DashboardGestor/PostHeader1/PostHeader1";
 
 const DashboardGestor =()=>{
     return(
@@ -11,7 +12,7 @@ const DashboardGestor =()=>{
                 <div className="body-gestor">
                     <div className="left-grid">
                         <div className="header">
-                            <span>¡Bienvenido!</span>
+                            <span>¡Bienvenido Alejandro!</span>
                         </div>
                         <div>
                             <img src={headerImg} alt="employ" />
@@ -21,6 +22,9 @@ const DashboardGestor =()=>{
                         <ButtonInicioGestor/>
                     </div>
                 </div>
+            </div>
+            <div className="post-header-1">
+                <PostHeader1/>
             </div>
             <div className="postSpace">
                     <div className="centerSpace">

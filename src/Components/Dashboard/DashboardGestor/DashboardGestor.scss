@@ -1,6 +1,6 @@
 .container-gestor{
     display: grid;
-    height: 90vh;
+    //height: 90vh;
 }
 
 .body-gestor{
@@ -42,4 +42,8 @@
         background-color: #E6E6E6;
         border-radius: 1em;
     }
+}
+
+.post-header-1{
+    margin-bottom: 60px;
 }

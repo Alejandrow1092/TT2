@@ -6,9 +6,21 @@ import ListScroll from "../ListScroll/ListScroll";
 import Footer from "../../Common/Footer/Footer";
 import ButtonX from "../../DesingComp/ButtonX/Buttonx";
 import AddGestor from "../../Common/AddGestor/AddGestor";
-
+import { useState } from "react";
 
 const VistaNegocioAdmin =()=>{
+    const [show, setShow]=useState("negocioInfo");
+
+    const handleShow=(state)=>{
+        console.log(state)
+        if(state==="negocioInfo"){
+            setShow("formulario");
+        }
+        if(state==="formulario"){
+            setShow("negocioInfo");
+        }
+    }
+    
     return(
         <>
             <NavBar3/>
@@ -20,11 +32,16 @@ const VistaNegocioAdmin =()=>{
                             <p>Gestores</p>
                         </div>
                         <ListScroll className="lista-gestores" nombre="Alejandro Martinez"/>
-                        <ButtonX className="btn" title="Agregar gestores"/>
+                        <ButtonX className="btn" title="Agregar gestores" fun={handleShow} state={show}/>
                     </div>
                     <div className="right-grid">
-                       {/*  <NegocioInfo/> */}
-                        <AddGestor userForm="creaGestor"/>
+                        {show==="negocioInfo"&&
+                            <NegocioInfo/>
+                        }
+                        {show==="formulario"&&
+                            <AddGestor userForm="creaGestor"/>
+                        }
+                      
                     </div>
                 </div>
             </div>
