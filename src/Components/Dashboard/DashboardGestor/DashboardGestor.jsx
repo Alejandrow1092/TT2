@@ -1,8 +1,8 @@
 import React from "react";
 import headerImg from "../../../asets/employVector.png"
 import './DashboardGestor.scss';
-import ButtonInicioGestor from "../../ButtonInicioGestor/ButtonInicioGestor";
-import Post from "../../Post/Post";
+import ButtonInicioGestor from "./ButtonInicioGestor/ButtonInicioGestor";
+import Post from "./Post/Post";
 import PostHeader1 from "../../Dashboard/DashboardGestor/PostHeader1/PostHeader1";
 
 const DashboardGestor =()=>{
@@ -23,14 +23,17 @@ const DashboardGestor =()=>{
                     </div>
                 </div>
             </div>
-            <div className="post-header-1">
-                <PostHeader1/>
-            </div>
-            <div className="postSpace">
-                    <div className="centerSpace">
-                        <Post/>
-                        <Post/>
-                    </div>
+            <div className="post-section">
+                <div className="post-header-1">
+                    <PostHeader1/>
+                </div>
+                <div className="postSpace">
+                        <div className="centerSpace">
+                            <Post/>
+                            <Post/>
+                            <Post/>
+                        </div>
+                </div>
             </div>
         </>
     );

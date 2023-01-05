@@ -1,6 +1,6 @@
 import React from "react";
 import './PostCommentBox.scss'
-import AvatarImgM from './../../../asets/avatarDummie1.png';
+import AvatarImgM from '../../../../../asets/avatarDummie1.png';
 
 const PostCommentBox =()=>{
     return(

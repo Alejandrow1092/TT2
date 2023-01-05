@@ -1,0 +1,35 @@
+.title{
+    display: block;
+    width: 100%;
+    font-size: 2em;
+    text-align: center;
+
+    h1[name="blueTitle"]{
+        color: #4299E1
+    }
+}
+
+.button2{
+    margin-left: 90px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    margin-top: 5%;
+    width: 80%;
+    border: none;
+    border-radius: 1vw;
+    font-size: 1.5em;
+    font-weight: bold;
+    //background-color: #b8ed64;
+    color: white;
+    button{
+        background-color: #6495ED;
+        border-style: none;
+        margin-right: 30px;
+        height: 3.8rem;
+        color: white;
+        font-size: 1.1rem;
+        padding: 0px 6px;
+        border-radius: 15px;
+    }
+}

@@ -32,7 +32,7 @@ const ProgramarForm =()=>{
                         <input type="date"/>
                     </div>
                     <div>
-                        <ButtonX/>
+                        <ButtonX title="Iniciar Formulario"/>
                     </div>
                 </div>
             </div>

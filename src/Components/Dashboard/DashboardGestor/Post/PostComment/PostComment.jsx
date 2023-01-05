@@ -1,6 +1,6 @@
 import React from "react";
 import './PostComment.scss'
-import SendVector from './../../../asets/sendVector.png';
+//import SendVector from './../../../asets/sendVector.png';
 
 const PostComment =()=>{
     return(

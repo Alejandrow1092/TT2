@@ -15,20 +15,20 @@ const AddGestor=(props)=>{
             <div className="form-gestor">
                 <h4>Datos del gestor</h4>
                 <div className="field-sec">
-                    <FieldX className="fieldx" label="Nombre" state="Alejandro"/>
-                    <FieldX className="fieldx" label="Apellidos" state="Alejandro"/>
-                    <FieldX className="fieldx" label="Domiclio" state="Alejandro"/>
+                    <FieldX className="fieldx" label="Nombre" state=""/>
+                    <FieldX className="fieldx" label="Apellidos" state=""/>
+                    <FieldX className="fieldx" label="Domiclio" state=""/>
                     <div className="group">
-                        <FieldX className="fieldx num-gestor" label="Num de celular" state="Alejandro"/>
-                        <FieldX className="fieldx num-gestor" label="Num de casa" state="Alejandro"/>
+                        <FieldX className="fieldx num-gestor" label="Num de celular" state=""/>
+                        <FieldX className="fieldx num-gestor" label="Num de casa" state=""/>
                     </div>
                 </div>
                
                 <h4>Credenciales de acceso</h4>
                 <div className="field-sec">
-                    <FieldX className="fieldx" label="Correo" state="Alejandro"/>
+                    <FieldX className="fieldx" label="Correo" state=""/>
                     <div className="group-1 ">
-                        <FieldX className="fieldx group2" label="Contraseña" state="Alejandro"/>
+                        <FieldX className="fieldx group2" label="Contraseña" state=""/>
                         {/* <ButtonX title="Generar contraseña"/> */}
                         <button className="genera-con">
                             <p>Generar contraseña</p>
@@ -51,9 +51,9 @@ const AddGestor=(props)=>{
             <h4>Datos del negocio</h4>
             <div className="field-sec">
                 <FieldX className="fieldx" label="Nombre" fun={setNombre} state={nombre}/>
-                <FieldX className="fieldx" label="Razon social" state="Alejandro"/>
-                <FieldX className="fieldx" label="Domiclio" state="Alejandro"/>
-                <FieldX className="fieldx" label="Actividad economica (Sector economico)" state="Alejandro"/>
+                <FieldX className="fieldx" label="Razon social" state=""/>
+                <FieldX className="fieldx" label="Domiclio" state=""/>
+                <FieldX className="fieldx" label="Actividad economica (Sector economico)" state=""/>
                 {/* <div className="group">
                     <FieldX className="fieldx num-gestor" label="Num de celular" state="Alejandro"/>
                     <FieldX className="fieldx num-gestor" label="Num de casa" state="Alejandro"/>
