@@ -1,0 +1,14 @@
+
+
+@mixin post-section(){
+    margin: auto;
+    //background-color: blue;
+    background-color: #0E1111;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 1200px;
+    .post-header-1{
+        margin-bottom: 60px;    
+    }
+}

@@ -1,0 +1,22 @@
+.itemArea{
+    color: white;
+    font-weight: bold;
+    margin-right: 15px;
+    margin-top: 8px;
+    .img-button{
+        width: 6rem;
+        padding: 3px 7px;
+        border-radius: 20px;
+        font-size: 1rem;
+        color: white;
+        background-color: #6495ED;
+        display: flex;
+        justify-content: space-between;
+        outline: none;
+        align-items: center;
+        border-style: none;
+        img{
+            cursor: pointer;
+        }
+    }
+}

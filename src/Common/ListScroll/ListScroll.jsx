@@ -1,6 +1,6 @@
 import React from "react";
 import './ListScroll.scss';
-import ItemListScroll from "../ItemListScroll/ItemListScroll";
+import ItemListScroll from "./ItemListScroll/ItemListScroll";
 
 const ListScroll =(props)=>{
     const {nombre, tipo}=props;

@@ -1,5 +1,6 @@
 import React from "react";
 import NavBar3 from "../../Common/NavBar3/NavBar3";
+import ButtonX from "../../DesingComp/ButtonX/Buttonx";
 import './EmpleadoInfo.scss';
 
 const EmpleadoInfo =()=>{
@@ -8,7 +9,7 @@ const EmpleadoInfo =()=>{
            
             <div className="contenedorInfo">
                 <div className="nombreEmpleado">
-                    <h1>Empleado 1</h1>
+                    <p>Empleado 1</p>
                 </div>
                 <div className="camposInfo">
                     <span className="input-title"  >Fecha de nacimiento</span>
@@ -31,7 +32,7 @@ const EmpleadoInfo =()=>{
                     <input className="input" value="ingeniero" disabled="disabled"/>
                 </div>
                 <div className="editar">
-                    <button className="editarButton">Editar</button>
+                    <ButtonX title="Editar"/>
                 </div>
             </div>
         </>

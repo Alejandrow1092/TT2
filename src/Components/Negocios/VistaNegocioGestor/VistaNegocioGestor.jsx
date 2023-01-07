@@ -1,9 +1,10 @@
 import React from "react";
 import './VistaNegocioGestor.scss';
-import NegocioInfo from "../NegocioInfo/NegocioInfo";
-import ListScroll from "../ListScroll/ListScroll";
-import EmpleadoInfo from "../EmpleadoInfo/EmpleadoInfo"
-import ItemArea from "../NegocioInfo/ItemArea";
+import NegocioInfo from "../../NegocioInfo/NegocioInfo";
+import ListScroll from "../../../Common/ListScroll/ListScroll";
+import EmpleadoInfo from "../../EmpleadoInfo/EmpleadoInfo"
+import ItemArea from "../../../Common/ItemArea/ItemArea";
+import ButtonX from "../../../DesingComp/ButtonX/Buttonx"
 
 const VistaNegocioGestor =()=>{
     return(
@@ -24,21 +25,22 @@ const VistaNegocioGestor =()=>{
                         <ItemArea/>
                         <ItemArea/>
                         <ItemArea/>
+                        <ItemArea plus="true"/>
                     </div>
                 </div>
-                <div className="inputArea">
+                {/* <div className="inputArea">
                     <span>Nombre del area</span>
                     <input></input>
                     <button>Agregar</button>
-                </div>
+                </div> */}
                 <div className="infoEmpleado">
                     <div className="left-grid-empleado">
                         <div className="gestores">
-                            <h1>Empleados</h1>
+                            <p>Empleados</p>
+                            <ListScroll nombre="Luis Fernando"/>
                         </div>
-                        <ListScroll nombre="Luis Fernando"/>
                         <div>
-                            <button>Agregar empleado</button>
+                            <ButtonX title="Agregar empleado"/>
                         </div>
                     </div>
                     <div className="right-grid-empleado">

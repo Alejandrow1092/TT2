@@ -3,7 +3,7 @@ import headerImg from "../../../asets/header.png"
 import './DashboardAdmin.scss';
 import NavBar3 from "../../../Common/NavBar3/NavBar3";
 import AdminItem from "../../AdminItem/AdminItem";
-import BubbleAdmin from "../../BubbleAdmin/BubbleAdmin";
+import BubbleAdmin from "../../../Common/BubbleAdmin/BubbleAdmin";
 
 const DashboardAdmin = (props)=>{
     const {user}=props;

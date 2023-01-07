@@ -8,13 +8,15 @@ import ProtectedRoutes from "./RootForm/ProtectedRoutes/ProtectedRoutes";
 import NavBar3 from "./Common/NavBar3/NavBar3";
 import Container from "./RootForm/Container/Container";
 import Dashboard from "./Components/Dashboard/Dashboard";
-import ListaNegocios from "./Components/ListaNegocios/ListaNegocios";
-import VistaNegocioGestor from "./Components/VistaNegocioGestor/VistaNegocioGestor"
+import VistaNegocioGestor from "./Components/Negocios/VistaNegocioGestor/VistaNegocioGestor"
 import VistaNegocioAdmin from "./Components/VistaNegocioAdmin/VistaNegocioAdmin"
 import EmpleadoInfo from "./Components/EmpleadoInfo/EmpleadoInfo";
 import Formulario from "./Components/Formulario/Formulario";
-import ProgramarForm from "./Components/ProgramarForm/ProgramarForm";
-
+import SetForm from "./Components/SetForm/SetForm";
+import Negocios from "./Components/Negocios/ListaNegocios";
+import Buzon from "./Components/Buzon/Buzon";
+import Servicios from "./Components/Servicios/Servicios";
+import Resultados from "./Components/Resultados/Resultados";
 
 /* const router = createBrowserRouter([
   {
@@ -23,24 +25,24 @@ import ProgramarForm from "./Components/ProgramarForm/ProgramarForm";
   },
 ]); */
 
-
-
 function App() {
   return (
     <div className="App">
       <Routes>
         <Route path="/login" element={<Login/>}/>
         <Route element={<ProtectedRoutes/>}>
-          <Route path="/Negocios" element={<ListaNegocios/>}/>
+          <Route path="/Negocios" element={<Negocios/>}/>
           <Route path="/Negocio-vista" element={<VistaNegocioAdmin/>}/>
           <Route path="/Empleado-vista" element={<EmpleadoInfo/>}/>
           <Route path="/Configuracion" element={<Configuracion/>}/>
           <Route path="/Dashboard" element={<Dashboard/>}/>
           <Route path="/VistaNegocioGest" element={<VistaNegocioGestor/>}/>
           <Route path="/Formulario" element={<Formulario/>}/>
-          <Route path="/ProgramarForm" element={<ProgramarForm/>}/>
+          <Route path="/SetForm" element={<SetForm/>}/>
+          <Route path="/Buzon" element={<Buzon/>}/>
+          <Route path="/Servicios" element={<Servicios/>}/>
+          <Route path="/Resultados" element={<Resultados/>}/>
         </Route>
-       
       </Routes>
     </div>
   );

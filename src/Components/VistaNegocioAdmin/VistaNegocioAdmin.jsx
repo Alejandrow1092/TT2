@@ -2,7 +2,7 @@ import React from "react";
 import './VistaNegocioAdmin.scss';
 import NavBar3 from "../../Common/NavBar3/NavBar3";
 import NegocioInfo from "../NegocioInfo/NegocioInfo";
-import ListScroll from "../ListScroll/ListScroll";
+import ListScroll from "../../Common/ListScroll/ListScroll";
 import Footer from "../../Common/Footer/Footer";
 import ButtonX from "../../DesingComp/ButtonX/Buttonx";
 import AddGestor from "../../Common/AddGestor/AddGestor";

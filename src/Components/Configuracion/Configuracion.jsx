@@ -26,6 +26,7 @@ const Configuracion=()=>{
             <div className="perfil">
                 {user==="Admin"&&<p id="admin">Administrador</p>}
                 {user==="Gestor"&&<p id="admin">Gestor</p>}
+                {user==="Empleado" && <p id="admin">Empleado</p>}
                 <figure>
                     <img src="https://picsum.photos/200" alt="perfil" />
                 </figure>

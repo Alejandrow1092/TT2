@@ -85,11 +85,21 @@
     .user-options{
         display: block;
         position: absolute;
-        width: 12rem;
-        height: 4rem;
+        width: 12.6rem;
+        //height: 4rem;
         margin-top: 10px;
+        margin-left: -10px;
         border-radius: 10px;
         background-color: rgba(128, 128, 128, 0.219);
+        #notificacion{
+            margin-left: 6px;
+            color: white;
+            background-color: red;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            text-align: center;
+        }
         ul{
             margin: 10px auto;
             width: 100%;

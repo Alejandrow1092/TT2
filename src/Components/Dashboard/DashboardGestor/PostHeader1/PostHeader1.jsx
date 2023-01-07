@@ -1,6 +1,8 @@
 import React from "react";
 import "./PostHeader1.scss";
 import sendIcon from "../../../../asets/sendVector.png"
+import addFoto from "../../../../asets/add-foto.png"
+
 const PostHeader1=()=>{
     return(
         <>
@@ -8,23 +10,28 @@ const PostHeader1=()=>{
                
                 <div className="img-header">
                     <figure>
-                        <img src="https://picsum.photos/60" alt="profile" />
+                        <img src="https://picsum.photos/35" alt="profile" />
                     </figure>
+                    <input type="text" id="title" placeholder="Titulo"/>
+                    <input type="text" id="type" placeholder="Tipo"/>
                 </div>
                 <div className="post-body">
-                    <div className="post-header">
-                        <input type="text" placeholder="titulo"/>
-                        <input type="text" placeholder="Tipo"/>
-                    </div>
-                    <textarea placeholder="Añade una descripcion a tu mensaje">
+                    
+                    <textarea placeholder="¿Qué quieres compartir con tus empleados?">
 
                     </textarea>
-                    <button>
+                </div>
 
+                <div className="post-btn">
+                    <button id="publicar">
                         <p>Publicar</p>
                         <img className="send-icon" src={sendIcon} alt="" />
                     </button>
-                </div>
+                    <button id="añadir">
+                        <p>Añadir </p>
+                        <img src={addFoto} alt="" />
+                    </button>
+                </div> 
                 
             </div>
         </>

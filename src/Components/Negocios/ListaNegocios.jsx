@@ -1,15 +1,15 @@
 import React from "react";
 import './ListaNegocios.scss';
 import NavBar3 from "../../Common/NavBar3/NavBar3";
-import BubbleAdmin from "../BubbleAdmin/BubbleAdmin";
-import ListScroll from "../ListScroll/ListScroll";
+import BubbleAdmin from "../../Common/BubbleAdmin/BubbleAdmin";
+import ListScroll from "../../Common/ListScroll/ListScroll";
 import { useDispatch, useSelector } from "react-redux";
-import VistaNegocioGestor from "../VistaNegocioGestor/VistaNegocioGestor";
+import VistaNegocioGestor from "./VistaNegocioGestor/VistaNegocioGestor";
 import Footer from "../../Common/Footer/Footer"
 import AddGestor from "../../Common/AddGestor/AddGestor";
 import { useState } from "react";
 
-const ListaNegocios =()=>{
+const Negocios =()=>{
     const user=useSelector((state)=>state.appTT.userType);
     const [show, setShow]=useState("burble");
 
@@ -61,4 +61,4 @@ const ListaNegocios =()=>{
     );
 }
 
-export default ListaNegocios;
+export default Negocios;

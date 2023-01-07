@@ -1,0 +1,131 @@
+.post{
+    margin: auto;
+    background-color: white;
+    width: 45rem;
+    //height: 20rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 35px;
+    .header-p{
+        //background-color: rgba(0, 0, 255, 0.63);
+        width: 100%;
+        height: 4.5rem;
+        display: flex;
+        align-items: center;
+        .perfil-img{
+            //display: flex;
+            width: 80px;
+            height: 80px;
+            //background-color: red;
+            img{
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+            }
+        }
+        .post-info{
+            display: flex;
+            width: 100%;
+            height: 100%;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.205);
+            .nombre-post{
+                width: 70%;
+                #nombre{
+                    margin-bottom: 3px;
+                }
+                #puesto{
+                    font-size: 0.9rem;
+                    color: rgb(32, 32, 32);
+                }
+            }
+            .fecha-post{
+                justify-content: space-between;
+                //background-color: red;
+                display: flex;
+                width: 30%;
+                img{
+                    width: 30px;
+                    height: 30px;
+                }
+               
+            }
+        }
+    }
+
+    .main-post-section{
+        figure{
+            margin-bottom: 10px;
+        }
+        #desc{
+            word-wrap: break-word;
+            margin: 30px 0px;
+        }
+    }
+
+    .comment-btn{
+        width: 100%;
+        background-color: red;
+        button{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 2rem;
+            background-color: #4299E1;
+            outline: none;
+            border-style: none;
+            color: white;
+            font-size: 1.1rem;
+        }
+    }
+
+    .comment-area{
+        [contenteditable][placeholder]:empty:before{
+            content: attr(placeholder);
+            position: absolute;
+            color: white;
+        }
+        margin-top: 15px;
+        width: 100%;
+        .single-comment{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            //background-color: blue;
+            color: white;
+            width: 100%;
+            //min-height: 2.3rem;
+            textarea, .text-area{
+
+                word-break: break-word;
+                width: 90%;
+                //resize: none;
+                resize: both;
+                outline: none;
+                //min-height: 30px;
+                border-style: none;
+                background-color: rgba(0, 0, 0, 0.295);
+                border-radius: 20px;
+                color: white;
+                font-size: 0.9rem;
+                //padding: 5px;
+                padding: 10px;
+                padding-left: 15px;
+                //padding-bottom: 30px;
+                &::placeholder{
+                    color: white;
+                }
+                [contenteditable][placeholder]:empty:before{
+                    content: attr(placeholder);
+                    position: absolute;
+                    color: white;
+                }
+            }
+            img{
+                border-radius: 50%;
+            }
+        }
+    }
+}
+

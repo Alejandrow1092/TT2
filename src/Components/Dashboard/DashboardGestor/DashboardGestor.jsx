@@ -4,6 +4,7 @@ import './DashboardGestor.scss';
 import ButtonInicioGestor from "./ButtonInicioGestor/ButtonInicioGestor";
 import Post from "./Post/Post";
 import PostHeader1 from "../../Dashboard/DashboardGestor/PostHeader1/PostHeader1";
+import Post1 from "./Post1/Post1";
 
 const DashboardGestor =()=>{
     return(
@@ -27,13 +28,15 @@ const DashboardGestor =()=>{
                 <div className="post-header-1">
                     <PostHeader1/>
                 </div>
-                <div className="postSpace">
+                {/* <div className="postSpace">
                         <div className="centerSpace">
                             <Post/>
                             <Post/>
                             <Post/>
+                            <Post1/>
                         </div>
-                </div>
+                </div> */}
+                <Post1/>
             </div>
         </>
     );

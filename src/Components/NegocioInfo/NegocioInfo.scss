@@ -3,13 +3,24 @@
     font-family: "San Seriff";
     //background-color: #C5C5C5;
     //padding: 0px 50px;
-
-    .nombreNegocio p{
-        //font-weight: 500;
-        //padding-right: 50%;
-        //font-size: 2em;
-        //font-size: 2rem;
-        //margin-bottom: 5%;
+    .title-line{
+        margin-top: 20px;
+    }
+    .nombreNegocioHeader{
+        //background-color: red;
+        display: flex;
+        justify-content: space-between;
+        width: 300px;
+        margin-bottom: 20px;
+        p{  
+            color: black;
+            font-size: 2.5rem;
+            //font-weight: 500;
+            //padding-right: 50%;
+            //font-size: 2em;
+            //font-size: 2rem;
+            //margin-bottom: 5%;
+        }
     }
 }
 
@@ -24,6 +35,16 @@
         width: 100%;
         display: block;
         margin-bottom: 1%;
+    }
+    .info-header{
+        display: flex;
+        justify-content: space-between;
+        background-color: #fffafa;
+        margin-bottom: 30px;
+        border-radius: 20px;
+        width: 70%;
+        padding: 5px;
+        font-size: 0.9rem;
     }
 }
 

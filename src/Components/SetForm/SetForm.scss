@@ -1,0 +1,147 @@
+.programar-formulario{
+    //background-color: rgba(0, 153, 255, 0.205);
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 8rem;
+}
+
+.title-line{
+    max-width: 1200px;
+    //background-color: red;
+}
+
+.set-form-alert{
+    max-width: 1200px;
+    margin: auto;
+    margin-bottom:30px;
+    background-color: #E2DFD2;
+    border-radius: 20px;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title-set-formulario{
+    //background-color: red;
+    max-width: 1200px;
+    
+    font-size: 2.3rem;
+    margin: 20px auto;
+
+}
+
+.container-instrucciones{
+    //background-color: cadetblue;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+    max-width: 1200px;
+
+    span{
+        margin: 10px 0px 10px;
+    }
+
+    .listaOrdenada{
+        list-style-type: decimal;
+        list-style-position: inside;
+    }
+
+    ol {
+        padding: 0;
+        margin: 0;
+        max-width: 700px;
+        position: relative;
+    }
+    
+    ol::before {
+        content: '';
+        width: 0.5rem;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 8%;
+        background: peachpuff;
+        z-index: -1;
+    }
+    
+    li {
+        padding: 0.5rem 1.5rem 1rem;
+        border-radius: 1.5rem;
+        background: peachpuff;
+    }
+    
+    li + li {
+        margin-top: 1rem;
+    }
+    
+    ::marker {
+        font-weight: 600;
+        color: tomato;
+        font-size: 1.8rem;
+    }
+    
+}
+
+.container-form-program{
+    //background-color: blue;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+
+    //max-width: 1200px;
+
+    .input-date{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+        span{
+            border-radius: 20px;
+            color: white;
+            display: flex;
+            align-items: center;
+            padding: 5px;
+            justify-content: space-between;
+            background-color: #F16482;
+            width: 200px;
+            //margin-right: 10px;
+        }
+        input[type="date"]{
+            //max-width: 300px;
+            outline: none;
+            border-style: none;
+            border-bottom: 1px solid black;
+            width: 8rem;
+            padding: 5px;
+            &:hover{
+                border-bottom: 2px solid black;
+                cursor: pointer;
+            }
+            &:focus{
+                border-bottom: 2px solid black;
+            }
+        }
+    }
+}
+
+.container-clock-img{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    img{
+        width: auto;
+        height: 300px;
+    }
+}

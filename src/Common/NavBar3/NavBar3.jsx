@@ -2,9 +2,11 @@ import React from "react";
 import './NavBar3.scss';
 import profile_img from '../../asets/profile-user.png';
 import { Link, Navigate } from "react-router-dom";
-import exit_img from '../../asets/exit.png';
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import exit_img from '../../asets/exit.png';
+import chatIcon from "../../asets/chat.png"
+
 
 const NavBar3=()=>{
     const [active, setActive]= useState(false);
@@ -22,6 +24,9 @@ const NavBar3=()=>{
         setLogged(false);
     }
 
+    const onOption=(option)=>{
+        console.log(option);
+    }   
 
     return(
         <nav className="navigation">
@@ -31,13 +36,24 @@ const NavBar3=()=>{
                     </div>
                     <ul>
                         <Link to="/Dashboard"><li>Inicio</li></Link>
+                        {user!=="Empleado"&&
                         <Link to="/Negocios"><li>Negocios</li></Link>
+                        }
                        {/*  <li>Sistema</li> */}
-                        <Link to='/Configuracion' className="link"><li>Configuracion</li></Link>
-                        {user=="Gestor"&&
+                     
+                        {user==="Empleado"&&
                         <Link to='/Formulario' className="link"><li>Formulario</li></Link>
                         }
-                        <Link to='/ProgramarForm' className="link"><li>Formulario</li></Link>
+                        {user==="Gestor" &&
+                        <Link to='/SetForm' className="link"><li>Formulario</li></Link>
+                        }
+                        {user!=="Admin" &&
+                        <Link to='/Resultados' className="link"><li>Resultados</li></Link>
+                        }
+                        {user!=="Admin" &&
+                        <Link to="/Servicios"><li>Servicios</li></Link>
+                        }
+                        <Link to='/Configuracion' className="link"><li>Configuracion</li></Link>
                     </ul>
             </div>
            
@@ -51,9 +67,20 @@ const NavBar3=()=>{
                     </button>
                     <div className={active?"user-options": "user-options-no"}>
                         <ul>
+                            {user=="Gestor"&&
+                                <Link to="/Buzon">
+                                <li >
+                                    <img src={chatIcon} alt="" />
+                                    <p>Buzon de quejas</p>
+                                    <p id="notificacion">2</p>
+                                </li>
+                                </Link>
+                            }
+
                             <li onClick={onLogout}>
                                 <img src={exit_img} alt="exit"/>
                                 <p>Logout</p>
+                                
                             </li>
                             {!logged && <Navigate to="/login"/>}
                         </ul>
