@@ -1,0 +1,32 @@
+[
+	[
+		{
+			"nivel": "Muy alto",
+			"necesidad": "Se requiere realizar el análisis de cada categoría y dominio para establecer las acciones de intervención apropiadas, mediante un Programa de intervención que deberá incluir evaluaciones específicas, y contemplar campañas de sensibilización, revisar la política de prevención de riesgos psicosociales y programas para la prevención de los factores de riesgo psicosocial, la promoción de un entorno organizacional favorable y la prevención de la violencia laboral, así como reforzar su aplicación y difusión.",
+			"color": "#FF0000"
+		},
+		{
+			"nivel": "Alto",
+			"necesidad": "Se requiere realizar un análisis de cada categoría y dominio, de manera que se puedan determinar las acciones de intervención apropiadas a través de un Programa de intervención, que podrá incluir una evaluación específica y deberá incluir una campaña de sensibilización, revisar la política de prevención de riesgos y programas para la prevención de los factores de riesgo psicosocial, la promoción de un entorno organizacional favorable y la prevención de la violencia laboral, así como reforzar su aplicación y difusión.",
+			"color": "#FFC000"
+		},
+		{
+			"nivel": "Medio",
+			"necesidad": "Se requiere revisar la política de prevención de riesgos psicosociales y programas para la prevención de los factores de riesgo psicosocial, la promoción de un entorno organizacional favorable y la prevención de la violencia laboral, así como reforzar su aplicación y difusión, mediante un Programa de intervención.",
+			"color" : "#FFFF00"
+		},
+		{
+			"nivel": "Bajo",
+			"necesidad": "Es necesario una mayor difusión de la política de prevención de riesgos psicosociales y programas para: la prevención de los factores de riesgo psicosocial, la promoción de un entorno organizacional favorable y la prevención de la violencia laboral.",
+			"color": "#6BF56E"
+		},
+		{
+			"nivel": "Nulo",
+			"necesidad": "El riesgo resulta despreciable por lo que no se requiere medidas adicionales.",
+			"color": "#9BE5F7"
+		}
+	],
+	{
+		"recomendaciones": ["Análisis de cada categoría y dominio.", "Crear un Programa de intervención con evaluaciones específicas y campañas de sensibilización.", "Revisar la política de prevención de riesgos psicosociales", "Revisar, aplicar y difundir los programas para la prevención de los factores de riesgo psicosocial.", "Promoción de un entorno organizacional favorable.", "Prevención de la violencia laboral."]
+	}
+]

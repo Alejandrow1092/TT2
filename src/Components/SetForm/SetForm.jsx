@@ -8,6 +8,7 @@ import finishIcon from "../../asets/finish.png"
 import informacionIcon from "../../asets/informacion.png"
 import Footer from "../../Common/Footer/Footer"
 import PDFView from "../../Common/PDFView/PDFView";
+import Gaugecomponent from "../../Common/Charts/Gaugecomponent";
 
 const SetForm =()=>{
     return(
@@ -67,7 +68,8 @@ const SetForm =()=>{
                 
             </div>
             <div>
-                <PDFView/>
+                {/**<PDFView/>*/}
+                <Gaugecomponent/>
             </div>
             <Footer/>
         </>
