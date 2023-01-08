@@ -4,12 +4,14 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import axios from 'axios';
 import { Navigate } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { setUserData } from "../../rootReducer";
 
 const Login =()=>{
 
     //local storage para el login
     //localStorage.setItem('auth', 'true');
-
+    const dispatch=useDispatch();
 
     const [correo, setCorreo]=useState("");
     const [pass, setPass]=useState("");
@@ -35,6 +37,9 @@ const Login =()=>{
          axios.post('http://localhost:8080/login', body)
         .then(({data})=>{
             console.log(data);
+            //lenar algunos datos traidos en el redux
+            dispatch(setUserData(data));
+            //console.log(data.nombre)
             localStorage.setItem('auth', 'true');
             //setLogged(true);
         })

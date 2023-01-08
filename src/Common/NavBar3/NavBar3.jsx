@@ -13,7 +13,10 @@ const NavBar3=()=>{
     const [logged, setLogged] = useState(true);
 
     const user=useSelector((state)=>state.appTT.userType);
-
+    var nombre=useSelector(state=>state.appTT.userData.nombre);
+    
+    //nombre=nombre.split(" ");
+    //console.log(nombre.split(" "));
     const handleUserMenu=()=>{
         setActive(!active);
         console.log(active);
@@ -62,7 +65,7 @@ const NavBar3=()=>{
                 
                 <div>
                     <button className="user-btn" onClick={handleUserMenu}>
-                        <p>Alejandro M</p>
+                        <p>{nombre.split(" ")[0]}</p>
                         <img src={profile_img} alt="icon" />
                     </button>
                     <div className={active?"user-options": "user-options-no"}>

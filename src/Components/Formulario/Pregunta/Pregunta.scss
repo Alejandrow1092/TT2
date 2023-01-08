@@ -1,7 +1,7 @@
 .container-color-pregunta{
     display: flex;
     align-items: center;
-
+    //background-color: red;
     .container-color{
         background-color: #F16482;
         width: 5px;
@@ -13,14 +13,18 @@
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
+        padding: 10px;
         border-radius: 20px;
         max-width: 1200px;
         margin-bottom: 25px;
         background-color: #F6F6FA;
-    
+        border-left: 10px solid #F16482;
     
         .pregunta{
             margin: 10px;
+            #numero{
+                background-color: aliceblue;
+            }
         }
     
         .opcion{

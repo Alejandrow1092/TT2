@@ -149,7 +149,8 @@ INSERT INTO Empleado (idUsuario) VALUES
     (3), (4);
 
 INSERT INTO Negocio (nombre, razonSocial, domicilio, actividad) VALUES
-    ('Juguitos y Refrescos Felices', 'Sociedad Cooperativa', 'Oroya 713, Lindavista, Gustavo A. Madero, Ciudad de México', 'Alimentos');
+    ('Juguitos y Refrescos Felices', 'Sociedad Cooperativa', 'Oroya 713, Lindavista, Gustavo A. Madero, Ciudad de México', 'Alimentos'),
+	('Mariscos el paso', 'Socidad Anonima', 'Av. Nader Sm 3 M2 L6 Cancún, México, Cancún 77500 México', 'Alimentos');
 
 INSERT INTO Area (idNegocio, nombre) VALUES
     (1, 'Capital Humano'), (2, 'Control de Calidad');

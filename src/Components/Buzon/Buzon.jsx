@@ -28,7 +28,7 @@ const Buzon =()=>{
                         <UserMessage/>
                     </div>
                     <div className="window-chat-section">
-                        <ChatWindow selected="yes" />
+                        <ChatWindow selected="yes" use="buzon"/>
                     </div>
                 </div>
             <Footer/>

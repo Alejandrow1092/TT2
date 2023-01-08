@@ -13,7 +13,7 @@ import VistaNegocioAdmin from "./Components/VistaNegocioAdmin/VistaNegocioAdmin"
 import EmpleadoInfo from "./Components/EmpleadoInfo/EmpleadoInfo";
 import Formulario from "./Components/Formulario/Formulario";
 import SetForm from "./Components/SetForm/SetForm";
-import Negocios from "./Components/Negocios/ListaNegocios";
+import Negocios from "./Components/Negocios/Negocios";
 import Buzon from "./Components/Buzon/Buzon";
 import Servicios from "./Components/Servicios/Servicios";
 import Resultados from "./Components/Resultados/Resultados";

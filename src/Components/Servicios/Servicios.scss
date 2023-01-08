@@ -1,0 +1,59 @@
+.servicios{
+    max-width: 1200px;
+    margin: auto;
+    height: 100vh;
+    //background-color: red;
+    margin-bottom: 40px;
+    .menu-servicios{
+        //width: 10rem;
+        //background-color: aquamarine;
+        border-bottom: 1px solid rgba(82, 78, 78, 0.377);
+        button{
+            font-size: 1.2rem;
+            width: 15rem;
+            height: 10vh;
+            cursor: pointer;
+            &:hover{
+                background-color: rgb(189, 189, 189);;
+            }
+        }
+    }
+    .panel-servicios{
+        //background-color: aqua;
+        width: 100%;
+        height: 90vh;
+        display: flex;
+        .panel-left{
+            background-color: #14171A;
+            width: 50%;
+            height: 100%;
+        }
+        .panel-right{
+            background-color: #E1E8ED;
+            width: 50%;
+            height: 100%;
+        }
+    }
+}
+
+.panel-right-medico{
+    //background-color: red;
+    background-color: #E1E8ED;
+    width: 50%;
+    height: 100%;
+   .botiquin{
+
+        display: FLEX;
+        align-items: CENTER;
+        justify-content: center;
+        font-size: 1.2rem;
+        width: 100%;
+        padding: 10px;
+        p{
+            margin-right: 20px;
+        }
+        &:hover{
+            cursor: pointer;
+        }
+   }
+}
