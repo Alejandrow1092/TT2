@@ -4,15 +4,31 @@ import './DashboardAdmin.scss';
 import NavBar3 from "../../../Common/NavBar3/NavBar3";
 import AdminItem from "../../AdminItem/AdminItem";
 import BubbleAdmin from "../../../Common/BubbleAdmin/BubbleAdmin";
+import { useSelector } from "react-redux";
+import axios from 'axios';
+import { useEffect } from "react";
 
 const DashboardAdmin = (props)=>{
     const {user}=props;
+    const {nombre}=useSelector(state=>state.appTT.userData);
+    var data1=[];
 
+    useEffect(()=>{
+        axios.get('http://localhost:8080/negocios')
+        .then(({data})=>{
+            console.log(data);
+            data=data1;
+        })
+        .catch(({response})=>{
+            console.log(response.data+" hola");
+        });
+    },[data1]);
+    
     return(
         <>
             <div className="container">
                 <div className="dash-header">
-                    <span>¡Bienvenido {user}!</span>
+                    <span>¡Bienvenido {nombre}!</span>
                 </div>
                 <div className="body-admin">
                     <div className="left-grid">

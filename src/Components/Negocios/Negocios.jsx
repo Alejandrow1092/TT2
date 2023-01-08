@@ -1,5 +1,5 @@
 import React from "react";
-import './ListaNegocios.scss';
+import './Negocios.scss';
 import NavBar3 from "../../Common/NavBar3/NavBar3";
 import BubbleAdmin from "../../Common/BubbleAdmin/BubbleAdmin";
 import ListScroll from "../../Common/ListScroll/ListScroll";

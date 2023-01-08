@@ -5,7 +5,9 @@ footer{
     color: black;
     position: absolute;
     min-height: 30px;
+    //min-height: calc(100vh );
     overflow: hidden;
+    margin-top: auto;
     .footer-sec1{
         color:rgb(0, 0, 0);
         height: 14rem;

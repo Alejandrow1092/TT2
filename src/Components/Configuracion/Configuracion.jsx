@@ -2,14 +2,18 @@ import React from "react";
 import './Configuracion.scss';
 import NavBar3 from "../../Common/NavBar3/NavBar3";
 import { useState } from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import Footer from "../../Common/Footer/Footer"
+import { setUserData } from "../../rootReducer";
 
 const Configuracion=()=>{
-    const [nombre, setNombre]=useState("Alejandro Martinez");
-    const [celular, setCelular]=useState("54532345");
-    const [celCasa, setCelCasa]=useState("12233455253");
-    const [correo, setCorreo]=useState("correodumie@dum.com");
+    const dispatch=useDispatch();
+    const{nombre, correo, numeroCasa, numeroTel}=useSelector(state=>state.appTT.userData)
+
+    const [nombre1, setNombre]=useState(nombre);
+    const [celular, setCelular]=useState(numeroTel);
+    const [celCasa, setCelCasa]=useState(numeroCasa);
+    const [correo1, setCorreo]=useState(correo);
     const [pass, setPass]=useState("1234");
     const [isAble, setIsAble]=useState(true);
 
@@ -31,7 +35,7 @@ const Configuracion=()=>{
                     <img src="https://picsum.photos/200" alt="perfil" />
                 </figure>
 
-                <p id="name">Alejandro Martinez</p>
+                <p id="name">{nombre}</p>
 
                 <button className="edit-btn">
                     <p>Editar perfil</p>
@@ -45,7 +49,7 @@ const Configuracion=()=>{
                     
                     <div className="form-fields">
                         <label for="nombre">Nombre: </label> <br />
-                        <input type="text" id="nombre" onChange={(event)=>setNombre(event.target.value)} value={nombre} disabled={isAble}/> <br />
+                        <input type="text" id="nombre" onChange={(event)=>setNombre(event.target.value)} value={nombre1} disabled={isAble}/> <br />
                         <div className="one-line-fields1">
                             <div>
                                 <label for="celular">Celular: </label> <br />
@@ -60,7 +64,7 @@ const Configuracion=()=>{
                         <div className="one-line-fields2">
                             <div>
                                 <label for="correo">Correo electronico: </label> <br />
-                                <input type="text" id="correo" onChange={(event)=>setCorreo(event.target.value)} value={correo} disabled={isAble}/> <br />
+                                <input type="text" id="correo" onChange={(event)=>setCorreo(event.target.value)} value={correo1} disabled={isAble}/> <br />
                             </div>
                             <div>
                                 <label for="contra">Contraseña</label> <br />

@@ -93,7 +93,25 @@ const login=(req, res)=>{
 
 }
 
+const negocio=(req, res)=>{
+    connection.query('Select * from negocio', (error, results)=>{
+        if(error){
+            res.status(500).send(error);
+        }
+        else{
+            if(results.length>0){
+                console.log(results);
+                res.status(200).send(results);
+            }
+            else{
+                res.status(400).send('Error en la optencionde la tabla');
+            }
+        }
+    });
+}
+
 module.exports ={
     index,
-    login
+    login,
+    negocio
 }
