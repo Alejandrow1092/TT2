@@ -7,6 +7,7 @@ import startIcon from "../../asets/start.png"
 import finishIcon from "../../asets/finish.png"
 import informacionIcon from "../../asets/informacion.png"
 import Footer from "../../Common/Footer/Footer"
+import PDFView from "../../Common/PDFView/PDFView";
 
 const SetForm =()=>{
     return(
@@ -65,7 +66,9 @@ const SetForm =()=>{
                 </div>
                 
             </div>
-
+            <div>
+                <PDFView/>
+            </div>
             <Footer/>
         </>
     );
