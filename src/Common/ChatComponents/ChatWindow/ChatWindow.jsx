@@ -1,5 +1,6 @@
 import React from "react";
 import messageIcon from "../../../asets/mensaje.png"
+import NewComment from "../../NewComment/NewComment";
 import LinerMessage from "../LinerMessage/LinerMessage";
 import "./ChatWindow.scss"
 
@@ -24,7 +25,7 @@ const ChatWindow=(props)=>{
                     <LinerMessage direction="reverse"/>
                 </div>
                 <div className="comment-panel">
-
+                    <NewComment/>
                 </div>
             </div>
             }

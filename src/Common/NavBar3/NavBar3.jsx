@@ -6,7 +6,7 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import exit_img from '../../asets/exit.png';
 import chatIcon from "../../asets/chat.png"
-
+import configuracion from "../../asets/configuracion.png"
 
 const NavBar3=()=>{
     const [active, setActive]= useState(false);
@@ -47,13 +47,13 @@ const NavBar3=()=>{
                         {user==="Gestor" &&
                         <Link to='/SetForm' className="link"><li>Formulario</li></Link>
                         }
-                        {user!=="Admin" &&
+                        {/* {user!=="Admin" &&
                         <Link to='/Resultados' className="link"><li>Resultados</li></Link>
-                        }
+                        } */}
                         {user!=="Admin" &&
                         <Link to="/Servicios"><li>Servicios</li></Link>
                         }
-                        <Link to='/Configuracion' className="link"><li>Configuracion</li></Link>
+                       {/*  <Link to='/Configuracion' className="link"><li>Configuracion</li></Link> */}
                     </ul>
             </div>
            
@@ -76,6 +76,13 @@ const NavBar3=()=>{
                                 </li>
                                 </Link>
                             }
+
+                            <Link to="/Configuracion">
+                                <li>
+                                    <img src={configuracion} alt="" />
+                                    <p>Configuracion</p>
+                                </li>
+                            </Link>
 
                             <li onClick={onLogout}>
                                 <img src={exit_img} alt="exit"/>

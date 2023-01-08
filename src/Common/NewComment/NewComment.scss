@@ -1,0 +1,41 @@
+.new-comment{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    //background-color: blue;
+    color: white;
+    width: 100%;
+    height: 100%;
+    margin: 0px 15px;
+    //margin-top: 100px;
+    //min-height: 2.3rem;
+    textarea, .text-area{
+
+        word-break: break-word;
+        width: 90%;
+        //resize: none;
+        resize: both;
+        outline: none;
+        //min-height: 30px;
+        border-style: none;
+        background-color: rgba(0, 0, 0, 0.295);
+        border-radius: 20px;
+        color: rgb(255, 255, 255);
+        font-size: 0.9rem;
+        //padding: 5px;
+        padding: 10px;
+        padding-left: 15px;
+        //padding-bottom: 30px;
+        &::placeholder{
+            color: white;
+        }
+        [contenteditable][placeholder]:empty:before{
+            content: attr(placeholder);
+            position: absolute;
+            color: white;
+        }
+    }
+    img{
+        border-radius: 50%;
+    }
+}
