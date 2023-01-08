@@ -42,3 +42,97 @@
         display: flex;
     }
 }
+
+.panel-solicitud-medica{
+    width: 100%;
+    //height: 100%;
+    //background-color: red;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    //flex-direction: column;
+    .datos-solicitud-medico{
+        margin-top: 20px;
+        //background-color: chocolate;
+        width: 90%;
+        height: 40%;
+        p{
+            display: flex;
+            align-items: center;
+            font-size: 1.1rem;
+            width: 100%;
+            border-radius: 20px;
+            padding: 10px;
+            margin-bottom: 20px;
+            background-color: blanchedalmond;
+            img{
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+.panel-medico-pendiente{
+    //background-color: blue;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.7rem;
+    padding: 30px;
+    #estatus{
+        span{
+            text-transform: uppercase;
+            background-color: red;
+            border-radius: 20px;
+            padding: 5px;
+            color: white;
+        }
+    }
+    #descripcion{
+        //background-color: white;
+        word-break: break;
+    }
+    img{
+        //background-color: red;
+        width: 120px;
+        height: 170px;
+    }
+}
+
+.panel-medico-nueva{
+    width: 100%;
+    height: 100%;
+    //background-color: red;
+    display: flex;
+    flex-wrap: wrap;
+    //flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    #info{
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        border-radius: 20px;
+        font-size: 1.1rem;
+        background-color: gray;
+    }
+    .inputs-medica{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        //background-color: blue;
+        width: 100%;
+        input{
+            width: 90%;
+            height: 40px;
+            margin: 10px;
+            padding-left: 10px;
+        }
+    }
+}
