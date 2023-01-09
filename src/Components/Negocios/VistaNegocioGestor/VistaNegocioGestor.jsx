@@ -25,19 +25,17 @@ const VistaNegocioGestor =()=>{
                 setNegocio(data);
                 //console.log(negocios)
             })
+            .then(axios.get(`http://localhost:8080/negocio-empleados/1`)
+            .then(({data})=>{
+                console.log(data);
+                setEmpData(data);
+                //console.log(negocios)
+            }))
             .catch(({response})=>{
                 console.log(response.data+" hola");
             });
-
-            axios.get(`http://localhost:8080/negocio-empleados/${negocio[0].idnegocio}`)
-                .then(({data})=>{
-                    console.log(data);
-                    setEmpData(data);
-                    //console.log(negocios)
-                })
-                .catch(({response})=>{
-                    console.log(response.data+" hola");
-                });
+            
+           
         }
 
      /*    const consultaEmpleados=()=>{

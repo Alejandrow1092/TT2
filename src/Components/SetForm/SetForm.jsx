@@ -12,6 +12,8 @@ import Gaugecomponent from "../../Common/Charts/Gaugecomponent";
 import Nivel from "../Resultados/Nivel/Nivel";
 import Resultados from "../Resultados/Resultados";
 import { useState } from "react";
+import formularioIcon from "../../asets/formulario.png"
+import resultadosIcon from "../../asets/resultados.png"
 
 const SetForm =()=>{
     const[menuOpcion, setMenuOpcion]=useState("formulario");
@@ -23,9 +25,11 @@ const SetForm =()=>{
                     <div className="menu-formulario">
                         <button onClick={()=>setMenuOpcion("formulario")}>
                             <p>Formulario</p>
+                            <img src={formularioIcon} width="30px" alt="" />
                         </button>
                         <button onClick={()=>setMenuOpcion("resultados")}>
                             <p>Resultados</p>
+                            <img src={resultadosIcon} width="30px" alt="" />
                         </button>
                     </div>
                 </div>
