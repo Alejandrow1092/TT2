@@ -11,31 +11,65 @@ import { useEffect } from "react";
 import { useState } from "react";
 
 const VistaNegocioGestor =()=>{
-    const[negocio, setNegocio]=useState([]);
+    const[negocio, setNegocio]=useState(null);
+    const[empData, setEmpData]=useState([])
 
     const userId=useSelector(state=>state.appTT.userData.id);
     console.log(userId);
 
     useEffect(()=>{
+        const consultaNegocioGestor=()=>{
             axios.get(`http://localhost:8080/negocio-gestor/${userId}`)
             .then(({data})=>{
-                //console.log(data);
+                console.log(data[0].idnegocio);
                 setNegocio(data);
                 //console.log(negocios)
             })
             .catch(({response})=>{
                 console.log(response.data+" hola");
             });
+
+            axios.get(`http://localhost:8080/negocio-empleados/${negocio[0].idnegocio}`)
+                .then(({data})=>{
+                    console.log(data);
+                    setEmpData(data);
+                    //console.log(negocios)
+                })
+                .catch(({response})=>{
+                    console.log(response.data+" hola");
+                });
+        }
+
+     /*    const consultaEmpleados=()=>{
+            
+            useEffect(()=>{
+                axios.get(`http://localhost:8080/negocio-empleados/1`)
+                .then(({data})=>{
+                    console.log(data);
+                    setEmpData(data);
+                    //console.log(negocios)
+                })
+                .catch(({response})=>{
+                    console.log(response.data+" hola");
+                });
+            },[])
+        } */
+        
+        consultaNegocioGestor();
+        //consultaEmpleados();
+            
     },[])
 
-    console.log(negocio)
+    //console.log(negocio[0]);
 
     return(
         <>
             <div className="container-empleado">
                 <div className="infoNegocio-empleado">
-                    <NegocioInfo elem={negocio[0]}/>
-                </div>
+                    {negocio!==null&&
+                        <NegocioInfo elem={negocio[0]}/>
+                    }
+                    </div>
                 <div className="infoArea">
                     <span>Areas registradas</span>
                     <div className="areas">
@@ -60,14 +94,14 @@ const VistaNegocioGestor =()=>{
                     <div className="left-grid-empleado">
                         <div className="gestores">
                             <p>Empleados</p>
-                          {/*   <ListScroll nombre="Luis Fernando"/> */}
+                            <ListScroll elementos={empData}/>
                         </div>
                         <div>
                             <ButtonX title="Agregar empleado"/>
                         </div>
                     </div>
                     <div className="right-grid-empleado">
-                        <EmpleadoInfo/>
+                        <EmpleadoInfo empData={empData}/>
                     </div>
                 </div>
             </div>

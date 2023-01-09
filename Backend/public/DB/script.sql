@@ -278,3 +278,14 @@ from
 where 
 	gestor.idusuario="2";
 	
+/* Consulta para saber los empleados que trabajan en un negocio */
+
+select	
+	usuario.nombre
+from
+	Area
+inner join area_empleado using (idArea)
+inner join empleado using (idempleado)
+inner join usuario using (idusuario)
+where
+	area.idnegocio='1';

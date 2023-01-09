@@ -4,7 +4,7 @@ import "./Footer.scss";
 const Footer=()=>{
     return(
         <>
-            <div className="footer-estilo">
+            <footer>
                 <div className="container-footer">
                     <div className="footer-sec1">
                         <p id="desc">
@@ -35,7 +35,7 @@ const Footer=()=>{
 
                     </div>
                 </div>
-            </div>
+            </footer>
         </>
     )
 }

@@ -77,7 +77,7 @@ const login=(req, res)=>{
             if(results.length>0){
                 console.log(results[0]);
                 //let userType= searchUsertype(results[0]);
-                console.log(searchUsertype(results[0]))
+                //console.log(searchUsertype(results[0]))
                 //console.log('usertype: '+userType)
                 const resultSet1=results[0];
                 //const resultSet={resultSet1, userType};
@@ -144,7 +144,7 @@ const negocioGestor=(req,res)=>{
     const values=[id];
     console.log(values)
     connection.query(`select
-	negocio.nombre, negocio.razonsocial, negocio.domicilio, negocio.actividad
+	idnegocio,negocio.nombre, negocio.razonsocial, negocio.domicilio, negocio.actividad
     from
 	gestor
 	    inner join gestor_negocio on gestor.idgestor = gestor_negocio.idgestor
@@ -166,10 +166,40 @@ const negocioGestor=(req,res)=>{
     });
 }
 
+const negocioEmpleados=(req,res)=>{
+    console.log("hola5");
+    const{id}=req.params;
+    const values=[id];
+    //console.log(values)
+    connection.query(`select	
+	usuario.nombre
+    from
+        Area
+    inner join area_empleado using (idArea)
+    inner join empleado using (idempleado)
+    inner join usuario using (idusuario)
+    where
+        area.idnegocio=?;`,values, (error, results)=>{
+        if(error){
+            res.status(500).send(error);
+        }
+        else{
+            if(results.length>0){
+                console.log(results);
+                res.status(200).send(results);
+            }
+            else{
+                res.status(400).send('Error en la optencion de la tabla');
+            }
+        }
+    });
+}
+
 module.exports ={
     index,
     login,
     negocio,
     gestoresAdmin,
-    negocioGestor
+    negocioGestor,
+    negocioEmpleados,
 }

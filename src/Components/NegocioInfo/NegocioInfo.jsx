@@ -2,6 +2,7 @@ import React from "react";
 import './NegocioInfo.scss';
 import { useState } from "react";
 import informacionIcon from '../../asets/informacion.png'
+import { useEffect } from "react";
 
 const NegocioInfo =(props)=>{
     const{elem}=props;
@@ -16,6 +17,7 @@ const NegocioInfo =(props)=>{
     const handleAble=()=>{
         setIsAble(!isAble);
     }
+
 
     return(
         <>

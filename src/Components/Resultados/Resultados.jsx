@@ -10,7 +10,7 @@ import GraficasDomino from "./GraficasDominio/GraficasDominio";
 const Resultados=()=>{
     return(
         <>
-            <NavBar3/>
+           {/*  <NavBar3/> */}
             <div className="container-resultados">
                 <ListaCuestionarios/>
                 <Nivel/>
@@ -19,7 +19,7 @@ const Resultados=()=>{
                 <h1 className="res-title">Resultados por dominio</h1>
                 <GraficasDomino/>
             </div>
-            <Footer/>
+           {/*  <Footer/> */}
         </>
     );
 }

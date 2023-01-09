@@ -18,7 +18,7 @@ const VistaNegocioAdmin =()=>{
     const idNegocio=useSelector(state=>state.appTT.selectedNegocio);
     const dataNegocio=useSelector(state=>state.appTT.negocioSelectedData)
 
-    console.log(dataNegocio)
+    console.log(dataNegocio);
 
     const handleShow=(state)=>{
         console.log(state)

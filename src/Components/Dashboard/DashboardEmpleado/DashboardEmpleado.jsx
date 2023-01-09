@@ -11,6 +11,9 @@ const DashboardEmpleado=()=>{
                     <PostHeader1/>
                 </div>
                 <Post1/>
+                <Post1/>
+                <Post1/>
+                <Post1/>
             </div>
         </>  
     );
