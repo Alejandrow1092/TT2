@@ -1,0 +1,15 @@
+.container-resultados{
+    display: flex;
+    min-height: 90vh;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    .res-title{
+        width: 100%;
+        margin: 20px;
+        text-align: center;
+        background-color: #E6E6E6;
+        padding: 5px;
+    }
+}

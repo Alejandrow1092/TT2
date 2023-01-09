@@ -9,11 +9,13 @@ import informacionIcon from "../../asets/informacion.png"
 import Footer from "../../Common/Footer/Footer"
 import PDFView from "../../Common/PDFView/PDFView";
 import Gaugecomponent from "../../Common/Charts/Gaugecomponent";
+import Nivel from "../Resultados/Nivel/Nivel";
+import Resultados from "../Resultados/Resultados";
 
 const SetForm =()=>{
     return(
         <>
-            <NavBar3/>
+            {/*<NavBar3/>
             
             <div className="title-set-formulario">
                 <div className="title-line"></div>
@@ -28,17 +30,15 @@ const SetForm =()=>{
             <div className="programar-formulario">
                 
                 <div className="container-instrucciones">
-                   {/*  <div className="instrucciones"> */}
-                        <span>Recuerda que durante la aplicación del cuestionario se deberá:</span>
-                        <ol className="listaOrdenada">
-                            <li>Propiciar un ambiente de respeto y confianza;</li>
-                            <li>Permitir una comunicación fluida entre los trabajadores y evaluador;</li>
-                            <li>Aclarar dudas y brindar apoyo a los trabajadores que lo requieran;</li>
-                            <li>Verificar que las indicaciones proporcionadas hayan quedado claras;</li>
-                            <li>Evitar interrumpir a los trabajadores cuando realicen sus respuestas, y</li>
-                            <li>Evitar conducir, persuadir o dirigir respuestas</li>
-                        </ol>
-                   {/*  </div> */}
+                    <span>Recuerda que durante la aplicación del cuestionario se deberá:</span>
+                    <ol className="listaOrdenada">
+                        <li>Propiciar un ambiente de respeto y confianza;</li>
+                        <li>Permitir una comunicación fluida entre los trabajadores y evaluador;</li>
+                        <li>Aclarar dudas y brindar apoyo a los trabajadores que lo requieran;</li>
+                        <li>Verificar que las indicaciones proporcionadas hayan quedado claras;</li>
+                        <li>Evitar interrumpir a los trabajadores cuando realicen sus respuestas, y</li>
+                        <li>Evitar conducir, persuadir o dirigir respuestas</li>
+                    </ol>
                 </div>
                 <div className="container-form-program">
                     <div>
@@ -67,11 +67,9 @@ const SetForm =()=>{
                 </div>
                 
             </div>
-            <div>
-                {/**<PDFView/>*/}
-                <Gaugecomponent/>
-            </div>
-            <Footer/>
+            <Footer/>*/}
+            <Resultados/>
+            
         </>
     );
 }

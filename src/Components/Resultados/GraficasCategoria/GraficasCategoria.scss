@@ -1,0 +1,12 @@
+.container-grafica-categoria{
+    display: flex;
+    width: 100%;
+    min-height: 60vh;
+    flex-wrap: wrap;
+    justify-content: center;
+
+
+    .grafica-categoria{
+        width: 40%;
+    }
+}

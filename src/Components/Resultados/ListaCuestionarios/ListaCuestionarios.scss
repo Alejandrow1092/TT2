@@ -1,0 +1,28 @@
+.container-drops{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+
+    .container-groups{
+
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        max-width: 1200px;
+
+        .select-group-drop{
+            margin: 20px;
+            width: 40%;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            
+            select{
+                width: 80%;
+            }
+        }
+    }
+}
