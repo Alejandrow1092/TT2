@@ -1,21 +1,24 @@
 import React from "react";
 import './ItemListScroll.scss';
 import { Link } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { setSelectedNegocio, setNegocioSelectedData } from "../../../rootReducer";
+
 
 const ItemListScroll =(props)=>{
-    const{nombreNegocio, tipo}=props;
-    
+    const{nombreNegocio, id, elementos}=props;
+    const dispatch=useDispatch();
+
+    const handleClick=()=>{
+        dispatch(setSelectedNegocio(id));
+        dispatch(setNegocioSelectedData(elementos));
+    }
+
     return(
         <>  
             <div className="item" name="blueItem">
-               {/*  {tipo==="negocio"&&<Link to="/Negocio-vista"><span className="text-item" >{nombreNegocio}</span></Link>}
-                {tipo==="empleado"&&<Link to="/Empleado-vista"><span className="text-item" >{nombreNegocio}</span></Link>} */}
-                <Link to="/Negocio-vista" className="item-list"><span className="text-item" >{nombreNegocio}</span></Link>
-               {/*  <Link to="/Empleado-vista"><span className="text-item" >{nombreNegocio}</span></Link> */}
+               <Link to="/Negocio-vista" className="item-list" onClick={handleClick}><span className="text-item" >{nombreNegocio}</span></Link>
             </div>
-           {/*  <div className="item" name="whiteItem">
-                <span className="text-item-black">Corporativo computacion</span>
-            </div> */}
         </>
     );
 }

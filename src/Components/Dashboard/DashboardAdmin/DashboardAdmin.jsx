@@ -11,18 +11,7 @@ import { useEffect } from "react";
 const DashboardAdmin = (props)=>{
     const {user}=props;
     const {nombre}=useSelector(state=>state.appTT.userData);
-    var data1=[];
-
-    useEffect(()=>{
-        axios.get('http://localhost:8080/negocios')
-        .then(({data})=>{
-            console.log(data);
-            data=data1;
-        })
-        .catch(({response})=>{
-            console.log(response.data+" hola");
-        });
-    },[data1]);
+    
     
     return(
         <>

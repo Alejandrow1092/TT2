@@ -110,8 +110,66 @@ const negocio=(req, res)=>{
     });
 }
 
+const gestoresAdmin=(req, res)=>{
+    console.log("hola");
+    const{id}=req.params;
+    const values=[id];
+    console.log(values)
+    connection.query(`select 
+    usuario.nombre
+  from
+    gestor
+    inner join gestor_negocio on gestor.idgestor = gestor_negocio.idgestor
+    inner join usuario using (idusuario)
+  where
+    gestor_negocio.idNegocio = ?`,values, (error, results)=>{
+        if(error){
+            res.status(500).send(error);
+        }
+        else{
+            if(results.length>0){
+                console.log(results);
+                res.status(200).send(results);
+            }
+            else{
+                res.status(400).send('Error en la optencionde la tabla');
+            }
+        }
+    });
+}
+
+const negocioGestor=(req,res)=>{
+    console.log("hola3");
+    const{id}=req.params;
+    const values=[id];
+    console.log(values)
+    connection.query(`select
+	negocio.nombre, negocio.razonsocial, negocio.domicilio, negocio.actividad
+    from
+	gestor
+	    inner join gestor_negocio on gestor.idgestor = gestor_negocio.idgestor
+	    inner join negocio using (idnegocio)
+    where 
+	gestor.idusuario=?`,values, (error, results)=>{
+        if(error){
+            res.status(500).send(error);
+        }
+        else{
+            if(results.length>0){
+                console.log(results);
+                res.status(200).send(results);
+            }
+            else{
+                res.status(400).send('Error en la optencion de la tabla');
+            }
+        }
+    });
+}
+
 module.exports ={
     index,
     login,
-    negocio
+    negocio,
+    gestoresAdmin,
+    negocioGestor
 }

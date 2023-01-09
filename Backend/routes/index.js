@@ -8,7 +8,12 @@ router.get("/", indexController.index);
 
 router.post("/login", indexController.login);
 
-router.get("/negocios", indexController.negocio)
+router.get("/negocios", indexController.negocio);
+
+router.get("/negocio-gestor/:id", indexController.negocioGestor),
+
+router.get("/gestores-admin/:id", indexController.gestoresAdmin);
+
 
 module.exports = router;
 

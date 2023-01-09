@@ -150,8 +150,9 @@ INSERT INTO Empleado (idUsuario) VALUES
 
 INSERT INTO Negocio (nombre, razonSocial, domicilio, actividad) VALUES
     ('Juguitos y Refrescos Felices', 'Sociedad Cooperativa', 'Oroya 713, Lindavista, Gustavo A. Madero, Ciudad de México', 'Alimentos'),
-	('Mariscos el paso', 'Socidad Anonima', 'Av. Nader Sm 3 M2 L6 Cancún, México, Cancún 77500 México', 'Alimentos');
-
+	('Mariscos el paso', 'Socidad Anonima', 'Av. Nader Sm 3 M2 L6 Cancún, México, Cancún 77500 México', 'Alimentos'),
+	('Taco Bell','Sociedad Anonima','5200 CA-1, Pacifica, CA 94044, United States', 'Alimentos'),
+	('Churchs chikens', 'Sociedad Anonima', '8023 West Ln, Stockton, CA 95210, United States', 'Alimentos');
 INSERT INTO Area (idNegocio, nombre) VALUES
     (1, 'Capital Humano'), (2, 'Control de Calidad');
 
@@ -160,3 +161,41 @@ INSERT INTO Gestor_Negocio VALUES
 
 INSERT INTO Area_Empleado VALUES
     (1, 1), (2, 2);
+
+/* ********************************************************************************** */
+/* Consultas a la base de datos, no cpoiar para crear la base de datos */
+/* ********************************************************************************** */
+
+/* Consulta para obtener los gestores de un negocio en particular */
+select 
+  usuario.nombre
+from
+  gestor
+  inner join gestor_negocio on gestor.idgestor = gestor_negocio.idgestor
+  inner join usuario using (idusuario)
+where
+  gestor_negocio.idNegocio = "1";
+
+/* Cosnulta para obtener TODOS los gestores  */
+
+select 
+  usuario.nombre
+from
+  gestor
+  inner join gestor_negocio on gestor.idgestor = gestor_negocio.idgestor
+  inner join usuario using (idusuario)
+where
+  gestor_negocio.idNegocio = "1";
+
+
+/* Consulta para obtener el negocio de un gestor */
+
+select
+	negocio.nombre, negocio.razonsocial, negocio.domicilio, negocio.actividad
+from
+	gestor
+	inner join gestor_negocio on gestor.idgestor = gestor_negocio.idgestor
+	inner join negocio using (idnegocio)
+where 
+	gestor.idusuario="2";
+	

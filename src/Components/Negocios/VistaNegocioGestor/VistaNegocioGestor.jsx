@@ -5,13 +5,36 @@ import ListScroll from "../../../Common/ListScroll/ListScroll";
 import EmpleadoInfo from "../../EmpleadoInfo/EmpleadoInfo"
 import ItemArea from "../../../Common/ItemArea/ItemArea";
 import ButtonX from "../../../DesingComp/ButtonX/Buttonx"
+import axios from "axios";
+import { useSelector } from "react-redux";
+import { useEffect } from "react";
+import { useState } from "react";
 
 const VistaNegocioGestor =()=>{
+    const[negocio, setNegocio]=useState([]);
+
+    const userId=useSelector(state=>state.appTT.userData.id);
+    console.log(userId);
+
+    useEffect(()=>{
+            axios.get(`http://localhost:8080/negocio-gestor/${userId}`)
+            .then(({data})=>{
+                //console.log(data);
+                setNegocio(data);
+                //console.log(negocios)
+            })
+            .catch(({response})=>{
+                console.log(response.data+" hola");
+            });
+    },[])
+
+    console.log(negocio)
+
     return(
         <>
             <div className="container-empleado">
                 <div className="infoNegocio-empleado">
-                    <NegocioInfo/>
+                    <NegocioInfo elem={negocio[0]}/>
                 </div>
                 <div className="infoArea">
                     <span>Areas registradas</span>
@@ -37,7 +60,7 @@ const VistaNegocioGestor =()=>{
                     <div className="left-grid-empleado">
                         <div className="gestores">
                             <p>Empleados</p>
-                            <ListScroll nombre="Luis Fernando"/>
+                          {/*   <ListScroll nombre="Luis Fernando"/> */}
                         </div>
                         <div>
                             <ButtonX title="Agregar empleado"/>

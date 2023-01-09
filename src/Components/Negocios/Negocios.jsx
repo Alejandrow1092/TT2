@@ -8,10 +8,13 @@ import VistaNegocioGestor from "./VistaNegocioGestor/VistaNegocioGestor";
 import Footer from "../../Common/Footer/Footer"
 import AddGestor from "../../Common/AddGestor/AddGestor";
 import { useState } from "react";
+import axios from "axios";
+import { useEffect } from "react";
 
 const Negocios =()=>{
     const user=useSelector((state)=>state.appTT.userType);
     const [show, setShow]=useState("burble");
+    const [negocios, setNegocios]=useState([]);
 
     const handleShow=()=>{
         if(show==="burble"){
@@ -22,7 +25,19 @@ const Negocios =()=>{
         }
     }
 
-    console.log(show)
+    useEffect(()=>{
+        axios.get('http://localhost:8080/negocios')
+        .then(({data})=>{
+            //console.log(data);
+            setNegocios(data);
+            //console.log(negocios)
+        })
+        .catch(({response})=>{
+            console.log(response.data+" hola");
+        });
+    },[]);
+
+    console.log(negocios)
     
     //console.log(user)
     return(
@@ -36,15 +51,17 @@ const Negocios =()=>{
                 </div>
                 <div className="body-negocio">
                     <div className="left-grid">
-                        <ListScroll nombre="Juguitos y Refrescos Felices"/>
+                        {/* <ListScroll nombre="Juguitos y Refrescos Felices"/> */}
                        {/*  <ListScroll nombre="Alejandro Martinez"/> */}
+                        <ListScroll elementos={negocios}/>
+
                         <div>
                             <button onClick={handleShow}>Agregar Negocio</button>
                         </div>
                     </div>
                     <div className="right-grid">
                         {show==="burble"&&
-                            <BubbleAdmin adminRegistrados="2" textoBubble="negocios"/>
+                            <BubbleAdmin adminRegistrados={negocios.length} textoBubble="negocios"/>
                         }
                         {show==="formulario"&&
                             <AddGestor userForm="creaNegocio"/>

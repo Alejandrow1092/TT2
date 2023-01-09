@@ -3,17 +3,19 @@ import './ListScroll.scss';
 import ItemListScroll from "./ItemListScroll/ItemListScroll";
 
 const ListScroll =(props)=>{
-    const {nombre, tipo}=props;
+    const {elementos}=props;
 
     return(
         <>
             <div className="list">
-                <ItemListScroll nombreNegocio={nombre} tipo={tipo}/>
-                <ItemListScroll nombreNegocio="Apura S.A de C.V" tipo={tipo}/>
-              {/*   <ItemListScroll/>
-                <ItemListScroll/>
-                <ItemListScroll/>
-                <ItemListScroll/> */}
+                {
+                    elementos.map((elem, i)=>{
+                        return(
+                            <ItemListScroll nombreNegocio={elem.nombre} id={elem.idNegocio} elementos={elem}/>
+                        );
+                    })
+                }   
+                
             </div>
         </>
     );

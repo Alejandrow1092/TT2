@@ -3,10 +3,14 @@ import './NegocioInfo.scss';
 import { useState } from "react";
 import informacionIcon from '../../asets/informacion.png'
 
-const NegocioInfo =()=>{
-    const [denominacion, setDenominacion]=useState("Sociedad Cooperativa");
-    const [domicilio, setDomicilio]=useState("Oroya 713, Lindavista, Gustavo A. Madero, Ciudad de México")
-    const [actividadP, setActividadP]=useState("Comida");
+const NegocioInfo =(props)=>{
+    const{elem}=props;
+    console.log(elem)
+
+    const [denominacion, setDenominacion]=useState(elem.razonsocial);
+    const [domicilio, setDomicilio]=useState(elem.domicilio)
+    const [actividadP, setActividadP]=useState(elem.actividad);
+    const [nombre, setNombre]=useState(elem.nombre);
     const [isAble, setIsAble]=useState(true);
 
     const handleAble=()=>{
@@ -18,7 +22,7 @@ const NegocioInfo =()=>{
             <div className="contenedorInfo">
                 <div className="title-line"></div>
                 <div className="nombreNegocioHeader">
-                    <p>Negocio 1</p>
+                    <p>{elem.nombre}</p>
                     <img src="https://picsum.photos/50" alt="" />
                 </div>
                 <div className="camposInfo">
@@ -26,6 +30,8 @@ const NegocioInfo =()=>{
                         <p>Aqui puedes editar los datos principales de tu empresa</p>
                         <img src={informacionIcon} width="20px" height="auto" alt="" />
                     </div>
+                    <span className="input-title">Nombre</span>
+                    <input className="input" onChange={(event)=>setNombre(event.target.value)} value={nombre} disabled={isAble}/>
                     <span className="input-title">Denominación o razón social</span>
                     <input className="input" onChange={(event)=>setDenominacion(event.target.value)} value={denominacion} disabled={isAble}/>
                     <span className="input-title">Domicilio</span>
