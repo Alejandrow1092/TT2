@@ -1,7 +1,7 @@
 [
 	"sec1":{
 		"nombre": "Para responder las preguntas siguientes considere las condiciones ambientales de su centro de trabajo durante este semestre.",
-		"preguntas": ["1. Mi espacio de trabajo posee las condiciones ergonómicas y sanitarias, para realizar mis actividades docentes con seguridad e higiene.", "2. Las herramientas digitales y materiales con que cuento me permiten realizar mi trabajo eficientemente.", "3. Me preocupa contagiarme del virus que me provoque el COVID.", "4. Se ha brindado información de prevención y orientación sobre COVID-19 en mi centro de trabajo.", "5. Se ha publicado el protocolo de identificación y seguimiento de casos sospechosos y confirmados de COVID-19 de mi centro de trabajo.", "6. Mi área de trabajo permite mantener la sana distancia entre compañeros.", "7. Mi actividad presencial es peligrosa."]
+		"preguntas" : ["1. Mi espacio de trabajo posee las condiciones ergonómicas y sanitarias, para realizar mis actividades docentes con seguridad e higiene.", "2. Las herramientas digitales y materiales con que cuento me permiten realizar mi trabajo eficientemente.", "3. Me preocupa contagiarme del virus que me provoque el COVID.", "4. Se ha brindado información de prevención y orientación sobre COVID-19 en mi centro de trabajo.", "5. Se ha publicado el protocolo de identificación y seguimiento de casos sospechosos y confirmados de COVID-19 de mi centro de trabajo.", "6. Mi área de trabajo permite mantener la sana distancia entre compañeros.", "7. Mi actividad presencial es peligrosa."]
 	},
 	"sec2":{
 		"nombre": "Para responder a las preguntas siguientes piense en la cantidad y ritmo de trabajo que tiene actualmente.",

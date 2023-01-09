@@ -25,66 +25,66 @@ const Configuracion=()=>{
     console.log(user);
     return(
         <>
-        <NavBar3/>
-        <div className="confi">
-            <div className="perfil">
-                {user==="Admin"&&<p id="admin">Administrador</p>}
-                {user==="Gestor"&&<p id="admin">Gestor</p>}
-                {user==="Empleado" && <p id="admin">Empleado</p>}
-                <figure>
-                    <img src="https://picsum.photos/200" alt="perfil" />
-                </figure>
+            <NavBar3/>
+            <div className="confi">
+                <div className="perfil">
+                    {user==="Admin"&&<p id="admin">Administrador</p>}
+                    {user==="Gestor"&&<p id="admin">Gestor</p>}
+                    {user==="Empleado" && <p id="admin">Empleado</p>}
+                    <figure>
+                        <img src="https://picsum.photos/200" alt="perfil" />
+                    </figure>
 
-                <p id="name">{nombre}</p>
+                    <p id="name">{nombre}</p>
 
-                <button className="edit-btn">
-                    <p>Editar perfil</p>
-                </button>
-            </div>
-            <div className="form">
-                <div className="main-form">
-                    <div className="title-line"></div>
-                    <p id="title1">Configuracion</p>
-                    <p id="title2">Informacion de la cuenta</p>
-                    
-                    <div className="form-fields">
-                        <label for="nombre">Nombre: </label> <br />
-                        <input type="text" id="nombre" onChange={(event)=>setNombre(event.target.value)} value={nombre1} disabled={isAble}/> <br />
-                        <div className="one-line-fields1">
-                            <div>
-                                <label for="celular">Celular: </label> <br />
-                                <input type="text" id="celular" value={celular} onChange={(event)=>setCelular(event.target.value)} disabled={isAble}/> <br />
+                    <button className="edit-btn">
+                        <p>Editar perfil</p>
+                    </button>
+                </div>
+                <div className="form">
+                    <div className="main-form">
+                        <div className="title-line"></div>
+                        <p id="title1">Configuracion</p>
+                        <p id="title2">Informacion de la cuenta</p>
+                        
+                        <div className="form-fields">
+                            <label for="nombre">Nombre: </label> <br />
+                            <input type="text" id="nombre" onChange={(event)=>setNombre(event.target.value)} value={nombre1} disabled={isAble}/> <br />
+                            <div className="one-line-fields1">
+                                <div>
+                                    <label for="celular">Celular: </label> <br />
+                                    <input type="text" id="celular" value={celular} onChange={(event)=>setCelular(event.target.value)} disabled={isAble}/> <br />
+                                </div>
+                                <div>
+                                    <label for="tel-casa">Tel Casa: </label> <br />
+                                    <input type="text" id="tel-casa" onChange={(event)=>setCelCasa(event.target.value)} value={celCasa} disabled={isAble}/> <br />
+                                </div>
                             </div>
-                            <div>
-                                <label for="tel-casa">Tel Casa: </label> <br />
-                                <input type="text" id="tel-casa" onChange={(event)=>setCelCasa(event.target.value)} value={celCasa} disabled={isAble}/> <br />
+
+                            <div className="one-line-fields2">
+                                <div>
+                                    <label for="correo">Correo electronico: </label> <br />
+                                    <input type="text" id="correo" onChange={(event)=>setCorreo(event.target.value)} value={correo1} disabled={isAble}/> <br />
+                                </div>
+                                <div>
+                                    <label for="contra">Contraseña</label> <br />
+                                    <input type="password" id="contra" onChange={(event)=>setPass(event.target.value)} value={pass} disabled={isAble}/> <br />
+                                </div>
                             </div>
+                            <div className="btn-formulario">
+                            <button onClick={handleAble}>
+                            {isAble==true&&<p>Editar</p>}
+                            {isAble==false&&<p>Guardar</p>}
+                            </button>
                         </div>
-
-                        <div className="one-line-fields2">
-                            <div>
-                                <label for="correo">Correo electronico: </label> <br />
-                                <input type="text" id="correo" onChange={(event)=>setCorreo(event.target.value)} value={correo1} disabled={isAble}/> <br />
-                            </div>
-                            <div>
-                                <label for="contra">Contraseña</label> <br />
-                                <input type="password" id="contra" onChange={(event)=>setPass(event.target.value)} value={pass} disabled={isAble}/> <br />
-                            </div>
                         </div>
-                        <div className="btn-formulario">
-                        <button onClick={handleAble}>
-                        {isAble==true&&<p>Editar</p>}
-                        {isAble==false&&<p>Guardar</p>}
-                        </button>
-                    </div>
-                    </div>
+                        
+                        
                     
-                    
-                   
+                    </div>
                 </div>
             </div>
-        </div>
-        <Footer/>
+            
         </>
     );
 }

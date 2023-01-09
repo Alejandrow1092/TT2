@@ -17,6 +17,8 @@ import Negocios from "./Components/Negocios/Negocios";
 import Buzon from "./Components/Buzon/Buzon";
 import Servicios from "./Components/Servicios/Servicios";
 import Resultados from "./Components/Resultados/Resultados";
+import Footer from "./Common/Footer/Footer";
+//import './App.css';
 
 /* const router = createBrowserRouter([
   {

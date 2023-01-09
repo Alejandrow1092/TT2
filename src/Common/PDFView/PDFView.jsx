@@ -1,6 +1,8 @@
 import React from "react";
 import "./PDFView.scss";
 import PDFile from "../../asets/pdf/cuestionario.pdf";
+
+
 export const PDFView = () =>{
     return(
         <div className="principal">

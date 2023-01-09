@@ -1,0 +1,23 @@
+.nivel{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .container-nivel{
+        display: flex;
+        text-align: justify;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        max-width: 1200px;
+        align-items: center;
+
+        .header-nivel{
+            margin-bottom: 20px;
+        }
+        
+        .body-nivel{
+            padding: 20px;
+        }
+    }
+}
