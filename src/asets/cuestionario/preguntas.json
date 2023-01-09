@@ -1,50 +1,86 @@
 {
 	"sec1":{
-		"nombre": "Para responder las preguntas siguientes considere las condiciones ambientales de su centro de trabajo durante este semestre.",
-		"preguntas" : ["1. Mi espacio de trabajo posee las condiciones ergonómicas y sanitarias, para realizar mis actividades docentes con seguridad e higiene.", "2. Las herramientas digitales y materiales con que cuento me permiten realizar mi trabajo eficientemente.", "3. Me preocupa contagiarme del virus que me provoque el COVID.", "4. Se ha brindado información de prevención y orientación sobre COVID-19 en mi centro de trabajo.", "5. Se ha publicado el protocolo de identificación y seguimiento de casos sospechosos y confirmados de COVID-19 de mi centro de trabajo.", "6. Mi área de trabajo permite mantener la sana distancia entre compañeros.", "7. Mi actividad presencial es peligrosa."]
+		"nombre": "Condiciones ambientales",
+		"indicacion": "Para responder las preguntas siguientes considere las condiciones ambientales de su centro de trabajo durante este semestre.",
+		"preguntas" : ["1. Mi espacio de trabajo posee las condiciones ergonómicas y sanitarias, para realizar mis actividades docentes con seguridad e higiene.", "2. Las herramientas digitales y materiales con que cuento me permiten realizar mi trabajo eficientemente.", "3. Me preocupa contagiarme del virus que me provoque el COVID.", "4. Se ha brindado información de prevención y orientación sobre COVID-19 en mi centro de trabajo.", "5. Se ha publicado el protocolo de identificación y seguimiento de casos sospechosos y confirmados de COVID-19 de mi centro de trabajo.", "6. Mi área de trabajo permite mantener la sana distancia entre compañeros.", "7. Mi actividad presencial es peligrosa."],
+		"respuestas" : [[0, 1, 2, 3, 4], [0, 1, 2, 3, 4], [4, 3, 2, 1, 0], [0, 1, 2, 3, 4], [0, 1, 2, 3, 4], [0, 1, 2, 3, 4], [4, 3, 2, 1, 0]],
+		"limites": [5, 8, 11, 14]
 	},
 	"sec2":{
-		"nombre": "Para responder a las preguntas siguientes piense en la cantidad y ritmo de trabajo que tiene actualmente.",
-		"preguntas": ["8. Debido a la cantidad de trabajo que tengo, me quedo tiempo adicional en mi centro de trabajo.", "9. Mi trabajo me permite cuidar mi salud.", "10. La modalidad híbrida exige mantener un ritmo de trabajo acelerado."]
+		"nombre": "Cantidad y ritmo de trabajo",
+		"indicacion": "Para responder a las preguntas siguientes piense en la cantidad y ritmo de trabajo que tiene actualmente.",
+		"preguntas": ["8. Debido a la cantidad de trabajo que tengo, me quedo tiempo adicional en mi centro de trabajo.", "9. Mi trabajo me permite cuidar mi salud.", "10. La modalidad híbrida exige mantener un ritmo de trabajo acelerado."],
+		"respuestas" : [[4, 3, 2, 1, 0], [0, 1, 2, 3, 4], [4, 3, 2, 1, 0]],
+		"limites": [3, 5, 7, 9]
 	},
 	"sec3":{
-		"nombre": "Las preguntas siguientes están relacionadas con el esfuerzo mental que le exige su trabajo actualmente.",
-		"preguntas": ["11. Mi trabajo en modalidad hibrida exige que esté muy concentrado/a.", "12. La modalidad híbrida requiere que comprenda y aplique diversos tipos de información en grandes cantidades."]
+		"nombre": "Esfuerzo mental",
+		"indicacion": "Las preguntas siguientes están relacionadas con el esfuerzo mental que le exige su trabajo actualmente.",
+		"preguntas": ["11. Mi trabajo en modalidad hibrida exige que esté muy concentrado/a.", "12. La modalidad híbrida requiere que comprenda y aplique diversos tipos de información en grandes cantidades."],
+		"respuestas": [[4, 3, 2, 1, 0], [4, 3, 2, 1, 0]],
+		"limites": [1, 2, 4, 6]
 	},
 	"sec4":{
-		"nombre": "Las preguntas siguientes están relacionadas con las actividades que realiza en su trabajo y las responsabilidades que tiene actualmente.",
-		"preguntas": ["13. En mi centro de trabajo, me dan órdenes contradictorias.", "14. En mi centro de trabajo, me piden hacer actividades innecesarias (burocráticas)."]
+		"nombre": "Actividades y responsabilidades",
+		"indicacion": "Las preguntas siguientes están relacionadas con las actividades que realiza en su trabajo y las responsabilidades que tiene actualmente.",
+		"preguntas": ["13. En mi centro de trabajo, me dan órdenes contradictorias.", "14. En mi centro de trabajo, me piden hacer actividades innecesarias (burocráticas)."],
+		"respuestas": [[4, 3, 2, 1, 0], [4, 3, 2, 1, 0]],
+		"limites": [1, 2, 4, 6]
 	},
 	"sec5":{
-		"nombre": "Las siguientes preguntas están relacionadas con su jornada de trabajo en la modalidad híbrida.",
-		"preguntas": ["15. Desde que inició la modalidad híbrida, trabajo horas extras más de tres veces a la semana.", "16. Desde que inició la modalidad híbrida, trabajo en días festivos, fines de semana o en vacaciones.", "17. El tiempo de trabajo en la modalidad híbrida es mucho y perjudica mis actividades familiares y personales.", "18. Atiendo actividades familiares o personales cuando estoy trabajando.", "19. Mis responsabilidades familiares afectan mi trabajo."]
+		"nombre": "Toma de decisiones",
+		"indicacion": "Las preguntas siguientes están relacionadas con las decisiones que puede tomar en su trabajo en la modalidad híbrida.",
+		"preguntas": ["15. Mi trabajo en modalidad híbrida me permite desarrollar nuevas habilidades.", "16. En mi trabajo puedo mejorar mi condición laboral.", "17. Durante mi jornada laboral tomo pausas cuando las necesito.", "18. Decido cuántas actividades, en línea y presenciales, realizo durante la jornada laboral.", "19. Decido la velocidad en que realizo mis actividades laborales."],
+		"respuestas": [[4, 3, 2, 1, 0], [4, 3, 2, 1, 0], [4, 3, 2, 1, 0], [4, 3, 2, 1, 0], [4, 3, 2, 1, 0]],
+		"limites": [3, 5, 8, 11]
 	},
 	"sec6":{
-		"nombre": "Las preguntas siguientes están relacionadas con las decisiones que puede tomar en su trabajo en la modalidad híbrida.",
-		"preguntas": ["20. Mi trabajo en modalidad híbrida me permite desarrollar nuevas habilidades.", "21. En mi trabajo puedo mejorar mi condición laboral.", "22. Durante mi jornada laboral tomo pausas cuando las necesito.", "23. Decido cuántas actividades, en línea y presenciales, realizo durante la jornada laboral.", "24. Decido la velocidad en que realizo mis actividades laborales."]
+		"nombre": "Jornada laboral",
+		"indicacion": "Las siguientes preguntas están relacionadas con su jornada de trabajo en la modalidad híbrida.",
+		"preguntas": ["20. Desde que inició la modalidad híbrida, trabajo horas extras más de tres veces a la semana.", "21. Desde que inició la modalidad híbrida, trabajo en días festivos, fines de semana o en vacaciones.", "22. El tiempo de trabajo en la modalidad híbrida es mucho y perjudica mis actividades familiares y personales.", "23. Atiendo actividades familiares o personales cuando estoy trabajando.", "24. Mis responsabilidades familiares afectan mi trabajo."],
+		"respuestas" : [[0, 1, 2, 3, 4], [0, 1, 2, 3, 4], [0, 1, 2, 3, 4], [0, 1, 2, 3, 4], [0, 1, 2, 3, 4]],
+		"limites": [3, 5, 8, 11]
 	},
 	"sec7":{
-		"nombre": "Las preguntas siguientes están relacionadas con cualquier tipo de cambio que ocurra en su trabajo (considere los últimos cambios realizados).",
-		"preguntas": ["25. Los cambios que se presentan en mi trabajo dificultan mis labores.", "26. Frente a cualquier cambio, se tienen en cuenta mis ideas o aportaciones."]
+		"nombre": "Cambios en el trabajo",
+		"indicacion": "Las preguntas siguientes están relacionadas con cualquier tipo de cambio que ocurra en su trabajo (considere los últimos cambios realizados).",
+		"preguntas": ["25. Los cambios que se presentan en mi trabajo dificultan mis labores.", "26. Frente a cualquier cambio, se tienen en cuenta mis ideas o aportaciones."],
+		"respuestas": [[4, 3, 2, 1, 0], [0, 1, 2, 3, 4]],
+		"limites": [1, 2, 4, 6]
 	},
 	"sec8":{
-		"nombre": "Las siguientes preguntas están relacionadas con la capacitación e información que se le proporciona sobre su trabajo en la modalidad híbrida.",
-		"preguntas": ["27. Me informan con claridad cuáles son mis funciones.", "28. Me explican claramente los resultados a obtener con mi trabajo.", "29. Me explican claramente los objetivos de mi trabajo.", "30. Me informan con quién puedo acudir, para resolver problemas de trabajo derivados de la modalidad híbrida.", "31. Recibo formación que facilita mi desempeño."]
+		"nombre": "Capacitación e información proporcionada",
+		"indicacion": "Las siguientes preguntas están relacionadas con la capacitación e información que se le proporciona sobre su trabajo en la modalidad híbrida.",
+		"preguntas": ["27. Me informan con claridad cuáles son mis funciones.", "28. Me explican claramente los resultados a obtener con mi trabajo.", "29. Me explican claramente los objetivos de mi trabajo.", "30. Me informan con quién puedo acudir, para resolver problemas de trabajo derivados de la modalidad híbrida.", "31. Recibo formación que facilita mi desempeño."],
+		"respuestas": [[0, 1, 2, 3, 4], [0, 1, 2, 3, 4], [0, 1, 2, 3, 4], [0, 1, 2, 3, 4], [0, 1, 2, 3, 4]],
+		"limites": [3, 5, 8, 11]
 	},
 	"sec9":{
-		"nombre": "Las siguientes preguntas están relacionadas con las o los directivos con los que tiene contacto.",
-		"preguntas": ["32. Mi jefe (a) me ayuda a organizar mejor el trabajo.", "33. Mi jefe (a) tiene en cuenta mis puntos de vista y opiniones.", "34. Mi jefe (a) me comunica a tiempo la información relacionada con el trabajo.", "35. La orientación que me da mi jefe (a) me ayuda a realizar mejor mi trabajo.", "36. Mi jefe (a) inmediato ofrece apoyo emocional.", "37. Mi jefe (a) me ayuda a solucionar los problemas relacionados con la modalidad híbrida."]
+		"nombre": "Contacto con directivos",
+		"indicacion": "Las siguientes preguntas están relacionadas con las o los directivos con los que tiene contacto.",
+		"preguntas": ["32. Mi jefe (a) me ayuda a organizar mejor el trabajo.", "33. Mi jefe (a) tiene en cuenta mis puntos de vista y opiniones.", "34. Mi jefe (a) me comunica a tiempo la información relacionada con el trabajo.", "35. La orientación que me da mi jefe (a) me ayuda a realizar mejor mi trabajo.", "36. Mi jefe (a) inmediato ofrece apoyo emocional.", "37. Mi jefe (a) me ayuda a solucionar los problemas relacionados con la modalidad híbrida."],
+		"respuestas": [[0, 1, 2, 3, 4], [0, 1, 2, 3, 4], [0, 1, 2, 3, 4], [0, 1, 2, 3, 4], [0, 1, 2, 3, 4], [0, 1, 2, 3, 4]],
+		"limites": [5, 8, 11, 14]
 	},
 	"sec10":{
-		"nombre": "Las preguntas siguientes se refieren a las relaciones con sus compañeros de trabajo.",
-		"preguntas": ["38. Confío en mis colegas.", "39. Entre compañeros solucionamos los problemas de trabajo de forma respetuosa.", "40. Me siento parte del grupo de trabajo.", "41. Existe colaboración.", "42. Mis colegas me ayudan cuando tengo dificultades."]
+		"nombre": "Relación con compañeros",
+		"indicacion": "Las preguntas siguientes se refieren a las relaciones con sus compañeros de trabajo.",
+		"preguntas": ["38. Confío en mis colegas.", "39. Entre compañeros solucionamos los problemas de trabajo de forma respetuosa.", "40. Me siento parte del grupo de trabajo.", "41. Existe colaboración.", "42. Mis colegas me ayudan cuando tengo dificultades."],
+		"respuestas": [[0, 1, 2, 3, 4], [0, 1, 2, 3, 4], [0, 1, 2, 3, 4], [0, 1, 2, 3, 4], [0, 1, 2, 3, 4]],
+		"limites": [3, 5, 8, 11]
 	},
 	"sec11":{
-		"nombre": "Las siguientes preguntas están relacionadas con la información que recibe sobre su rendimiento laboral, el reconocimiento a su labor, la pertenencia a su centro de trabajo, así como la estabilidad laboral.",
-		"preguntas": ["43. Me informan sobre lo que hago bien en mi trabajo.", "44. La forma como evalúan mi trabajo, me ayuda a mejorar mi desempeño.", "45. El pago que recibo es el que merezco por el trabajo que estoy realizando actualmente.", "46. El buen desempeño es recompensado o reconocido.", "47. Los trabajadores con un buen desempeño pueden mejorar sus condiciones laborales.", "48. Mi trabajo es estable.", "49. Me siento orgulloso de ser trabajador en este centro laboral."]
+		"nombre": "Reconocimiento al desempeño",
+		"indicacion": "Las siguientes preguntas están relacionadas con la información que recibe sobre su rendimiento laboral, el reconocimiento a su labor, la pertenencia a su centro de trabajo, así como la estabilidad laboral.",
+		"preguntas": ["43. Me informan sobre lo que hago bien en mi trabajo.", "44. La forma como evalúan mi trabajo, me ayuda a mejorar mi desempeño.", "45. El pago que recibo es el que merezco por el trabajo que estoy realizando actualmente.", "46. El buen desempeño es recompensado o reconocido.", "47. Los trabajadores con un buen desempeño pueden mejorar sus condiciones laborales.", "48. Mi trabajo es estable.", "49. Me siento orgulloso de ser trabajador en este centro laboral."],
+		"respuestas": [[0, 1, 2, 3, 4], [0, 1, 2, 3, 4], [0, 1, 2, 3, 4], [0, 1, 2, 3, 4], [0, 1, 2, 3, 4], [0, 1, 2, 3, 4], [0, 1, 2, 3, 4]],
+		"limites": [5, 8, 11, 14]
 	},
 	"sec12":{
-		"nombre": "Las preguntas siguientes están relacionadas con actos de violencia laboral (malos tratos, acoso, hostigamiento, acoso psicológico).",
-		"preguntas": ["50. Durante las reuniones de trabajo, puedo expresarme libremente sin interrupciones.", "51. Recibo críticas constantes hacia mi persona y/o trabajo.", "52. Recibo burlas, calumnias, difamaciones, humillaciones o ridiculizaciones.", "53. Se ignora mi presencia o se demeritan mis aportaciones en las reuniones de trabajo.", "54. Se manipulan las situaciones de trabajo o mis aportaciones, para hacer parecer que soy mal trabajador.", "55. Se ignoran mis éxitos laborales y se atribuyen a otros trabajadores.", "56. Me obstaculizan las oportunidades del centro de trabajo para mejorar mis condiciones laborales.", "57. He presenciado actos de violencia en mi centro de trabajo.", "58. En la modalidad híbrida trabajo con personas muy estresadas.", "59. Mis compañeros requieren apoyo emocional.", "60. Mi trabajo requiere expresar emociones distintas a las mías."]
+		"nombre": "Violencia laboral",
+		"indicacion": "Las preguntas siguientes están relacionadas con actos de violencia laboral (malos tratos, acoso, hostigamiento, acoso psicológico).",
+		"preguntas": ["50. Durante las reuniones de trabajo, puedo expresarme libremente sin interrupciones.", "51. Recibo críticas constantes hacia mi persona y/o trabajo.", "52. Recibo burlas, calumnias, difamaciones, humillaciones o ridiculizaciones.", "53. Se ignora mi presencia o se demeritan mis aportaciones en las reuniones de trabajo.", "54. Se manipulan las situaciones de trabajo o mis aportaciones, para hacer parecer que soy mal trabajador.", "55. Se ignoran mis éxitos laborales y se atribuyen a otros trabajadores.", "56. Me obstaculizan las oportunidades del centro de trabajo para mejorar mis condiciones laborales.", "57. He presenciado actos de violencia en mi centro de trabajo.", "58. En la modalidad híbrida trabajo con personas muy estresadas.", "59. Mis compañeros requieren apoyo emocional.", "60. Mi trabajo requiere expresar emociones distintas a las mías."],
+		"respuestas": [[0, 1, 2, 3, 4], [4, 3, 2, 1, 0], [4, 3, 2, 1, 0], [4, 3, 2, 1, 0], [4, 3, 2, 1, 0], [4, 3, 2, 1, 0], [4, 3, 2, 1, 0], [4, 3, 2, 1, 0], [4, 3, 2, 1, 0], [4, 3, 2, 1, 0], [4, 3, 2, 1, 0]],
+		"limites": [10, 13, 16, 20]
 	}
 }
