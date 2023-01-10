@@ -3,6 +3,7 @@ import './NegocioInfo.scss';
 import { useState } from "react";
 import informacionIcon from '../../asets/informacion.png'
 import { useEffect } from "react";
+import empresaIcon from "../../asets/empresa.png"
 
 const NegocioInfo =(props)=>{
     const{elem}=props;
@@ -25,7 +26,7 @@ const NegocioInfo =(props)=>{
                 <div className="title-line"></div>
                 <div className="nombreNegocioHeader">
                     <p>{elem.nombre}</p>
-                    <img src="https://picsum.photos/50" alt="" />
+                    <img src={empresaIcon} width="50px" alt="" />
                 </div>
                 <div className="camposInfo">
                     <div className="info-header">

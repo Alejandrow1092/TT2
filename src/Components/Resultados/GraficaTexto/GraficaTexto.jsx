@@ -8,7 +8,7 @@ const GraficaTexto=()=>{
         <>
             <div className="container-chart-text">
                 <Gaugecomponent/>
-                <span>Categoría</span>
+                <span id="titulo">Categoría</span>
             </div>
         </>
     );

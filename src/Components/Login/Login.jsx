@@ -5,14 +5,14 @@ import { useState } from "react";
 import axios from 'axios';
 import { Navigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { setUserData } from "../../rootReducer";
-
+import { setUserData, setUser } from "../../rootReducer";
+import { useCallback } from "react";
 const Login =()=>{
 
     //local storage para el login
     //localStorage.setItem('auth', 'true');
     const dispatch=useDispatch();
-
+    const idUser=useSelector((state)=>state.appTT.userData.id);
     const [correo, setCorreo]=useState("");
     const [pass, setPass]=useState("");
     const [response, setResponse]=useState("no")
@@ -33,15 +33,20 @@ const Login =()=>{
     }
 
     //lamada a la API
+    
     const onSubmit=(event)=>{
          axios.post('http://localhost:8080/login', body)
         .then(({data})=>{
             console.log(data);
             //lenar algunos datos traidos en el redux
             dispatch(setUserData(data));
-            //console.log(data.nombre)
             localStorage.setItem('auth', 'true');
             //setLogged(true);
+        })
+        .then(async()=>{
+            console.log("se va a hacer otra llamada...");
+            const {data}=await axios.get(`http://localhost:8080/tipo-usuario/${idUser}`)
+            dispatch(setUser(data));
         })
         .catch(({response})=>{
             console.log(response.data+" hola");

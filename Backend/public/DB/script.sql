@@ -289,3 +289,36 @@ inner join empleado using (idempleado)
 inner join usuario using (idusuario)
 where
 	area.idnegocio='1';
+
+/* Consulta opara obtener el tipo de usuario de unempleado */
+
+delimiter // 
+
+create function getUsuario2 (idusuario1 varchar(12))
+returns varchar(30)
+begin
+	if exists(select * from gestor where idusuario=idusuario1)then
+		return "Gestor";
+	elseif exists(select * from empleado where idusuario=idusuario1)then
+		return "Empleado";
+	else
+		return "Admin";
+	end if;
+end;
+//
+delimiter;
+
+
+
+DELIMITER //
+
+CREATE function simpleproc5 (param1 INT)
+returns int
+ BEGIN
+  if exists(SELECT * FROM usuario where idusuario=param1)then
+  return 1;
+  end if;
+ END;
+//
+
+DELIMITER ;

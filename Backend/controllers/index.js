@@ -195,6 +195,27 @@ const negocioEmpleados=(req,res)=>{
     });
 }
 
+const tipoUsuario=(req, res)=>{
+    const{id}=req.params;
+    const values=[id];
+    connection.query(`
+    Select getusuario2(?)
+    `,values, (error, results)=>{
+        if(error){
+            res.status(500).send(error);
+        }
+        else{
+            if(results.length>0){
+                console.log(results);
+                res.status(200).send(results);
+            }
+            else{
+                res.status(400).send('Error en la optencion de la tabla');
+            }
+        }
+    });
+}
+
 module.exports ={
     index,
     login,
@@ -202,4 +223,5 @@ module.exports ={
     gestoresAdmin,
     negocioGestor,
     negocioEmpleados,
+    tipoUsuario
 }

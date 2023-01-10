@@ -58,8 +58,6 @@ const VistaNegocioGestor =()=>{
             
     },[])
 
-    //console.log(negocio[0]);
-
     return(
         <>
             <div className="container-empleado">

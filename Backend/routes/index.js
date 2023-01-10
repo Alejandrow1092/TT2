@@ -16,5 +16,7 @@ router.get("/gestores-admin/:id", indexController.gestoresAdmin);
 
 router.get("/negocio-empleados/:id", indexController.negocioEmpleados);
 
+router.get("/tipo-usuario/:id", indexController.tipoUsuario);
+
 module.exports = router;
 

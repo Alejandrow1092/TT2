@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 export const appTTSlice = createSlice({
     name: 'appTT',
     initialState:{
-        userType: 'Admin',
+        userType: '',
         logged: false,
         userData:{
             id: 0,
@@ -23,9 +23,10 @@ export const appTTSlice = createSlice({
     },
     reducers:{
         setUser: (state, action)=>{
-            state.usertype = action.payload;
+            state.userType = action.payload[0][Object.keys(action.payload[0])[0]]
         },
         setLogged: (state, action)=>{
+            
             state.logged = action.payload;
         },
         setUserData: (state, action)=>{

@@ -17,6 +17,17 @@ import resultadosIcon from "../../asets/resultados.png"
 
 const SetForm =()=>{
     const[menuOpcion, setMenuOpcion]=useState("formulario");
+    const[showModal, setShowModal]=useState(false);
+
+    const handleModal=(state)=>{
+        if(state){
+            setShowModal(false);
+        }
+        else{
+            setShowModal(true);
+        }
+        console.log(showModal)
+    }
 
     return(
         <>
@@ -35,10 +46,13 @@ const SetForm =()=>{
                 </div>
                 <div className="panel-central-form">
                     {menuOpcion==="resultados"&&
-                        <Resultados/>
+                        <Resultados />
                     }
                     {menuOpcion==="formulario"&&
                         <>
+                                {showModal&&
+                                    <PDFView state={showModal} fun={handleModal}/>
+                                }
                                 <div className="title-set-formulario">
                                     <div className="title-line"></div>
                                     <p>Programar formulario</p>
@@ -83,7 +97,7 @@ const SetForm =()=>{
                                                     <img src={clockVector} alt="tiempo"/>
                                                 </div>
                                                 <ButtonX title="Iniciar Formulario"/>
-                                                <ButtonX title="Ver formulario"/>
+                                                <ButtonX title="Ver formulario" fun={handleModal} state={showModal}/>
                                             </div>
                                         </div>
                                     </div>
