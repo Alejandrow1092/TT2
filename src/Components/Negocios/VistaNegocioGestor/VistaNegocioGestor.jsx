@@ -25,21 +25,17 @@ const VistaNegocioGestor =()=>{
                 setNegocio(data);
                 //console.log(negocios)
             })
+            .then(axios.get(`http://localhost:8080/negocio-empleados/1`)
+            .then(({data})=>{
+                console.log(data);
+                setEmpData(data);
+                //console.log(negocios)
+            }))
             .catch(({response})=>{
                 console.log(response.data+" hola");
             });
             
-            if(negocio!==null){
-            axios.get(`http://localhost:8080/negocio-empleados/${negocio[0].idnegocio}`)
-                .then(({data})=>{
-                    console.log(data);
-                    setEmpData(data);
-                    //console.log(negocios)
-                })
-                .catch(({response})=>{
-                    console.log(response.data+" hola");
-                });
-            }
+           
         }
 
      /*    const consultaEmpleados=()=>{
@@ -73,7 +69,7 @@ const VistaNegocioGestor =()=>{
                     }
                     </div>
                 <div className="infoArea">
-                    <span>Areas registradas</span>
+                    <span>Áreas registradas</span>
                     <div className="areas">
                         <ItemArea/>
                         <ItemArea/>

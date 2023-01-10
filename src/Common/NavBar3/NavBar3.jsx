@@ -74,7 +74,7 @@ const NavBar3=()=>{
                                 <Link to="/Buzon">
                                 <li >
                                     <img src={chatIcon} alt="" />
-                                    <p>Buzon de quejas</p>
+                                    <p>Buzón de quejas</p>
                                     <p id="notificacion">2</p>
                                 </li>
                                 </Link>
@@ -83,7 +83,7 @@ const NavBar3=()=>{
                             <Link to="/Configuracion">
                                 <li>
                                     <img src={configuracion} alt="" />
-                                    <p>Configuracion</p>
+                                    <p>Configuración</p>
                                 </li>
                             </Link>
 

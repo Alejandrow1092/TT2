@@ -48,13 +48,13 @@ const EmpleadoInfo =(props)=>{
                     <input className="input" value={numCelular} disabled={isAble}/>
                     <span className="input-title">Número de casa</span>
                     <input className="input" value={numCasa} disabled={isAble}/>
-                    <span className="input-title">Correo eléctronico</span>
+                    <span className="input-title">Correo electrónico</span>
                     <input className="input" type="email" disabled={isAble} value={correo}/>
-                    <span className="input-title">Area de trabajo</span>
+                    <span className="input-title">Área de trabajo</span>
                     <select className="input" disabled={isAble} value={area}>
-                        <option>Area 1</option>
-                        <option>Area 2</option>
-                        <option>Area 3</option>
+                        <option>Área 1</option>
+                        <option>Área 2</option>
+                        <option>Área 3</option>
                     </select>
                     <span className="input-title">Actividad principal</span>
                     <input className="input" value={actividad} disabled={isAble}/>

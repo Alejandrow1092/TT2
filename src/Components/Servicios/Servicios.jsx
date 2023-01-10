@@ -29,13 +29,13 @@ const Servicios=()=>{
                     
                     {user==="Empleado"&&
                     <button onClick={()=>{setSelected("buzon"); setSelectedBuzon("no")}}>
-                        <p>Buzon de quejas</p>
+                        <p>Buzón de quejas</p>
                         <img src={correoIcon} width="30px" alt="" />
                     </button>
                     }
 
                     <button onClick={()=>{setSelected("medico"); setMedicoNueva("no"); setSelectedQueja("no");}}>
-                        <p>Solicitudes medicas</p>
+                        <p>Solicitudes médicas</p>
                         <img src={medicineIcon} width="30px" alt="" />
                     </button>
                 </div>

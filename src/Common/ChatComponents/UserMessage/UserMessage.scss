@@ -1,15 +1,16 @@
 .user-message{
-    background-color: rgba(0, 0, 0, 0.918);
-    color: white;
+    background-color: rgba(102, 102, 102, 0.918);
+    color: black;
     width: 100%;
     display: flex;
     border-radius: 10px;
     .user-foto{
-        //background-color: red;
+        background-color: #e6e6e6;
         width: 15%;
         padding: 7px;
         border-top-left-radius: inherit;
         border-bottom-left-radius: inherit;
+        margin: 1px;
         img{
             border-radius: 50%;
         }
@@ -20,12 +21,14 @@
         width: 85%;
         padding-left: 20px;
         padding-top: 20px;
-        background-color: #14171A;
+        background-color: #e6e6e6;
+        margin: 1px;
         #name{
+            font-weight: bold;
             margin-bottom: 3px;
         }
         #preview-message{
-            color: rgba(255, 255, 255, 0.603);
+            color: black;
         }
         &:hover{
             border-top-right-radius: inherit;
@@ -33,5 +36,9 @@
             background-color: #5d5e6175;
             cursor: pointer;
         }
+    }
+
+    :hover{
+        color: #e6e6e6;
     }
 }

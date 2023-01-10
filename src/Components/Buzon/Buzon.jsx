@@ -12,7 +12,7 @@ const Buzon =()=>{
             <NavBar3/>
                 <div className="chat-main-window">
                     <div className="chat-header">
-                        <p>Buzon de quejas</p>
+                        <p>Buzón de quejas</p>
                     </div>
                     <div className="chat-section">
                         <UserMessage />
