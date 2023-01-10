@@ -69,7 +69,7 @@ const VistaNegocioGestor =()=>{
                     }
                     </div>
                 <div className="infoArea">
-                    <span>Areas registradas</span>
+                    <span>Áreas registradas</span>
                     <div className="areas">
                         <ItemArea/>
                         <ItemArea/>

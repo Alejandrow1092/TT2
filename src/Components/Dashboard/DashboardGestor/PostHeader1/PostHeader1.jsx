@@ -12,7 +12,7 @@ const PostHeader1=()=>{
                     <figure>
                         <img src="https://picsum.photos/35" alt="profile" />
                     </figure>
-                    <input type="text" id="title" placeholder="Titulo"/>
+                    <input type="text" id="title" placeholder="Título"/>
                     <input type="text" id="type" placeholder="Tipo"/>
                 </div>
                 <div className="post-body">

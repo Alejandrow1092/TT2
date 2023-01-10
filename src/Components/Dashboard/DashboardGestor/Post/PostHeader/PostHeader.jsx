@@ -7,7 +7,7 @@ const PostHeader =()=>{
             <div className="postHeader">
                 <div className="postTitle">
                     <span>
-                        Titulo
+                        Título
                     </span>
                 </div>
                 <div className="postType">

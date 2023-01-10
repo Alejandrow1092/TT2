@@ -44,8 +44,8 @@ const Configuracion=()=>{
                 <div className="form">
                     <div className="main-form">
                         <div className="title-line"></div>
-                        <p id="title1">Configuracion</p>
-                        <p id="title2">Informacion de la cuenta</p>
+                        <p id="title1">Configuración</p>
+                        <p id="title2">Información de la cuenta</p>
                         
                         <div className="form-fields">
                             <label for="nombre">Nombre: </label> <br />
@@ -63,7 +63,7 @@ const Configuracion=()=>{
 
                             <div className="one-line-fields2">
                                 <div>
-                                    <label for="correo">Correo electronico: </label> <br />
+                                    <label for="correo">Correo electrónico: </label> <br />
                                     <input type="text" id="correo" onChange={(event)=>setCorreo(event.target.value)} value={correo1} disabled={isAble}/> <br />
                                 </div>
                                 <div>

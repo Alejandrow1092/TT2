@@ -45,7 +45,7 @@ const SetForm =()=>{
                                 </div>
                                 
                                 <div className="set-form-alert">
-                                    <p>Selecciona una fecha de incio y una de cierre para el formulario, despues preciona comenzar</p>
+                                    <p>Selecciona una fecha de incio y una de cierre para el formulario, despues presiona comenzar</p>
                                     <img src={informacionIcon} width="20px" alt="" />
                                 </div>
 
