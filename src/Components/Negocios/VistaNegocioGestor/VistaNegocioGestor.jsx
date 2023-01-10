@@ -28,7 +28,8 @@ const VistaNegocioGestor =()=>{
             .catch(({response})=>{
                 console.log(response.data+" hola");
             });
-
+            
+            if(negocio!==null){
             axios.get(`http://localhost:8080/negocio-empleados/${negocio[0].idnegocio}`)
                 .then(({data})=>{
                     console.log(data);
@@ -38,6 +39,7 @@ const VistaNegocioGestor =()=>{
                 .catch(({response})=>{
                     console.log(response.data+" hola");
                 });
+            }
         }
 
      /*    const consultaEmpleados=()=>{
