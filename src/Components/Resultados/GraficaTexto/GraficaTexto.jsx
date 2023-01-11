@@ -3,12 +3,13 @@ import GaugeChart from "react-gauge-chart";
 import Gaugecomponent from "../../../Common/Charts/Gaugecomponent";
 import "./GraficaTexto.scss";
 
-const GraficaTexto=()=>{
+const GraficaTexto=(props)=>{
+    const{titulo, number}=props
     return(
         <>
             <div className="container-chart-text">
-                <Gaugecomponent/>
-                <span id="titulo">Categoría</span>
+                <Gaugecomponent num={number}/>
+                <span id="titulo">{titulo}</span>
             </div>
         </>
     );

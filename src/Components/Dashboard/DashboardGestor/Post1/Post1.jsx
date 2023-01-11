@@ -1,7 +1,15 @@
 import React from "react";
 import "./Post1.scss";
+import portafolioIcon from "../../../../asets/portafolio.png"
+import adIcon from "../../../../asets/advertencia.png"
+import { useSelector } from "react-redux";
 
-const Post1=()=>{
+const Post1=(props)=>{
+
+    const{texto}=props;
+
+    const nombre=useSelector(state=>state.appTT.userData.nombre)
+
     return(
       <>
         <div className="post">
@@ -11,19 +19,21 @@ const Post1=()=>{
                 </div>
                 <div className="post-info">
                     <section className="nombre-post">
-                        <p id="nombre">Alejandro Martinez</p>
-                        <p id="puesto">Gestor . </p>
+                        <p id="nombre">{nombre}</p>
+                        <div className="sub">
+                            <p id="puesto">Gestor  </p>
+                            <img src={portafolioIcon} width="20px" alt="" />
+                        </div>
+                        
                     </section>
                     <section className="fecha-post">
                         <p>12/12/2022</p>
-                        <img src="https://picsum.photos/50" alt="" />
+                        <img src={adIcon} alt="" />
                     </section>
                 </div>
             </div>
             <div className="main-post-section">
-                <p id="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis ipsam repellendus, 
-                possimus ea tempore, animi ratione excepturi magni debitis cumque quia consectetur explicabo odio 
-                earum rem inventore aspernatur tenetur vero!</p>
+                <p id="desc">{texto}</p>
                 <figure>
                     <img src="https://picsum.photos/650" alt="" />
                 </figure>

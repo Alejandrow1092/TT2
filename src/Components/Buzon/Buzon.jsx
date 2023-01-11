@@ -15,17 +15,7 @@ const Buzon =()=>{
                         <p>Buzón de quejas</p>
                     </div>
                     <div className="chat-section">
-                        <UserMessage />
-                        <UserMessage/>
-                        <UserMessage/>
-                        <UserMessage/>
-                        <UserMessage/>
-                        <UserMessage/>
-                        <UserMessage/>
-                        <UserMessage/>
-                        <UserMessage/>
-                        <UserMessage/>
-                        <UserMessage/>
+                        <UserMessage usuario="Alejandro"/>
                     </div>
                     <div className="window-chat-section">
                         <ChatWindow selected="yes" use="buzon"/>

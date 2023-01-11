@@ -10,6 +10,7 @@ import pruebaIcon from "../../../asets/prueba.png"
 import cuestionarioIcon from "../../../asets/cuestionario.png"
 import tiempoRapido from "../../../asets/tiempo-rapido.png"
 import informacionIcon from "../../../asets/informacion.png"
+import chatIcon from "../../../asets/consultante.png"
 
 const ChatWindow=(props)=>{
     const{selected, use, pendiente}=props;
@@ -26,8 +27,8 @@ const ChatWindow=(props)=>{
                     }   
                     {use==="medico"&&
                     <div className="chat-panel-no">
-                            <img src={messageIcon} width="200px" alt="" />
-                            <p id="title">Selecciona una solicitud reciente</p>
+                            <img src={chatIcon} width="200px" alt="" />
+                            <p id="title">Selecciona una solicitud medica reciente</p>
                     </div>
                     }  
             </div>

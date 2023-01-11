@@ -52,9 +52,9 @@ const Servicios=()=>{
                     {selected==="medico"&&
                         <>
                         <div className="panel-left" onClick={()=>setSelectedQueja("yes")}>
-                            <UserMessage/>
-                            <UserMessage/>
-                            <UserMessage/>
+                            <UserMessage usuario="Alejandro" prev="buenas tardes"/>
+                           {/*  <UserMessage usuario="Juan" prev="hola, que tal!"/>
+                            <UserMessage usuario="Rodrigo" prev="Buen dia"/> */}
                         </div>
                          <div className="panel-right-medico">
                             {user==="Gestor"&&

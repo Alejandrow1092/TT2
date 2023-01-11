@@ -35,6 +35,14 @@
             border-bottom: 1px solid rgba(0, 0, 0, 0.205);
             .nombre-post{
                 width: 70%;
+                //background-color: red;
+                .sub{
+                    display: flex;
+                    //background-color: blue;
+                    img{
+                        margin-left: 10px;
+                    }
+                }
                 #nombre{
                     margin-bottom: 3px;
                 }

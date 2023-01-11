@@ -15,6 +15,7 @@ const VistaNegocioGestor =()=>{
     const[empData, setEmpData]=useState([])
 
     const userId=useSelector(state=>state.appTT.userData.id);
+    const negocioId=useSelector(state=>state.appTT.selectedNegocio);
     console.log(userId);
 
     useEffect(()=>{
@@ -25,7 +26,7 @@ const VistaNegocioGestor =()=>{
                 setNegocio(data);
                 //console.log(negocios)
             })
-            .then(axios.get(`http://localhost:8080/negocio-empleados/1`)
+            .then(axios.get(`http://localhost:8080/negocio-empleados/${negocioId}`)
             .then(({data})=>{
                 console.log(data);
                 setEmpData(data);
@@ -72,13 +73,6 @@ const VistaNegocioGestor =()=>{
                         <ItemArea/>
                         <ItemArea/>
                         <ItemArea/>
-                        <ItemArea/>
-                        <ItemArea/>
-                        <ItemArea/>
-                        <ItemArea/>
-                        <ItemArea/>
-                        <ItemArea/>
-                        <ItemArea plus="true"/>
                     </div>
                 </div>
                 {/* <div className="inputArea">

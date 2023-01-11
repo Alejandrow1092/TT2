@@ -14,11 +14,19 @@ import Resultados from "../Resultados/Resultados";
 import { useState } from "react";
 import formularioIcon from "../../asets/formulario.png"
 import resultadosIcon from "../../asets/resultados.png"
+import { useSelector } from "react-redux";
+import { useEffect } from "react";
+import axios from "axios";
 
 const SetForm =()=>{
     const[menuOpcion, setMenuOpcion]=useState("formulario");
     const[showModal, setShowModal]=useState(false);
-
+    const[cuestionarios, setCuestionarios]=useState(null)
+    
+    const negocioid=useSelector(state=>state.appTT.selectedNegocio);
+    
+    
+    console.log(negocioid)
     const handleModal=(state)=>{
         if(state){
             setShowModal(false);
@@ -28,6 +36,30 @@ const SetForm =()=>{
         }
         console.log(showModal)
     }
+
+    useEffect(()=>{
+        const consultaNegocioGestor=()=>{
+            axios.get(`http://localhost:8080/cuestionario-negocio/${negocioid}`)
+            .then(({data})=>{
+                //console.log(data);
+                setCuestionarios(data);
+                console.log(data[0].fechaApertura)
+            })
+            /* .then(axios.get(`http://localhost:8080/negocio-empleados/${negocioId}`)
+            .then(({data})=>{
+                console.log(data);
+                setEmpData(data);
+                //console.log(negocios)
+            })) */
+            .catch(({response})=>{
+                console.log(response.data+" hola");
+            });
+            
+           
+        }
+
+        consultaNegocioGestor();
+    }, []);
 
     return(
         <>
@@ -46,7 +78,7 @@ const SetForm =()=>{
                 </div>
                 <div className="panel-central-form">
                     {menuOpcion==="resultados"&&
-                        <Resultados />
+                        <Resultados cues={cuestionarios}/>
                     }
                     {menuOpcion==="formulario"&&
                         <>

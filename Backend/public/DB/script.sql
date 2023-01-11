@@ -322,3 +322,24 @@ returns int
 //
 
 DELIMITER ;
+
+/* Consulta pra obtener el id de negocio */
+
+select 
+	negocio.idnegocio
+from
+	Gestor
+inner join gestor_negocio using (idgestor)
+inner join negocio using (idnegocio)
+where
+	gestor.idusuario=12;
+
+
+/*  */
+
+select	
+	*
+from Negocio_Cuestionario
+inner join cuestionario using (idcuestionario)
+where
+	negocio_cuestionario.idnegocio="5";

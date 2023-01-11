@@ -1,7 +1,9 @@
 import React from "react";
 import "./UserMessage.scss"
 
-const UserMessage=()=>{
+const UserMessage=(props)=>{
+
+    const{usuario, prev}=props;
     return(
         <>
             <div className="user-message">
@@ -9,8 +11,8 @@ const UserMessage=()=>{
                     <img src="https://picsum.photos/70" alt="" />
                 </div>
                 <div className="message-info">
-                    <p id="name">Alejandro Martinez</p>
-                    <p id="preview-message">Hola como estas, tengo una queja...</p>
+                    <p id="name">{usuario}</p>
+                    <p id="preview-message">{prev}</p>
                 </div>
             </div>
         </>
