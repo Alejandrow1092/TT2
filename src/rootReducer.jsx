@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 export const appTTSlice = createSlice({
     name: 'appTT',
     initialState:{
-        userType: '',
+        userType: 'Gestor',
         logged: false,
         userData:{
             id: 0,
