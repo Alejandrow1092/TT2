@@ -9,7 +9,7 @@ const ListaCuestionarios=(props)=>{
             <div className="container-drops">
                 <div className="container-groups">
                     <div className="select-group-drop">
-                        <span>Año:</span>
+                        <span>Fecha:</span>
                         <select value={estadoFecha} onChange={(event)=>fun(event.target.value)}>
                             <option value="" disabled >Selecciona una fecha</option>
                             {cuest!=null&&cuest.map((elem, i)=>{

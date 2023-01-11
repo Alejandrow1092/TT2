@@ -147,13 +147,19 @@
 }
 
 .form-panel{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
     .menu-formulario{
+        width: 100%;
         display: flex;
-        margin: auto;
+        margin: 40px;
+        justify-content: space-around;
         max-width: 1200px;
         button{
             cursor: pointer;
-            font-size: 1.2rem;
+            font-size: 1.5rem;
             width: 150px;
             //height: 50px;
         }

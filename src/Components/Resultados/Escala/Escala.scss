@@ -1,0 +1,27 @@
+.container-escala{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    padding: 40px;
+    border: 1px solid rgba(182, 182, 182, 0.514);
+    box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.31);
+    -webkit-box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.31);
+    -moz-box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.31);
+
+    .container-center-escala{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+        max-width: 1200px;
+
+        div{
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+    }
+}
