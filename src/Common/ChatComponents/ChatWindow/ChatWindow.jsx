@@ -11,10 +11,18 @@ import cuestionarioIcon from "../../../asets/cuestionario.png"
 import tiempoRapido from "../../../asets/tiempo-rapido.png"
 import informacionIcon from "../../../asets/informacion.png"
 import chatIcon from "../../../asets/consultante.png"
+import { useState } from "react";
 
 const ChatWindow=(props)=>{
     const{selected, use, pendiente}=props;
-    
+    const[aceptado, setAceptado]=useState(false);
+    const[re, setRef]=useState(false);
+    const aceptadof=(state)=>{
+        setAceptado(!state);
+    }
+    const ref=(state)=>{
+        setRef(!state);
+    }
     return(
         <>
             {selected==="no"&&
@@ -64,9 +72,18 @@ const ChatWindow=(props)=>{
                         <img src={cuestionarioIcon} width="30px" alt="" />
                         <b>Numero de cuestionario:</b> 34334
                     </p>
+
+                    {aceptado&&
+                        <p className="aceptada">¡Solicitud aceptada!</p>
+                    }
+
+                    {re&&
+                        <p className="re">¡Solicitud rechazada!</p>
+                    }
+
                 </div>
-                <ButtonX title="Aceptar"/>
-                <ButtonX title="Rechazar"/>
+                <ButtonX title="Aceptar" fun={aceptadof} state={aceptado}/>
+                <ButtonX title="Rechazar" fun={ref} state={re}/>
             </div>
             }
             {selected==="yes"&&use==="medico" &&pendiente==="yes"&&

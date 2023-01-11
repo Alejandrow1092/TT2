@@ -2,6 +2,8 @@ import { createSlice } from "@reduxjs/toolkit";
 
 export const appTTSlice = createSlice({
     name: 'appTT',
+    negocioNuevo:"",
+    gestorNuevo:"",
     initialState:{
         userType: '',
         logged: false,
@@ -51,10 +53,16 @@ export const appTTSlice = createSlice({
             state.negocioSelectedData.actividad=action.payload.actividad;
             state.negocioSelectedData.razonSocial=action.payload.razonSocial
             state.negocioSelectedData.domicilio=action.payload.domicilio;
+        },
+        setnegocionuevo:(state, action)=>{
+            state.negocioNuevo=action.payload;
+        },
+        setgestornuevo:(state, action)=>{
+            state.setgestornuevo=action.payload;
         }
     },
 });
 
-export const {setUser, setLogged, setUserData,setSelectedNegocio, setNegocioSelectedData} = appTTSlice.actions;
+export const {setUser, setLogged, setUserData,setSelectedNegocio, setNegocioSelectedData, setgestornuevo, setnegocionuevo} = appTTSlice.actions;
 
 export default appTTSlice.reducer;

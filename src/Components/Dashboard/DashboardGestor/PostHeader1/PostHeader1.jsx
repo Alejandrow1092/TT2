@@ -4,7 +4,9 @@ import sendIcon from "../../../../asets/sendVector.png"
 import addFoto from "../../../../asets/add-foto.png"
 import adIcon from "../../../../asets/advertencia.png"
 
-const PostHeader1=()=>{
+const PostHeader1=(props)=>{
+    const{header, cuerpo, headerFun, cuerpoFun, postFun}=props
+
     return(
         <>
             <div className="post-header">
@@ -13,7 +15,7 @@ const PostHeader1=()=>{
                     <figure>
                         <img src="https://picsum.photos/35" alt="profile" />
                     </figure>
-                    <input type="text" id="title" placeholder="Título"/>
+                    <input onChange={(event)=>headerFun(event.target.value)} type="text" id="title" placeholder="Título"/>
                    {/*  <input type="text" id="type" placeholder="Tipo"/> */}
                     <select name="" id="type">
                         <option value="" selected disabled>Tipo</option>
@@ -28,13 +30,13 @@ const PostHeader1=()=>{
                 </div>
                 <div className="post-body">
                     
-                    <textarea placeholder="¿Qué quieres compartir con tus empleados?">
+                    <textarea onChange={(event)=>cuerpoFun(event.target.value)} placeholder="¿Qué quieres compartir con tus empleados?">
 
                     </textarea>
                 </div>
 
                 <div className="post-btn">
-                    <button id="publicar">
+                    <button id="publicar" onClick={postFun}>
                         <p>Publicar</p>
                         <img className="send-icon" src={sendIcon} alt="" />
                     </button>

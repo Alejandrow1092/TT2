@@ -9,7 +9,7 @@ const NegocioInfo =(props)=>{
     const{elem}=props;
     console.log(elem)
 
-    const [denominacion, setDenominacion]=useState(elem.razonsocial);
+    const [denominacion, setDenominacion]=useState(elem.razonSocial);
     const [domicilio, setDomicilio]=useState(elem.domicilio)
     const [actividadP, setActividadP]=useState(elem.actividad);
     const [nombre, setNombre]=useState(elem.nombre);

@@ -5,7 +5,10 @@ import { useSelector } from "react-redux";
 
 const ListScroll =(props)=>{
     const {elementos}=props;
-    const user=useSelector(state=>state.appTT.userType)
+    const user=useSelector(state=>state.appTT.userType);
+    const negocioNuevo=useSelector(state=>state.appTT.negocioNuevo);
+    const gestorNuevo=useSelector(state=>state.appTT.gestorNuevo)
+    
     return(
         <>
             <div className="list">
@@ -15,6 +18,13 @@ const ListScroll =(props)=>{
                             <ItemListScroll nombreNegocio={elem.nombre} id={elem.idNegocio} elementos={elem}/>
                         );
                     })
+                   
+                }
+                {negocioNuevo!==""&&
+                        <ItemListScroll nombreNegocio={negocioNuevo}/>
+                }
+                {gestorNuevo!==""&&
+                    <ItemListScroll nombreNegocio={gestorNuevo}/>
                 }
                 {user==="Gestor"&&
                     elementos.map((elem, i)=>{
@@ -22,7 +32,8 @@ const ListScroll =(props)=>{
                             <ItemListScroll elementos={elem}/>
                         );
                     })
-                }   
+                }
+                
                 
             </div>
         </>

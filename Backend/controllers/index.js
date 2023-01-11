@@ -270,6 +270,32 @@ where
     });
 }
 
+const cuestionarioEmpleado=(req, res)=>{
+    const{id}=req.params;
+    const values=[id];
+    connection.query(`
+    select	
+	*
+from empleado_Cuestionario
+inner join cuestionario using (idcuestionario)
+where
+	empleado_Cuestionario.idempleado=?;
+    `,values, (error, results)=>{
+        if(error){
+            res.status(500).send(error);
+        }
+        else{
+            if(results.length>0){
+                console.log(results);
+                res.status(200).send(results);
+            }
+            else{
+                res.status(400).send('Error en la optencion de la tabla');
+            }
+        }
+    });
+}
+
 module.exports ={
     index,
     login,
@@ -279,5 +305,6 @@ module.exports ={
     negocioEmpleados,
     tipoUsuario,
     negocioId,
-    cuestionarioNegocio
+    cuestionarioNegocio,
+    cuestionarioEmpleado
 }

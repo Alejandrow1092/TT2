@@ -343,3 +343,10 @@ from Negocio_Cuestionario
 inner join cuestionario using (idcuestionario)
 where
 	negocio_cuestionario.idnegocio="5";
+
+select	
+	*
+from empleado_Cuestionario
+inner join cuestionario using (idcuestionario)
+where
+	empleado_Cuestionario.idempleado="1";

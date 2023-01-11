@@ -10,10 +10,10 @@ const DashboardEmpleado=()=>{
                 <div className="post-header-1">
                     <PostHeader1/>
                 </div>
-                <Post1/>
-                <Post1/>
-                <Post1/>
-                <Post1/>
+                <Post1 imglink="https://picsum.photos/650"/>
+                <Post1  imglink="https://picsum.photos/651"/>
+                <Post1  imglink="https://picsum.photos/652"/>
+                <Post1  imglink="https://picsum.photos/653"/>
             </div>
         </>  
     );

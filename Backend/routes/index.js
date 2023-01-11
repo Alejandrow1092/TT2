@@ -22,5 +22,7 @@ router.get("/negocio-id/:id", indexController.negocioId);
 
 router.get("/cuestionario-negocio/:id", indexController.cuestionarioNegocio);
 
+router.get("/cuestionario-empleado/:id", indexController.cuestionarioEmpleado);
+
 module.exports = router;
 

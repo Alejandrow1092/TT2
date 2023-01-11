@@ -35,11 +35,11 @@ const Configuracion=()=>{
                         <img src="https://picsum.photos/200" alt="perfil" />
                     </figure>
 
-                    <p id="name">{nombre}</p>
+                    <p id="name">{nombre1}</p>
 
-                    <button className="edit-btn">
+                    {/* <button className="edit-btn">
                         <p>Editar perfil</p>
-                    </button>
+                    </button> */}
                 </div>
                 <div className="form">
                     <div className="main-form">

@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 
 const Post1=(props)=>{
 
-    const{texto}=props;
+    const{texto, imglink, title, header}=props;
 
     const nombre=useSelector(state=>state.appTT.userData.nombre)
 
@@ -33,10 +33,14 @@ const Post1=(props)=>{
                 </div>
             </div>
             <div className="main-post-section">
+                <p id="title">{header}</p>
                 <p id="desc">{texto}</p>
+                {imglink!==""&&
                 <figure>
-                    <img src="https://picsum.photos/650" alt="" />
+                    <img src={imglink} alt="" />
                 </figure>
+                }
+                
             </div>
             <div className="comment-btn">
                 <button>
