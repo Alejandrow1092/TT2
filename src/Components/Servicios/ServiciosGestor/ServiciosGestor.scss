@@ -1,6 +1,9 @@
 .servicios-gestor{
+    display: flex;
+    justify-content: center;
+    width: 100%;
     max-width: 1200px;
-    margin: auto;
+    margin: 20px;
     min-height: 100vh;
     background-color: red;
     margin-bottom: 40px;
@@ -13,7 +16,7 @@
             width: 15rem;
             cursor: pointer;
             &:hover{
-                background-color: rgb(189, 189, 189);;
+                background-color: rgb(189, 189, 189);
             }
         }
     }

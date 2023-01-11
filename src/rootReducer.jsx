@@ -5,7 +5,7 @@ export const appTTSlice = createSlice({
     negocioNuevo:"",
     gestorNuevo:"",
     initialState:{
-        userType: '',
+        userType: 'Gestor',
         logged: false,
         userData:{
             id: 0,
