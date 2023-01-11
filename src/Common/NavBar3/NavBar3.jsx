@@ -71,7 +71,7 @@ const NavBar3=()=>{
                     <div className={active?"user-options": "user-options-no"}>
                         <ul>
                             {user=="Gestor"&&
-                                <Link to="/Buzon">
+                                <Link to="/Buzon" className="link">
                                 <li >
                                     <img src={chatIcon} alt="" />
                                     <p>Buzón de quejas</p>
@@ -80,7 +80,7 @@ const NavBar3=()=>{
                                 </Link>
                             }
 
-                            <Link to="/Configuracion">
+                            <Link to="/Configuracion" className="link">
                                 <li>
                                     <img src={configuracion} alt="" />
                                     <p>Configuración</p>

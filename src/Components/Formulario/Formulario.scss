@@ -1,3 +1,17 @@
+.formulario-main{
+    max-width: 1200px;
+    margin: auto;
+    .menu-formulario{
+        width: 100%;
+        //background-color: red;
+        button{
+            cursor: pointer;
+            font-size: 1.2rem;
+            width: 150px;
+        }
+    }
+}
+
 .container-formulario{
     display: flex;
     flex-wrap: wrap;
@@ -5,6 +19,7 @@
     align-content: center;
     justify-content: space-between;
     margin: 10px;
+    //background-color: red;
 }
 
 .container-seccion{

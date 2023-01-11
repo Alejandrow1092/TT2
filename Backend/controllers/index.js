@@ -216,6 +216,60 @@ const tipoUsuario=(req, res)=>{
     });
 }
 
+const negocioId=(req, res)=>{
+    const{id}=req.params;
+    const values=[id];
+    connection.query(`
+    select 
+	negocio.idnegocio
+    from
+        Gestor
+    inner join gestor_negocio using (idgestor)
+    inner join negocio using (idnegocio)
+    where
+	gestor.idusuario=?;
+    `,values, (error, results)=>{
+        if(error){
+            res.status(500).send(error);
+        }
+        else{
+            if(results.length>0){
+                console.log(results);
+                res.status(200).send(results);
+            }
+            else{
+                res.status(400).send('Error en la optencion de la tabla');
+            }
+        }
+    });
+}
+
+const cuestionarioNegocio=(req,res)=>{
+    const{id}=req.params;
+    const values=[id];
+    connection.query(`
+    select	
+	*
+from Negocio_Cuestionario
+inner join cuestionario using (idcuestionario)
+where
+	negocio_cuestionario.idnegocio=?;
+    `,values, (error, results)=>{
+        if(error){
+            res.status(500).send(error);
+        }
+        else{
+            if(results.length>0){
+                console.log(results);
+                res.status(200).send(results);
+            }
+            else{
+                res.status(400).send('Error en la optencion de la tabla');
+            }
+        }
+    });
+}
+
 module.exports ={
     index,
     login,
@@ -223,5 +277,7 @@ module.exports ={
     gestoresAdmin,
     negocioGestor,
     negocioEmpleados,
-    tipoUsuario
+    tipoUsuario,
+    negocioId,
+    cuestionarioNegocio
 }

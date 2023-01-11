@@ -1,6 +1,7 @@
 .container-color-pregunta{
     display: flex;
     align-items: center;
+    width: 90%;
     //background-color: red;
     .container-color{
         background-color: #F16482;
@@ -10,6 +11,7 @@
 
 
     .container-pregunta{
+        width: 100%;
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
