@@ -35,7 +35,7 @@ const Login =()=>{
     //lamada a la API
     
     const onSubmit=(event)=>{
-         axios.post('http://localhost:8080/login', body)
+         axios.post('http://3.132.222.240/login', body)
         .then(({data})=>{
             console.log(data);
             //lenar algunos datos traidos en el redux
@@ -45,7 +45,7 @@ const Login =()=>{
         })
         .then(async()=>{
             console.log("se va a hacer otra llamada...");
-            const {data}=await axios.get(`http://localhost:8080/tipo-usuario/${idUser}`)
+            const {data}=await axios.get(`http://3.132.222.240/tipo-usuario/${idUser}`)
             dispatch(setUser(data));
         })
         .catch(({response})=>{

@@ -20,7 +20,7 @@ const Dashboard =()=>{
 
     useEffect(()=>{
         const negocioType=async()=>{
-            const negocioid=await axios.get(`http://localhost:8080/negocio-id/${userId}`);
+            const negocioid=await axios.get(`http://3.132.222.240/negocio-gestor/${userId}`);
             console.log(negocioid.data[0].idnegocio);
             dispatch(setSelectedNegocio(negocioid.data[0].idnegocio))
         }

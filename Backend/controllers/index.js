@@ -224,8 +224,8 @@ const negocioId=(req, res)=>{
 	negocio.idnegocio
     from
         Gestor
-    inner join gestor_negocio using (idgestor)
-    inner join negocio using (idnegocio)
+    inner join Gestor_Negocio using (idgestor)
+    inner join Negocio using (idnegocio)
     where
 	gestor.idusuario=?;
     `,values, (error, results)=>{
@@ -251,9 +251,9 @@ const cuestionarioNegocio=(req,res)=>{
     select	
 	*
 from Negocio_Cuestionario
-inner join cuestionario using (idcuestionario)
+inner join Cuestionario using (idcuestionario)
 where
-	negocio_cuestionario.idnegocio=?;
+	Negocio_Cuestionario.idnegocio=?;
     `,values, (error, results)=>{
         if(error){
             res.status(500).send(error);
@@ -276,10 +276,10 @@ const cuestionarioEmpleado=(req, res)=>{
     connection.query(`
     select	
 	*
-from empleado_Cuestionario
+from Empleado_Cuestionario
 inner join cuestionario using (idcuestionario)
 where
-	empleado_Cuestionario.idempleado=?;
+	Empleado_Cuestionario.idempleado=?;
     `,values, (error, results)=>{
         if(error){
             res.status(500).send(error);

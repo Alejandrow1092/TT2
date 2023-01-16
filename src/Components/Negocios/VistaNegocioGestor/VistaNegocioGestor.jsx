@@ -20,13 +20,13 @@ const VistaNegocioGestor =()=>{
 
     useEffect(()=>{
         const consultaNegocioGestor=()=>{
-            axios.get(`http://localhost:8080/negocio-gestor/${userId}`)
+            axios.get(`http://3.132.222.240/negocio-gestor/${userId}`)
             .then(({data})=>{
                 console.log(data[0].idnegocio);
                 setNegocio(data);
                 //console.log(negocios)
             })
-            .then(axios.get(`http://localhost:8080/negocio-empleados/${negocioId}`)
+            .then(axios.get(`http://3.132.222.240/negocio-empleados/${negocioId}`)
             .then(({data})=>{
                 console.log(data);
                 setEmpData(data);
@@ -84,7 +84,8 @@ const VistaNegocioGestor =()=>{
                     <div className="left-grid-empleado">
                         <div className="gestores">
                             <p>Empleados</p>
-                            <ListScroll elementos={empData}/>
+                            {/* Revisar que es lo que sucede */}
+                           {/*  <ListScroll elementos={empData}/> */}
                         </div>
                         <div>
                             <ButtonX title="Agregar empleado"/>

@@ -39,7 +39,7 @@ const Formulario=()=>{
 
     useEffect(()=>{
         const consultaNegocioGestor=()=>{
-            axios.get(`http://localhost:8080/cuestionario-empleado/1`)
+            axios.get(`http://3.132.222.240/cuestionario-empleado/1`)
             .then(({data})=>{
                 //console.log(data);
                 setCues(data);

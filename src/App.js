@@ -1,4 +1,4 @@
-import {createBrowserRouter, RouterProvider, Route, Router, Routes} from "react-router-dom";
+import {createBrowserRouter, RouterProvider, Route, Router, Routes, Navigate} from "react-router-dom";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import Login from "./Components/Login/Login"
@@ -31,6 +31,7 @@ function App() {
   return (
     <div className="App">
       <Routes>
+        <Route path="/" element={<Navigate to="/login"/>}/>
         <Route path="/login" element={<Login/>}/>
         <Route element={<ProtectedRoutes/>}>
           <Route path="/Negocios" element={<Negocios/>}/>

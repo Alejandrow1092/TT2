@@ -39,7 +39,7 @@ const SetForm =()=>{
 
     useEffect(()=>{
         const consultaNegocioGestor=()=>{
-            axios.get(`http://localhost:8080/cuestionario-negocio/${negocioid}`)
+            axios.get(`http://3.132.222.240/cuestionario-negocio/${negocioid}`)
             .then(({data})=>{
                 //console.log(data);
                 setCuestionarios(data);

@@ -26,7 +26,7 @@ const Negocios =()=>{
     }
 
     useEffect(()=>{
-        axios.get('http://localhost:8080/negocios')
+        axios.get('http://3.132.222.240/negocios')
         .then(({data})=>{
             //console.log(data);
             setNegocios(data);

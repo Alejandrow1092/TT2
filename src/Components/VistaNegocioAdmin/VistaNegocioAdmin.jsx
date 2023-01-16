@@ -40,7 +40,7 @@ const VistaNegocioAdmin =()=>{
         //setGestores(resultSet);
     },[]); */
     useEffect(()=>{
-        axios.get(`http://localhost:8080/gestores-admin/${idNegocio}`)
+        axios.get(`http://3.132.222.240/gestores-admin/${idNegocio}`)
         .then(({data})=>{
             //console.log(data);
             setGestores(data);
